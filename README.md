@@ -5,6 +5,8 @@ Download it here: https://github.com/ccidral/tomighty-osx/releases/tag/v1.0
 
 Unzip it, run it.
 
+The source code of the Java version is at https://github.com/ccidral/tomighty
+
 License
 =======
 
