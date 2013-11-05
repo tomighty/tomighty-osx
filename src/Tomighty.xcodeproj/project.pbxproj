@@ -21,7 +21,8 @@
 		301ABD0C17A602E800F19F3C /* Sounds.m in Sources */ = {isa = PBXBuildFile; fileRef = 301ABD0B17A602E800F19F3C /* Sounds.m */; };
 		3025F55717A7299000970DA9 /* Tomighty.m in Sources */ = {isa = PBXBuildFile; fileRef = 3025F55617A7299000970DA9 /* Tomighty.m */; };
 		3025F55A17A74A6100970DA9 /* TimerContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 3025F55917A74A6100970DA9 /* TimerContext.m */; };
-		30429410179F2CD3008CB481 /* status-normal.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 3042940E179F2CD3008CB481 /* status-normal.tiff */; };
+		3055C8C718297D540040918A /* status-normal.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 3055C8C618297D540040918A /* status-normal.tiff */; };
+		3055C8CA1829A4F30040918A /* ImageLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 3055C8C91829A4F30040918A /* ImageLoader.m */; };
 		30AA857217A154C400F4ADC6 /* tomighty.icns in Resources */ = {isa = PBXBuildFile; fileRef = 30AA857117A154C400F4ADC6 /* tomighty.icns */; };
 		30B829CF17A0AC1500DFC201 /* Timer.m in Sources */ = {isa = PBXBuildFile; fileRef = 30B829CE17A0AC1500DFC201 /* Timer.m */; };
 		30B829D417A0CCD000DFC201 /* status-white.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 30B829D317A0CCD000DFC201 /* status-white.tiff */; };
@@ -57,7 +58,9 @@
 		3025F55617A7299000970DA9 /* Tomighty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tomighty.m; sourceTree = "<group>"; };
 		3025F55817A74A6100970DA9 /* TimerContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimerContext.h; sourceTree = "<group>"; };
 		3025F55917A74A6100970DA9 /* TimerContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimerContext.m; sourceTree = "<group>"; };
-		3042940E179F2CD3008CB481 /* status-normal.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = "status-normal.tiff"; sourceTree = "<group>"; };
+		3055C8C618297D540040918A /* status-normal.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = "status-normal.tiff"; sourceTree = "<group>"; };
+		3055C8C81829A4F30040918A /* ImageLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageLoader.h; sourceTree = "<group>"; };
+		3055C8C91829A4F30040918A /* ImageLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageLoader.m; sourceTree = "<group>"; };
 		30AA857117A154C400F4ADC6 /* tomighty.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = tomighty.icns; sourceTree = "<group>"; };
 		30B829CD17A0AC1500DFC201 /* Timer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Timer.h; sourceTree = "<group>"; };
 		30B829CE17A0AC1500DFC201 /* Timer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Timer.m; sourceTree = "<group>"; };
@@ -98,6 +101,7 @@
 		301ABCF317A5A53300F19F3C /* Icons */ = {
 			isa = PBXGroup;
 			children = (
+				3055C8C618297D540040918A /* status-normal.tiff */,
 				301ABCF117A5999400F19F3C /* clock.tiff */,
 				301ABCED17A593AA00F19F3C /* start-pomodoro.tiff */,
 				301ABCEE17A593AA00F19F3C /* status-pomodoro.tiff */,
@@ -107,7 +111,6 @@
 				30FA9D9B17A586A0005D0A80 /* start-long-break.tiff */,
 				30FA9D9D17A586A0005D0A80 /* start-short-break.tiff */,
 				30B829D317A0CCD000DFC201 /* status-white.tiff */,
-				3042940E179F2CD3008CB481 /* status-normal.tiff */,
 			);
 			name = Icons;
 			sourceTree = "<group>";
@@ -128,6 +131,8 @@
 				3025F55617A7299000970DA9 /* Tomighty.m */,
 				3025F55817A74A6100970DA9 /* TimerContext.h */,
 				3025F55917A74A6100970DA9 /* TimerContext.m */,
+				3055C8C81829A4F30040918A /* ImageLoader.h */,
+				3055C8C91829A4F30040918A /* ImageLoader.m */,
 			);
 			name = Core;
 			sourceTree = "<group>";
@@ -262,7 +267,6 @@
 				30F01B06179EC3F00061D183 /* InfoPlist.strings in Resources */,
 				30F01B0C179EC3F00061D183 /* Credits.rtf in Resources */,
 				30F01B12179EC3F10061D183 /* MainMenu.xib in Resources */,
-				30429410179F2CD3008CB481 /* status-normal.tiff in Resources */,
 				30B829D417A0CCD000DFC201 /* status-white.tiff in Resources */,
 				30AA857217A154C400F4ADC6 /* tomighty.icns in Resources */,
 				30FA9D9F17A586A0005D0A80 /* start-long-break.tiff in Resources */,
@@ -271,6 +275,7 @@
 				301ABCE617A5910C00F19F3C /* status-long-break.tiff in Resources */,
 				301ABCE817A5910C00F19F3C /* status-short-break.tiff in Resources */,
 				301ABCEF17A593AA00F19F3C /* start-pomodoro.tiff in Resources */,
+				3055C8C718297D540040918A /* status-normal.tiff in Resources */,
 				301ABCF017A593AA00F19F3C /* status-pomodoro.tiff in Resources */,
 				301ABCF217A5999400F19F3C /* clock.tiff in Resources */,
 				301ABCFC17A5A8E100F19F3C /* PreferencesWindow.xib in Resources */,
@@ -295,6 +300,7 @@
 				301ABD0217A5C48500F19F3C /* Preferences.m in Sources */,
 				301ABD0C17A602E800F19F3C /* Sounds.m in Sources */,
 				3025F55717A7299000970DA9 /* Tomighty.m in Sources */,
+				3055C8CA1829A4F30040918A /* ImageLoader.m in Sources */,
 				3025F55A17A74A6100970DA9 /* TimerContext.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

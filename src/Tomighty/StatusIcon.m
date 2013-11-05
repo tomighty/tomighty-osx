@@ -7,6 +7,7 @@
 //
 
 #import "StatusIcon.h"
+#import "ImageLoader.h"
 
 @implementation StatusIcon
 {
@@ -22,15 +23,19 @@
     self = [super init];
     
     if(self) {
-        blackIcon = [NSImage imageNamed:@"status-normal.tiff"];
-        whiteIcon = [NSImage imageNamed:@"status-white.tiff"];
-        redIcon = [NSImage imageNamed:@"status-pomodoro.tiff"];
-        greenIcon = [NSImage imageNamed:@"status-short-break.tiff"];
-        blueIcon = [NSImage imageNamed:@"status-long-break.tiff"];
+        [self createIcons];
         [self createStatusItem:statusMenu];
     }
     
     return self;
+}
+
+- (void)createIcons {
+    blackIcon = [ImageLoader loadIcon:@"status-normal"];
+    whiteIcon = [ImageLoader loadIcon:@"status-white"];
+    redIcon = [ImageLoader loadIcon:@"status-pomodoro"];
+    greenIcon = [ImageLoader loadIcon:@"status-short-break"];
+    blueIcon = [ImageLoader loadIcon:@"status-long-break"];
 }
 
 - (void)normal {

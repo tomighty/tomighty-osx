@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "ImageLoader.h"
 #import "Preferences.h"
 #import "PreferencesWindowController.h"
 #import "Sounds.h"
@@ -35,8 +36,16 @@
     shortBreakContext = [[TimerContext alloc] initWithName:@"Short break"];
     longBreakContext = [[TimerContext alloc] initWithName:@"Long break"];
     
+    [self initMenuItemsIcons];
     [self updateRemainingTime:0];
-    
+}
+
+- (void)initMenuItemsIcons {
+    [self.remainingTimeMenuItem setImage:[ImageLoader loadIcon:@"clock"]];
+    [self.stopTimerMenuItem setImage:[ImageLoader loadIcon:@"stop"]];
+    [self.startPomodoroMenuItem setImage:[ImageLoader loadIcon:@"start-pomodoro"]];
+    [self.startShortBreakMenuItem setImage:[ImageLoader loadIcon:@"start-short-break"]];
+    [self.startLongBreakMenuItem setImage:[ImageLoader loadIcon:@"start-long-break"]];
 }
 
 - (IBAction)showPreferences:(id)sender {
