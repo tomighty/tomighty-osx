@@ -1,11 +1,10 @@
 Tomighty for Mac
 ================
 
-Download it here: https://github.com/ccidral/tomighty-osx/releases/tag/v1.0
+Available for download at http://www.tomighty.org
 
-Unzip it, run it.
-
-The source code of the Java version is at https://github.com/ccidral/tomighty
+This repository contains the source code for the native OSX version of Tomighty.
+If you are looking for the source code of the multiplatform (Java) version, go to https://github.com/ccidral/tomighty
 
 License
 =======
