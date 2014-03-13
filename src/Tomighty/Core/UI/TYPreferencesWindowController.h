@@ -6,7 +6,7 @@
 //  Copyright (c) 2014 Gig Software. All rights reserved.
 //
 
-#import <Cocoa/Cocoa.h>
+#import <AppKit/AppKit.h>
 
 @interface TYPreferencesWindowController : NSWindowController
 

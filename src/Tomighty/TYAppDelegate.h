@@ -5,7 +5,7 @@
 //  http://www.apache.org/licenses/LICENSE-2.0.txt
 //
 
-#import <Cocoa/Cocoa.h>
+#import <AppKit/AppKit.h>
 
 #import "TYStatusMenu.h"
 #import "TYStatusIcon.h"
