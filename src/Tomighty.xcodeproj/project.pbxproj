@@ -30,6 +30,8 @@
 		304AF83E18BD04BF00A2EA74 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 304AF83C18BD04BF00A2EA74 /* InfoPlist.strings */; };
 		3054083318D259E2009523AC /* OCMockito.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3054083218D259E2009523AC /* OCMockito.framework */; };
 		3054083518D259F0009523AC /* OCHamcrest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3054083418D259F0009523AC /* OCHamcrest.framework */; };
+		3054083618D266DE009523AC /* OCHamcrest.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3054083418D259F0009523AC /* OCHamcrest.framework */; };
+		3054083718D266DE009523AC /* OCMockito.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3054083218D259E2009523AC /* OCMockito.framework */; };
 		305D161918CD030400CE6A34 /* TYUserInterfaceAgent.m in Sources */ = {isa = PBXBuildFile; fileRef = 305D161818CD030400CE6A34 /* TYUserInterfaceAgent.m */; };
 		305D161E18CD13F100CE6A34 /* tomighty.icns in Resources */ = {isa = PBXBuildFile; fileRef = 305D161D18CD13F100CE6A34 /* tomighty.icns */; };
 		309394E718D0C76100D6C71A /* TYDefaultStatusIcon.m in Sources */ = {isa = PBXBuildFile; fileRef = 309394E618D0C76100D6C71A /* TYDefaultStatusIcon.m */; };
@@ -80,6 +82,8 @@
 			dstPath = "";
 			dstSubfolderSpec = 16;
 			files = (
+				3054083618D266DE009523AC /* OCHamcrest.framework in CopyFiles */,
+				3054083718D266DE009523AC /* OCMockito.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -791,7 +795,6 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 					"$(inherited)",
-					/Users/ccidral/dev/proj/gig/osx/private/Tomighty,
 					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -815,7 +818,6 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 					"$(inherited)",
-					/Users/ccidral/dev/proj/gig/osx/private/Tomighty,
 					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
