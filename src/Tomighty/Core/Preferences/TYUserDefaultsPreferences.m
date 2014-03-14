@@ -18,7 +18,7 @@ NSString * const PREF_PLAY_TICKTOCK_SOUND_DURING_BREAK     = @"org.tomighty.soun
 
 @implementation TYUserDefaultsPreferences
 {
-    __strong id <TYEventBus> eventBus;
+    id <TYEventBus> eventBus;
 }
 
 - (id)initWith:(id <TYEventBus>)anEventBus

@@ -35,12 +35,12 @@
 
 @implementation TYAppDelegate
 {
-    __strong id <TYTomighty> tomighty;
-    __strong id <TYPreferences> preferences;
-    __strong TYSoundAgent *soundAgent;
-    __strong TYSyntheticEventPublisher *syntheticEventPublisher;
-    __strong TYUserInterfaceAgent *userInterfaceAgent;
-    __strong TYPreferencesWindowController *preferencesWindow;
+    id <TYTomighty> tomighty;
+    id <TYPreferences> preferences;
+    TYSoundAgent *soundAgent;
+    TYSyntheticEventPublisher *syntheticEventPublisher;
+    TYUserInterfaceAgent *userInterfaceAgent;
+    TYPreferencesWindowController *preferencesWindow;
 }
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification

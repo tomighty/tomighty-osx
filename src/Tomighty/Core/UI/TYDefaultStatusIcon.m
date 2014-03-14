@@ -15,9 +15,9 @@ NSString * const ICON_STATUS_ALTERNATE = @"icon-status-alternate";
 
 @implementation TYDefaultStatusIcon
 {
-    __strong NSStatusItem *statusItem;
-    __strong NSMutableDictionary *iconImageCache;
-    __strong TYImageLoader *imageLoader;
+    NSStatusItem *statusItem;
+    NSMutableDictionary *iconImageCache;
+    TYImageLoader *imageLoader;
 }
 
 - (id)initWith:(NSMenu *)aMenu imageLoader:(TYImageLoader *)anImageLoader

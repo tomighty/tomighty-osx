@@ -10,8 +10,8 @@
 
 @implementation TYMockEventBus
 {
-    __strong NSMutableDictionary *subscribers;
-    __strong NSMutableArray *publishedEvents;
+    NSMutableDictionary *subscribers;
+    NSMutableArray *publishedEvents;
 }
 
 - (id)init

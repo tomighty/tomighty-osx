@@ -15,7 +15,7 @@
 
 @implementation TYPreferencesWindowController
 {
-    __strong id <TYPreferences> preferences;
+    id <TYPreferences> preferences;
 }
 
 - (id)initWithPreferences:(id <TYPreferences>)aPreferences

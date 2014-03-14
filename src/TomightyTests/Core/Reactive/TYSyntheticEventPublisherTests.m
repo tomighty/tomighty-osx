@@ -23,9 +23,9 @@
 
 @implementation TYSyntheticEventPublisherTests
 {
-    __strong TYSyntheticEventPublisher *syntheticEventPublisher;
-    __strong TYMockEventBus *eventBus;
-    __strong id <TYTimerContext> timerContext;
+    TYSyntheticEventPublisher *syntheticEventPublisher;
+    TYMockEventBus *eventBus;
+    id <TYTimerContext> timerContext;
 }
 
 - (void)setUp

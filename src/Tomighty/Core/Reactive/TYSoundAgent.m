@@ -10,8 +10,8 @@
 
 @implementation TYSoundAgent
 {
-    __strong id <TYSoundPlayer> soundPlayer;
-    __strong id <TYPreferences> preferences;
+    id <TYSoundPlayer> soundPlayer;
+    id <TYPreferences> preferences;
 }
 
 - (id)initWith:(id <TYSoundPlayer>)aSoundPlayer preferences:(id <TYPreferences>)aPreferences

@@ -24,9 +24,9 @@
 
 @implementation TYUserInterfaceAgentTests
 {
-    __strong id <TYAppUI> ui;
-    __strong TYMockEventBus *eventBus;
-    __strong TYUserInterfaceAgent *uiAgent;
+    id <TYAppUI> ui;
+    TYMockEventBus *eventBus;
+    TYUserInterfaceAgent *uiAgent;
 }
 
 - (void)setUp

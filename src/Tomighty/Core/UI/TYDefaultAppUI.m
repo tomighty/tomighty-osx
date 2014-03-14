@@ -9,8 +9,8 @@
 
 @implementation TYDefaultAppUI
 {
-    __strong id <TYStatusMenu> statusMenu;
-    __strong id <TYStatusIcon> statusIcon;
+    id <TYStatusMenu> statusMenu;
+    id <TYStatusIcon> statusIcon;
 }
 
 - (id)initWith:(id <TYStatusMenu>)aStatusMenu statusIcon:(id<TYStatusIcon>)aStatusIcon

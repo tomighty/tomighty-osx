@@ -10,7 +10,7 @@
 @implementation TYPublishedEvent
 {
     TYEventType eventType;
-    __strong id eventData;
+    id eventData;
 }
 
 - (id)initWith:(TYEventType)anEventType data:(id)someEventData

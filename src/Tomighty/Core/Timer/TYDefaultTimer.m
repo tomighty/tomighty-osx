@@ -11,9 +11,9 @@
 
 @implementation TYDefaultTimer
 {
-    __strong id<TYEventBus> eventBus;
-    __strong id<TYSystemTimer> systemTimer;
-    __strong id<TYTimerContext> currentTimerContext;
+    id<TYEventBus> eventBus;
+    id<TYSystemTimer> systemTimer;
+    id<TYTimerContext> currentTimerContext;
 }
 
 + (id)createWith:(id<TYEventBus>)anEventBus systemTimer:(id<TYSystemTimer>)aSystemTimer

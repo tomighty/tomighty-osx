@@ -13,8 +13,8 @@ NSString * const SOUND_TIMER_GOES_OFF = @"timer_goes_off";
 
 @implementation TYDefaultSoundPlayer
 {
-    __strong NSMutableDictionary *soundClipCache;
-    __strong NSSound *currentLoopingSoundClip;
+    NSMutableDictionary *soundClipCache;
+    NSSound *currentLoopingSoundClip;
 }
 
 - (id)init

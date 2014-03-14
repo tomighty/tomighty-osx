@@ -18,8 +18,8 @@
 
 @implementation TYPreferencesTests
 {
-    __strong id <TYPreferences> preferences;
-    __strong TYMockEventBus *eventBus;
+    id <TYPreferences> preferences;
+    TYMockEventBus *eventBus;
 }
 
 - (void)setUp

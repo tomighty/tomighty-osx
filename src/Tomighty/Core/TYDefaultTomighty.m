@@ -14,9 +14,9 @@
 {
     int pomodoroCount;
     
-    __strong id <TYTimer> timer;
-    __strong id <TYPreferences> preferences;
-    __strong id <TYEventBus> eventBus;
+    id <TYTimer> timer;
+    id <TYPreferences> preferences;
+    id <TYEventBus> eventBus;
 }
 
 - (id)initWith:(id <TYTimer>)aTimer

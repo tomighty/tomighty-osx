@@ -10,7 +10,7 @@
 
 @implementation TYUserInterfaceAgent
 {
-    __strong id <TYAppUI> ui;
+    id <TYAppUI> ui;
 }
 
 - (id)initWith:(id <TYAppUI>)theAppUI

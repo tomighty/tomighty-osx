@@ -24,9 +24,9 @@
 
 @implementation TYAppUITests
 {
-    __strong id <TYAppUI> appUi;
-    __strong id <TYStatusMenu> statusMenu;
-    __strong id <TYStatusIcon> statusIcon;
+    id <TYAppUI> appUi;
+    id <TYStatusMenu> statusMenu;
+    id <TYStatusIcon> statusIcon;
 }
 
 - (void)setUp

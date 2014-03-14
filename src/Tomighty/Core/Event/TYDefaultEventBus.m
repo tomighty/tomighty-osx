@@ -9,7 +9,7 @@
 
 @implementation TYDefaultEventBus
 {
-    __strong NSMutableDictionary *map;
+    NSMutableDictionary *map;
 }
 
 - (id)init

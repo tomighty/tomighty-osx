@@ -25,11 +25,11 @@
 
 @implementation TYSoundAgentTests
 {
-    __strong TYSoundAgent *soundAgent;
-    __strong TYMockEventBus *eventBus;
-    __strong id <TYPreferences> preferences;
-    __strong id <TYSoundPlayer> soundPlayer;
-    __strong id <TYTimerContext> timerContext;
+    TYSoundAgent *soundAgent;
+    TYMockEventBus *eventBus;
+    id <TYPreferences> preferences;
+    id <TYSoundPlayer> soundPlayer;
+    id <TYTimerContext> timerContext;
 }
 
 - (void)setUp
