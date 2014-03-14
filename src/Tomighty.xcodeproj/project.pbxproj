@@ -10,9 +10,11 @@
 		300AE29218D1444400264309 /* PreferencesWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 300AE29018D1444400264309 /* PreferencesWindow.xib */; };
 		300AE29518D1471F00264309 /* TYPreferencesWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 300AE29418D1471F00264309 /* TYPreferencesWindowController.m */; };
 		301A007918BD417200B8DEE0 /* TYDefaultTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 301A007818BD417200B8DEE0 /* TYDefaultTimer.m */; };
+		3025AE5518D35B2B00BC4207 /* TYSoundAgent.m in Sources */ = {isa = PBXBuildFile; fileRef = 3025AE5218D35B2B00BC4207 /* TYSoundAgent.m */; };
+		3025AE5618D35B2B00BC4207 /* TYUserInterfaceAgent.m in Sources */ = {isa = PBXBuildFile; fileRef = 3025AE5418D35B2B00BC4207 /* TYUserInterfaceAgent.m */; };
+		3025AE5918D35B3700BC4207 /* TYSyntheticEventPublisher.m in Sources */ = {isa = PBXBuildFile; fileRef = 3025AE5818D35B3700BC4207 /* TYSyntheticEventPublisher.m */; };
 		3032EEE318C6AF2C00070BD2 /* TYDefaultSoundPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3032EEE218C6AF2C00070BD2 /* TYDefaultSoundPlayer.m */; };
 		3032EEE718C6B98800070BD2 /* TYSyntheticEventPublisherTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3032EEE618C6B98800070BD2 /* TYSyntheticEventPublisherTests.m */; };
-		3032EEEA18C6BCBC00070BD2 /* TYSyntheticEventPublisher.m in Sources */ = {isa = PBXBuildFile; fileRef = 3032EEE918C6BCBC00070BD2 /* TYSyntheticEventPublisher.m */; };
 		3032EEED18C6C28700070BD2 /* TYPublishedEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 3032EEEC18C6C28700070BD2 /* TYPublishedEvent.m */; };
 		3039D2F518C4DF7C008689C9 /* TYDefaultEventBus.m in Sources */ = {isa = PBXBuildFile; fileRef = 3039D2F318C4DF7C008689C9 /* TYDefaultEventBus.m */; };
 		3039D2F818C4DFCE008689C9 /* TYEventBusTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3039D2F718C4DFCE008689C9 /* TYEventBusTests.m */; };
@@ -32,11 +34,9 @@
 		3054083518D259F0009523AC /* OCHamcrest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3054083418D259F0009523AC /* OCHamcrest.framework */; };
 		3054083618D266DE009523AC /* OCHamcrest.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3054083418D259F0009523AC /* OCHamcrest.framework */; };
 		3054083718D266DE009523AC /* OCMockito.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3054083218D259E2009523AC /* OCMockito.framework */; };
-		305D161918CD030400CE6A34 /* TYUserInterfaceAgent.m in Sources */ = {isa = PBXBuildFile; fileRef = 305D161818CD030400CE6A34 /* TYUserInterfaceAgent.m */; };
 		305D161E18CD13F100CE6A34 /* tomighty.icns in Resources */ = {isa = PBXBuildFile; fileRef = 305D161D18CD13F100CE6A34 /* tomighty.icns */; };
 		309394E718D0C76100D6C71A /* TYDefaultStatusIcon.m in Sources */ = {isa = PBXBuildFile; fileRef = 309394E618D0C76100D6C71A /* TYDefaultStatusIcon.m */; };
 		309394EA18D0CBEC00D6C71A /* TYImageLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 309394E918D0CBEC00D6C71A /* TYImageLoader.m */; };
-		309C5B1D18C636BB001B4359 /* TYSoundAgent.m in Sources */ = {isa = PBXBuildFile; fileRef = 309C5B1B18C636BB001B4359 /* TYSoundAgent.m */; };
 		309C5B2018C636FA001B4359 /* TYSoundAgentTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 309C5B1F18C636FA001B4359 /* TYSoundAgentTests.m */; };
 		309C5B2218C63742001B4359 /* TYUserInterfaceAgentTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 309C5B2118C63742001B4359 /* TYUserInterfaceAgentTests.m */; };
 		309ECAFD18C36F6300B270BF /* TYMockTimerContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 309ECAFC18C36F6300B270BF /* TYMockTimerContext.m */; };
@@ -96,11 +96,15 @@
 		301A007718BD417200B8DEE0 /* TYDefaultTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TYDefaultTimer.h; path = Core/Timer/TYDefaultTimer.h; sourceTree = "<group>"; };
 		301A007818BD417200B8DEE0 /* TYDefaultTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TYDefaultTimer.m; path = Core/Timer/TYDefaultTimer.m; sourceTree = "<group>"; };
 		301A007B18BD421500B8DEE0 /* TYTimerContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TYTimerContext.h; path = Core/Timer/TYTimerContext.h; sourceTree = "<group>"; };
+		3025AE5118D35B2B00BC4207 /* TYSoundAgent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TYSoundAgent.h; path = Core/Agent/TYSoundAgent.h; sourceTree = "<group>"; };
+		3025AE5218D35B2B00BC4207 /* TYSoundAgent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TYSoundAgent.m; path = Core/Agent/TYSoundAgent.m; sourceTree = "<group>"; };
+		3025AE5318D35B2B00BC4207 /* TYUserInterfaceAgent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TYUserInterfaceAgent.h; path = Core/Agent/TYUserInterfaceAgent.h; sourceTree = "<group>"; };
+		3025AE5418D35B2B00BC4207 /* TYUserInterfaceAgent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TYUserInterfaceAgent.m; path = Core/Agent/TYUserInterfaceAgent.m; sourceTree = "<group>"; };
+		3025AE5718D35B3700BC4207 /* TYSyntheticEventPublisher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TYSyntheticEventPublisher.h; path = Core/Event/TYSyntheticEventPublisher.h; sourceTree = "<group>"; };
+		3025AE5818D35B3700BC4207 /* TYSyntheticEventPublisher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TYSyntheticEventPublisher.m; path = Core/Event/TYSyntheticEventPublisher.m; sourceTree = "<group>"; };
 		3032EEE118C6AF2C00070BD2 /* TYDefaultSoundPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TYDefaultSoundPlayer.h; path = Core/Sound/TYDefaultSoundPlayer.h; sourceTree = "<group>"; };
 		3032EEE218C6AF2C00070BD2 /* TYDefaultSoundPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TYDefaultSoundPlayer.m; path = Core/Sound/TYDefaultSoundPlayer.m; sourceTree = "<group>"; };
 		3032EEE618C6B98800070BD2 /* TYSyntheticEventPublisherTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TYSyntheticEventPublisherTests.m; path = Core/Reactive/TYSyntheticEventPublisherTests.m; sourceTree = "<group>"; };
-		3032EEE818C6BCBC00070BD2 /* TYSyntheticEventPublisher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TYSyntheticEventPublisher.h; path = Core/Reactive/TYSyntheticEventPublisher.h; sourceTree = "<group>"; };
-		3032EEE918C6BCBC00070BD2 /* TYSyntheticEventPublisher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TYSyntheticEventPublisher.m; path = Core/Reactive/TYSyntheticEventPublisher.m; sourceTree = "<group>"; };
 		3032EEEB18C6C28700070BD2 /* TYPublishedEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TYPublishedEvent.h; path = Mock/TYPublishedEvent.h; sourceTree = "<group>"; };
 		3032EEEC18C6C28700070BD2 /* TYPublishedEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TYPublishedEvent.m; path = Mock/TYPublishedEvent.m; sourceTree = "<group>"; };
 		3039D2F218C4DF7C008689C9 /* TYDefaultEventBus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TYDefaultEventBus.h; path = Core/Event/TYDefaultEventBus.h; sourceTree = "<group>"; };
@@ -133,15 +137,11 @@
 		3054083418D259F0009523AC /* OCHamcrest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OCHamcrest.framework; sourceTree = "<group>"; };
 		305D161418CCEE3500CE6A34 /* TYTimer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TYTimer.h; path = Core/Timer/TYTimer.h; sourceTree = "<group>"; };
 		305D161618CD02E100CE6A34 /* TYAppUI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TYAppUI.h; path = Core/UI/TYAppUI.h; sourceTree = "<group>"; };
-		305D161718CD030400CE6A34 /* TYUserInterfaceAgent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TYUserInterfaceAgent.h; path = Core/Reactive/TYUserInterfaceAgent.h; sourceTree = "<group>"; };
-		305D161818CD030400CE6A34 /* TYUserInterfaceAgent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TYUserInterfaceAgent.m; path = Core/Reactive/TYUserInterfaceAgent.m; sourceTree = "<group>"; };
 		305D161D18CD13F100CE6A34 /* tomighty.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = tomighty.icns; sourceTree = "<group>"; };
 		309394E518D0C76100D6C71A /* TYDefaultStatusIcon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TYDefaultStatusIcon.h; path = Core/UI/TYDefaultStatusIcon.h; sourceTree = "<group>"; };
 		309394E618D0C76100D6C71A /* TYDefaultStatusIcon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TYDefaultStatusIcon.m; path = Core/UI/TYDefaultStatusIcon.m; sourceTree = "<group>"; };
 		309394E818D0CBEC00D6C71A /* TYImageLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TYImageLoader.h; path = Core/UI/TYImageLoader.h; sourceTree = "<group>"; };
 		309394E918D0CBEC00D6C71A /* TYImageLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TYImageLoader.m; path = Core/UI/TYImageLoader.m; sourceTree = "<group>"; };
-		309C5B1A18C636BB001B4359 /* TYSoundAgent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TYSoundAgent.h; path = Core/Reactive/TYSoundAgent.h; sourceTree = "<group>"; };
-		309C5B1B18C636BB001B4359 /* TYSoundAgent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TYSoundAgent.m; path = Core/Reactive/TYSoundAgent.m; sourceTree = "<group>"; };
 		309C5B1F18C636FA001B4359 /* TYSoundAgentTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TYSoundAgentTests.m; path = Core/Reactive/TYSoundAgentTests.m; sourceTree = "<group>"; };
 		309C5B2118C63742001B4359 /* TYUserInterfaceAgentTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TYUserInterfaceAgentTests.m; path = Core/Reactive/TYUserInterfaceAgentTests.m; sourceTree = "<group>"; };
 		309ECAFB18C36F6300B270BF /* TYMockTimerContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TYMockTimerContext.h; path = Mock/TYMockTimerContext.h; sourceTree = "<group>"; };
@@ -221,9 +221,22 @@
 			name = Timer;
 			sourceTree = "<group>";
 		};
+		3025AE5018D35AA000BC4207 /* Agent */ = {
+			isa = PBXGroup;
+			children = (
+				3025AE5118D35B2B00BC4207 /* TYSoundAgent.h */,
+				3025AE5218D35B2B00BC4207 /* TYSoundAgent.m */,
+				3025AE5318D35B2B00BC4207 /* TYUserInterfaceAgent.h */,
+				3025AE5418D35B2B00BC4207 /* TYUserInterfaceAgent.m */,
+			);
+			name = Agent;
+			sourceTree = "<group>";
+		};
 		3039D2F118C4DF47008689C9 /* Event */ = {
 			isa = PBXGroup;
 			children = (
+				3025AE5718D35B3700BC4207 /* TYSyntheticEventPublisher.h */,
+				3025AE5818D35B3700BC4207 /* TYSyntheticEventPublisher.m */,
 				3039D2F418C4DF7C008689C9 /* TYEventBus.h */,
 				3039D2F218C4DF7C008689C9 /* TYDefaultEventBus.h */,
 				3039D2F318C4DF7C008689C9 /* TYDefaultEventBus.m */,
@@ -349,6 +362,7 @@
 		304AF84918BD117200A2EA74 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				3025AE5018D35AA000BC4207 /* Agent */,
 				3039D2F118C4DF47008689C9 /* Event */,
 				30415FAF18C51B4D0069FAE3 /* Preferences */,
 				309C5B1918C635DD001B4359 /* Reactive */,
@@ -401,12 +415,6 @@
 		309C5B1918C635DD001B4359 /* Reactive */ = {
 			isa = PBXGroup;
 			children = (
-				309C5B1A18C636BB001B4359 /* TYSoundAgent.h */,
-				309C5B1B18C636BB001B4359 /* TYSoundAgent.m */,
-				3032EEE818C6BCBC00070BD2 /* TYSyntheticEventPublisher.h */,
-				3032EEE918C6BCBC00070BD2 /* TYSyntheticEventPublisher.m */,
-				305D161718CD030400CE6A34 /* TYUserInterfaceAgent.h */,
-				305D161818CD030400CE6A34 /* TYUserInterfaceAgent.m */,
 			);
 			name = Reactive;
 			sourceTree = "<group>";
@@ -604,19 +612,19 @@
 			files = (
 				304AF82218BD04BE00A2EA74 /* main.m in Sources */,
 				30B89F9E18C3855600C1DD2B /* TYDefaultTimerContext.m in Sources */,
+				3025AE5518D35B2B00BC4207 /* TYSoundAgent.m in Sources */,
 				309ECB0418C3828B00B270BF /* TYDefaultSystemTimer.m in Sources */,
 				3032EEE318C6AF2C00070BD2 /* TYDefaultSoundPlayer.m in Sources */,
-				3032EEEA18C6BCBC00070BD2 /* TYSyntheticEventPublisher.m in Sources */,
 				300AE29518D1471F00264309 /* TYPreferencesWindowController.m in Sources */,
 				30DB72FA18CD54D200293915 /* TYDefaultTomighty.m in Sources */,
 				301A007918BD417200B8DEE0 /* TYDefaultTimer.m in Sources */,
 				309394E718D0C76100D6C71A /* TYDefaultStatusIcon.m in Sources */,
-				305D161918CD030400CE6A34 /* TYUserInterfaceAgent.m in Sources */,
-				309C5B1D18C636BB001B4359 /* TYSoundAgent.m in Sources */,
 				30C383E018CFE02100FABFFE /* TYDefaultAppUI.m in Sources */,
 				30415FB618C51C290069FAE3 /* TYUserDefaultsPreferences.m in Sources */,
 				3039D2F518C4DF7C008689C9 /* TYDefaultEventBus.m in Sources */,
 				309394EA18D0CBEC00D6C71A /* TYImageLoader.m in Sources */,
+				3025AE5618D35B2B00BC4207 /* TYUserInterfaceAgent.m in Sources */,
+				3025AE5918D35B3700BC4207 /* TYSyntheticEventPublisher.m in Sources */,
 				304AF82918BD04BE00A2EA74 /* TYAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
