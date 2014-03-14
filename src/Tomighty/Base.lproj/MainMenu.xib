@@ -29,17 +29,17 @@
                 <menuItem title="00:00" enabled="NO" id="GWx-hi-EB7">
                     <modifierMask key="keyEquivalentModifierMask"/>
                 </menuItem>
-                <menuItem title="Stop" enabled="NO" id="BaX-XO-ewG">
+                <menuItem title="Stop" id="BaX-XO-ewG">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
                         <action selector="stopTimer:" target="494" id="V9i-4H-J11"/>
                     </connections>
                 </menuItem>
                 <menuItem isSeparatorItem="YES" id="9yJ-7U-nBE"/>
-                <menuItem title="No full pomodoro yet" enabled="NO" id="zxM-G5-msF">
+                <menuItem title="Pomodoro count text" enabled="NO" id="zxM-G5-msF">
                     <modifierMask key="keyEquivalentModifierMask"/>
                 </menuItem>
-                <menuItem title="Reset count" enabled="NO" id="oaC-Hq-BIZ">
+                <menuItem title="Reset count" id="oaC-Hq-BIZ">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
                         <action selector="resetPomodoroCount:" target="494" id="0Zn-wy-1Nw"/>

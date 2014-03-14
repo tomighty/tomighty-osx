@@ -66,6 +66,8 @@
     [userInterfaceAgent updateAppUiInResponseToEventsFrom:eventBus];
     
     [self initMenuItemsIcons:imageLoader];
+    
+    [eventBus publish:APP_INIT data:nil];
 }
 
 - (void)initMenuItemsIcons:(TYImageLoader *)imageLoader {

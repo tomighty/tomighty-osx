@@ -44,6 +44,24 @@
     [super tearDown];
 }
 
+- (void)test_switch_ui_to_idle_state_when_application_is_initialized
+{
+    [eventBus publish:APP_INIT data:nil];
+    [verify(ui) switchToIdleState];
+}
+
+- (void)test_update_remaining_time_to_zero_when_application_is_initialized
+{
+    [eventBus publish:APP_INIT data:nil];
+    [verify(ui) updateRemainingTime:0];
+}
+
+- (void)test_update_pomodoro_count_to_zero_when_application_is_initialized
+{
+    [eventBus publish:APP_INIT data:nil];
+    [verify(ui) updatePomodoroCount:0];
+}
+
 - (void)test_switch_ui_to_idle_state_when_timer_stops
 {
     [eventBus publish:TIMER_STOP data:nil];

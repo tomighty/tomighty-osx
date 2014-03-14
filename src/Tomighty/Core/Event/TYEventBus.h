@@ -9,6 +9,8 @@
 
 typedef NS_ENUM(NSInteger, TYEventType)
 {
+    APP_INIT,
+    
     TIMER_START,
     TIMER_TICK,
     TIMER_STOP,

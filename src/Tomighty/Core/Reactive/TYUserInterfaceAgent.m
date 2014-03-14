@@ -25,6 +25,12 @@
 
 - (void)updateAppUiInResponseToEventsFrom:(id <TYEventBus>)eventBus
 {
+    [eventBus subscribeTo:APP_INIT subscriber:^(id eventData) {
+        [ui switchToIdleState];
+        [ui updateRemainingTime:0];
+        [ui updatePomodoroCount:0];
+    }];
+
     [eventBus subscribeTo:POMODORO_START subscriber:^(id eventData) {
         [ui switchToPomodoroState];
     }];
