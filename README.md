@@ -6,6 +6,11 @@ Available for download at http://www.tomighty.org
 This repository contains the source code for the native OSX version of Tomighty.
 If you are looking for the source code of the multiplatform (Java) version, go to https://github.com/ccidral/tomighty
 
+Architecture
+============
+
+![](/docs/tomighty_architecture.png)
+
 Development Workflow
 ====================
 
