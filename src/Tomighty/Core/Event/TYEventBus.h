@@ -9,24 +9,23 @@
 
 typedef NS_ENUM(NSInteger, TYEventType)
 {
-    APP_INIT,
+    APP_INIT                  = 0,
     
-    TIMER_START,
-    TIMER_TICK,
-    TIMER_STOP,
-    TIMER_ABORT,
-    TIMER_GOES_OFF,
+    TIMER_START               = 1,
+    TIMER_TICK                = 2,
+    TIMER_STOP                = 3,
+    TIMER_ABORT               = 4,
+    TIMER_GOES_OFF            = 5,
     
-    POMODORO_START,
-    BREAK_START,
-    SHORT_BREAK_START,
-    LONG_BREAK_START,
+    POMODORO_START            = 6,
+    BREAK_START               = 7,
+    SHORT_BREAK_START         = 8,
+    LONG_BREAK_START          = 9,
     
-    POMODORO_COMPLETE,
+    POMODORO_COMPLETE         = 10,
+    POMODORO_COUNT_CHANGE     = 11,
     
-    POMODORO_COUNT_CHANGE,
-    
-    PREFERENCE_CHANGE
+    PREFERENCE_CHANGE         = 12
 };
 
 typedef void (^TYEventSubscriber)(id eventData);
