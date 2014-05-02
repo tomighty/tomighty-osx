@@ -25,6 +25,7 @@
 @implementation TYUserInterfaceAgentTests
 {
     id <TYAppUI> ui;
+    id <TYPreferences> preferences;
     TYMockEventBus *eventBus;
     TYUserInterfaceAgent *uiAgent;
 }
@@ -33,8 +34,11 @@
 {
     [super setUp];
     ui = mockProtocol(@protocol(TYAppUI));
+    preferences = mockProtocol(@protocol(TYPreferences));
+    [given([preferences getInt:PREF_STATUS_ICON_TIME_FORMAT]) willReturnInt:PREF_STATUS_ICON_TIME_FORMAT_MINUTES];
+    
     eventBus = [[TYMockEventBus alloc] init];
-    uiAgent = [[TYUserInterfaceAgent alloc] initWith:ui];
+    uiAgent = [[TYUserInterfaceAgent alloc] initWith:ui preferences:preferences];
     
     [uiAgent updateAppUiInResponseToEventsFrom:eventBus];
 }
@@ -53,13 +57,19 @@
 - (void)test_update_remaining_time_to_zero_when_application_is_initialized
 {
     [eventBus publish:APP_INIT data:nil];
-    [verify(ui) updateRemainingTime:0];
+    [verify(ui) updateRemainingTime:0 withMode:TYAppUIRemainingTimeModeDefault];
 }
 
 - (void)test_update_pomodoro_count_to_zero_when_application_is_initialized
 {
     [eventBus publish:APP_INIT data:nil];
     [verify(ui) updatePomodoroCount:0];
+}
+
+- (void)test_read_status_text_format_from_preferences_when_initialized
+{
+    [eventBus publish:APP_INIT data:nil];
+    [verify(ui) setStatusIconTextFormat:TYAppUIStatusIconTextFormatMinutes];
 }
 
 - (void)test_switch_ui_to_idle_state_when_timer_stops
@@ -93,7 +103,17 @@
     [given([timerContext getRemainingSeconds]) willReturnInt:270];
     
     [eventBus publish:TIMER_TICK data:timerContext];
-    [verify(ui) updateRemainingTime:[timerContext getRemainingSeconds]];
+    [verify(ui) updateRemainingTime:[timerContext getRemainingSeconds] withMode:TYAppUIRemainingTimeModeDefault];
+}
+
+- (void)test_update_remaining_time_when_timer_starts
+{
+    id <TYTimerContext> timerContext = mockProtocol(@protocol(TYTimerContext));
+    
+    [given([timerContext getRemainingSeconds]) willReturnInt:270];
+    
+    [eventBus publish:TIMER_START data:timerContext];
+    [verify(ui) updateRemainingTime:[timerContext getRemainingSeconds] withMode:TYAppUIRemainingTimeModeStart];
 }
 
 - (void)test_update_pomodoro_count_when_it_changes
@@ -101,6 +121,15 @@
     NSNumber *pomodoroCount = [NSNumber numberWithInt:3];
     [eventBus publish:POMODORO_COUNT_CHANGE data:pomodoroCount];
     [verify(ui) updatePomodoroCount:3];
+}
+
+- (void)test_change_status_text_format_when_preferences_change
+{
+    [given([preferences getInt:PREF_STATUS_ICON_TIME_FORMAT]) willReturnInt:PREF_STATUS_ICON_TIME_FORMAT_SECONDS];
+
+    [eventBus publish:PREFERENCE_CHANGE data:PREF_STATUS_ICON_TIME_FORMAT];
+    
+    [verify(ui) setStatusIconTextFormat:TYAppUIStatusIconTextFormatSeconds];
 }
 
 @end

@@ -11,14 +11,16 @@
 @implementation TYUserInterfaceAgent
 {
     id <TYAppUI> ui;
+    id <TYPreferences> preferences;
 }
 
-- (id)initWith:(id <TYAppUI>)theAppUI
+- (id)initWith:(id <TYAppUI>)theAppUI preferences:(id <TYPreferences>)aPreferences
 {
     self = [super init];
     if(self)
     {
         ui = theAppUI;
+        preferences = aPreferences;
     }
     return self;
 }
@@ -27,7 +29,8 @@
 {
     [eventBus subscribeTo:APP_INIT subscriber:^(id eventData) {
         [ui switchToIdleState];
-        [ui updateRemainingTime:0];
+        [ui updateRemainingTime:0 withMode:TYAppUIRemainingTimeModeDefault];
+        [ui setStatusIconTextFormat:(TYAppUIStatusIconTextFormat) [preferences getInt:PREF_STATUS_ICON_TIME_FORMAT]];
         [ui updatePomodoroCount:0];
     }];
 
@@ -50,9 +53,19 @@
     [eventBus subscribeTo:TIMER_TICK subscriber:^(id <TYTimerContext> timerContext) {
         [ui updateRemainingTime:[timerContext getRemainingSeconds] withMode:TYAppUIRemainingTimeModeDefault];
     }];
+
+    [eventBus subscribeTo:TIMER_START subscriber:^(id <TYTimerContext> timerContext) {
+        [ui updateRemainingTime:[timerContext getRemainingSeconds] withMode:TYAppUIRemainingTimeModeStart];
+    }];
     
     [eventBus subscribeTo:POMODORO_COUNT_CHANGE subscriber:^(NSNumber *pomodoroCount) {
         [ui updatePomodoroCount:[pomodoroCount intValue]];
+    }];
+
+    [eventBus subscribeTo:PREFERENCE_CHANGE subscriber:^(NSString *preferenceKey) {
+        if ([preferenceKey isEqualToString:PREF_STATUS_ICON_TIME_FORMAT]) {
+            [ui setStatusIconTextFormat:(TYAppUIStatusIconTextFormat) [preferences getInt:PREF_STATUS_ICON_TIME_FORMAT]];
+        }
     }];
 }
 

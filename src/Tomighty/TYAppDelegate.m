@@ -54,11 +54,11 @@
     id <TYStatusIcon> statusIcon = [[TYDefaultStatusIcon alloc] initWith:self.statusMenu imageLoader:imageLoader];
     id <TYStatusMenu> statusMenu = self;
     id <TYAppUI> appUi = [[TYDefaultAppUI alloc] initWith:statusMenu statusIcon:statusIcon];
-    
+
     preferences = [[TYUserDefaultsPreferences alloc] initWith:eventBus];
     soundAgent = [[TYSoundAgent alloc] initWith:soundPlayer preferences:preferences];
     syntheticEventPublisher = [[TYSyntheticEventPublisher alloc] init];
-    userInterfaceAgent = [[TYUserInterfaceAgent alloc] initWith:appUi];
+    userInterfaceAgent = [[TYUserInterfaceAgent alloc] initWith:appUi preferences:preferences];
     tomighty = [[TYDefaultTomighty alloc] initWith:timer preferences:preferences eventBus:eventBus];
     
     [syntheticEventPublisher publishSyntheticEventsInResponseToOtherEventsFrom:eventBus];
