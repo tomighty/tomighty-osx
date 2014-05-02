@@ -47,13 +47,11 @@
         [ui switchToLongBreakState];
     }];
     
-    [eventBus subscribeTo:TIMER_TICK subscriber:^(id eventData) {
-        id <TYTimerContext> timerContext = eventData;
-        [ui updateRemainingTime:[timerContext getRemainingSeconds]];
+    [eventBus subscribeTo:TIMER_TICK subscriber:^(id <TYTimerContext> timerContext) {
+        [ui updateRemainingTime:[timerContext getRemainingSeconds] withMode:TYAppUIRemainingTimeModeDefault];
     }];
     
-    [eventBus subscribeTo:POMODORO_COUNT_CHANGE subscriber:^(id eventData) {
-        NSNumber *pomodoroCount = eventData;
+    [eventBus subscribeTo:POMODORO_COUNT_CHANGE subscriber:^(NSNumber *pomodoroCount) {
         [ui updatePomodoroCount:[pomodoroCount intValue]];
     }];
 }
