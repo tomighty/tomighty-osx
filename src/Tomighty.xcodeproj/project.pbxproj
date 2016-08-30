@@ -1,896 +1,2773 @@
-// !$*UTF8*$!
-{
-	archiveVersion = 1;
-	classes = {
-	};
-	objectVersion = 46;
-	objects = {
-
-/* Begin PBXBuildFile section */
-		300AE29218D1444400264309 /* PreferencesWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 300AE29018D1444400264309 /* PreferencesWindow.xib */; };
-		300AE29518D1471F00264309 /* TYPreferencesWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 300AE29418D1471F00264309 /* TYPreferencesWindowController.m */; };
-		301A007918BD417200B8DEE0 /* TYDefaultTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 301A007818BD417200B8DEE0 /* TYDefaultTimer.m */; };
-		3025AE5518D35B2B00BC4207 /* TYSoundAgent.m in Sources */ = {isa = PBXBuildFile; fileRef = 3025AE5218D35B2B00BC4207 /* TYSoundAgent.m */; };
-		3025AE5618D35B2B00BC4207 /* TYUserInterfaceAgent.m in Sources */ = {isa = PBXBuildFile; fileRef = 3025AE5418D35B2B00BC4207 /* TYUserInterfaceAgent.m */; };
-		3025AE5918D35B3700BC4207 /* TYSyntheticEventPublisher.m in Sources */ = {isa = PBXBuildFile; fileRef = 3025AE5818D35B3700BC4207 /* TYSyntheticEventPublisher.m */; };
-		3025AE5D18D35C0D00BC4207 /* TYSoundAgentTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3025AE5B18D35C0D00BC4207 /* TYSoundAgentTests.m */; };
-		3025AE5E18D35C0D00BC4207 /* TYUserInterfaceAgentTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3025AE5C18D35C0D00BC4207 /* TYUserInterfaceAgentTests.m */; };
-		3025AE6018D35C1700BC4207 /* TYSyntheticEventPublisherTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3025AE5F18D35C1700BC4207 /* TYSyntheticEventPublisherTests.m */; };
-		3032EEE318C6AF2C00070BD2 /* TYDefaultSoundPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3032EEE218C6AF2C00070BD2 /* TYDefaultSoundPlayer.m */; };
-		3032EEED18C6C28700070BD2 /* TYPublishedEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 3032EEEC18C6C28700070BD2 /* TYPublishedEvent.m */; };
-		3039D2F518C4DF7C008689C9 /* TYDefaultEventBus.m in Sources */ = {isa = PBXBuildFile; fileRef = 3039D2F318C4DF7C008689C9 /* TYDefaultEventBus.m */; };
-		3039D2F818C4DFCE008689C9 /* TYEventBusTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3039D2F718C4DFCE008689C9 /* TYEventBusTests.m */; };
-		30415FAE18C5109D0069FAE3 /* TYPreferencesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 30415FAD18C5109D0069FAE3 /* TYPreferencesTests.m */; };
-		30415FB618C51C290069FAE3 /* TYUserDefaultsPreferences.m in Sources */ = {isa = PBXBuildFile; fileRef = 30415FB518C51C290069FAE3 /* TYUserDefaultsPreferences.m */; };
-		304AF81618BD04BE00A2EA74 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 304AF81518BD04BE00A2EA74 /* Cocoa.framework */; };
-		304AF82018BD04BE00A2EA74 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 304AF81E18BD04BE00A2EA74 /* InfoPlist.strings */; };
-		304AF82218BD04BE00A2EA74 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 304AF82118BD04BE00A2EA74 /* main.m */; };
-		304AF82618BD04BE00A2EA74 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 304AF82418BD04BE00A2EA74 /* Credits.rtf */; };
-		304AF82918BD04BE00A2EA74 /* TYAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 304AF82818BD04BE00A2EA74 /* TYAppDelegate.m */; };
-		304AF82C18BD04BE00A2EA74 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 304AF82A18BD04BE00A2EA74 /* MainMenu.xib */; };
-		304AF82E18BD04BE00A2EA74 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 304AF82D18BD04BE00A2EA74 /* Images.xcassets */; };
-		304AF83518BD04BF00A2EA74 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 304AF83418BD04BE00A2EA74 /* XCTest.framework */; };
-		304AF83618BD04BF00A2EA74 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 304AF81518BD04BE00A2EA74 /* Cocoa.framework */; };
-		304AF83E18BD04BF00A2EA74 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 304AF83C18BD04BF00A2EA74 /* InfoPlist.strings */; };
-		305D161E18CD13F100CE6A34 /* tomighty.icns in Resources */ = {isa = PBXBuildFile; fileRef = 305D161D18CD13F100CE6A34 /* tomighty.icns */; };
-		309394E718D0C76100D6C71A /* TYDefaultStatusIcon.m in Sources */ = {isa = PBXBuildFile; fileRef = 309394E618D0C76100D6C71A /* TYDefaultStatusIcon.m */; };
-		309394EA18D0CBEC00D6C71A /* TYImageLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 309394E918D0CBEC00D6C71A /* TYImageLoader.m */; };
-		309ECAFD18C36F6300B270BF /* TYMockTimerContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 309ECAFC18C36F6300B270BF /* TYMockTimerContext.m */; };
-		309ECB0418C3828B00B270BF /* TYDefaultSystemTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 309ECB0218C3828B00B270BF /* TYDefaultSystemTimer.m */; };
-		309ECB0818C382CF00B270BF /* TYTimerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 309ECB0718C382CF00B270BF /* TYTimerTests.m */; };
-		309ECB0A18C3830B00B270BF /* TYTimerContextTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 309ECB0918C3830B00B270BF /* TYTimerContextTests.m */; };
-		30B89F9E18C3855600C1DD2B /* TYDefaultTimerContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 30B89F9D18C3855600C1DD2B /* TYDefaultTimerContext.m */; };
-		30BD314318C556EE00428B1E /* TYMockEventBus.m in Sources */ = {isa = PBXBuildFile; fileRef = 30BD314218C556EE00428B1E /* TYMockEventBus.m */; };
-		30C383C918CFC9FC00FABFFE /* icon-clock.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 30C383BF18CFC9FC00FABFFE /* icon-clock.tiff */; };
-		30C383CA18CFC9FC00FABFFE /* icon-start-long-break.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 30C383C018CFC9FC00FABFFE /* icon-start-long-break.tiff */; };
-		30C383CB18CFC9FC00FABFFE /* icon-start-pomodoro.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 30C383C118CFC9FC00FABFFE /* icon-start-pomodoro.tiff */; };
-		30C383CC18CFC9FC00FABFFE /* icon-start-short-break.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 30C383C218CFC9FC00FABFFE /* icon-start-short-break.tiff */; };
-		30C383CD18CFC9FC00FABFFE /* icon-status-long-break.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 30C383C318CFC9FC00FABFFE /* icon-status-long-break.tiff */; };
-		30C383CE18CFC9FC00FABFFE /* icon-status-idle.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 30C383C418CFC9FC00FABFFE /* icon-status-idle.tiff */; };
-		30C383CF18CFC9FC00FABFFE /* icon-status-pomodoro.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 30C383C518CFC9FC00FABFFE /* icon-status-pomodoro.tiff */; };
-		30C383D018CFC9FC00FABFFE /* icon-status-short-break.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 30C383C618CFC9FC00FABFFE /* icon-status-short-break.tiff */; };
-		30C383D118CFC9FC00FABFFE /* icon-status-alternate.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 30C383C718CFC9FC00FABFFE /* icon-status-alternate.tiff */; };
-		30C383D218CFC9FC00FABFFE /* icon-stop-timer.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 30C383C818CFC9FC00FABFFE /* icon-stop-timer.tiff */; };
-		30C383D718CFCA6B00FABFFE /* timer_start.wav in Resources */ = {isa = PBXBuildFile; fileRef = 30C383D418CFCA6B00FABFFE /* timer_start.wav */; };
-		30C383D818CFCA6B00FABFFE /* timer_goes_off.wav in Resources */ = {isa = PBXBuildFile; fileRef = 30C383D518CFCA6B00FABFFE /* timer_goes_off.wav */; };
-		30C383D918CFCA6B00FABFFE /* timer_tick.wav in Resources */ = {isa = PBXBuildFile; fileRef = 30C383D618CFCA6B00FABFFE /* timer_tick.wav */; };
-		30C383DC18CFDE8F00FABFFE /* TYAppUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 30C383DB18CFDE8F00FABFFE /* TYAppUITests.m */; };
-		30C383E018CFE02100FABFFE /* TYDefaultAppUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 30C383DF18CFE02100FABFFE /* TYDefaultAppUI.m */; };
-		30CFBF1218BD76F7000266B4 /* TYMockSystemTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 30CFBF1118BD76F7000266B4 /* TYMockSystemTimer.m */; };
-		30DB72F618CD4FC800293915 /* TYTomightyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 30DB72F518CD4FC800293915 /* TYTomightyTests.m */; };
-		30DB72FA18CD54D200293915 /* TYDefaultTomighty.m in Sources */ = {isa = PBXBuildFile; fileRef = 30DB72F918CD54D200293915 /* TYDefaultTomighty.m */; };
-		88742E1C44894488BB0F167C /* libPods-TomightyTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B1A27968CA44FEFB1DA3DB3 /* libPods-TomightyTests.a */; };
-/* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		304AF83718BD04BF00A2EA74 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 304AF80A18BD04BE00A2EA74 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 304AF81118BD04BE00A2EA74;
-			remoteInfo = Tomighty;
-		};
-/* End PBXContainerItemProxy section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		30CFBF0718BD45BF000266B4 /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 16;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
-/* Begin PBXFileReference section */
-		0B1A27968CA44FEFB1DA3DB3 /* libPods-TomightyTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TomightyTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		300AE29118D1444400264309 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/PreferencesWindow.xib; sourceTree = "<group>"; };
-		300AE29318D1471F00264309 /* TYPreferencesWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TYPreferencesWindowController.h; path = Core/UI/TYPreferencesWindowController.h; sourceTree = "<group>"; };
-		300AE29418D1471F00264309 /* TYPreferencesWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TYPreferencesWindowController.m; path = Core/UI/TYPreferencesWindowController.m; sourceTree = "<group>"; };
-		301A007718BD417200B8DEE0 /* TYDefaultTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TYDefaultTimer.h; path = Core/Timer/TYDefaultTimer.h; sourceTree = "<group>"; };
-		301A007818BD417200B8DEE0 /* TYDefaultTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TYDefaultTimer.m; path = Core/Timer/TYDefaultTimer.m; sourceTree = "<group>"; };
-		301A007B18BD421500B8DEE0 /* TYTimerContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TYTimerContext.h; path = Core/Timer/TYTimerContext.h; sourceTree = "<group>"; };
-		3025AE5118D35B2B00BC4207 /* TYSoundAgent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TYSoundAgent.h; path = Core/Agent/TYSoundAgent.h; sourceTree = "<group>"; };
-		3025AE5218D35B2B00BC4207 /* TYSoundAgent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TYSoundAgent.m; path = Core/Agent/TYSoundAgent.m; sourceTree = "<group>"; };
-		3025AE5318D35B2B00BC4207 /* TYUserInterfaceAgent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TYUserInterfaceAgent.h; path = Core/Agent/TYUserInterfaceAgent.h; sourceTree = "<group>"; };
-		3025AE5418D35B2B00BC4207 /* TYUserInterfaceAgent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TYUserInterfaceAgent.m; path = Core/Agent/TYUserInterfaceAgent.m; sourceTree = "<group>"; };
-		3025AE5718D35B3700BC4207 /* TYSyntheticEventPublisher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TYSyntheticEventPublisher.h; path = Core/Event/TYSyntheticEventPublisher.h; sourceTree = "<group>"; };
-		3025AE5818D35B3700BC4207 /* TYSyntheticEventPublisher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TYSyntheticEventPublisher.m; path = Core/Event/TYSyntheticEventPublisher.m; sourceTree = "<group>"; };
-		3025AE5B18D35C0D00BC4207 /* TYSoundAgentTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TYSoundAgentTests.m; path = Core/Agent/TYSoundAgentTests.m; sourceTree = "<group>"; };
-		3025AE5C18D35C0D00BC4207 /* TYUserInterfaceAgentTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TYUserInterfaceAgentTests.m; path = Core/Agent/TYUserInterfaceAgentTests.m; sourceTree = "<group>"; };
-		3025AE5F18D35C1700BC4207 /* TYSyntheticEventPublisherTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TYSyntheticEventPublisherTests.m; path = Core/Event/TYSyntheticEventPublisherTests.m; sourceTree = "<group>"; };
-		3032EEE118C6AF2C00070BD2 /* TYDefaultSoundPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TYDefaultSoundPlayer.h; path = Core/Sound/TYDefaultSoundPlayer.h; sourceTree = "<group>"; };
-		3032EEE218C6AF2C00070BD2 /* TYDefaultSoundPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TYDefaultSoundPlayer.m; path = Core/Sound/TYDefaultSoundPlayer.m; sourceTree = "<group>"; };
-		3032EEEB18C6C28700070BD2 /* TYPublishedEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TYPublishedEvent.h; path = Mock/TYPublishedEvent.h; sourceTree = "<group>"; };
-		3032EEEC18C6C28700070BD2 /* TYPublishedEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TYPublishedEvent.m; path = Mock/TYPublishedEvent.m; sourceTree = "<group>"; };
-		3039D2F218C4DF7C008689C9 /* TYDefaultEventBus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TYDefaultEventBus.h; path = Core/Event/TYDefaultEventBus.h; sourceTree = "<group>"; };
-		3039D2F318C4DF7C008689C9 /* TYDefaultEventBus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TYDefaultEventBus.m; path = Core/Event/TYDefaultEventBus.m; sourceTree = "<group>"; };
-		3039D2F418C4DF7C008689C9 /* TYEventBus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TYEventBus.h; path = Core/Event/TYEventBus.h; sourceTree = "<group>"; };
-		3039D2F718C4DFCE008689C9 /* TYEventBusTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TYEventBusTests.m; path = Core/Event/TYEventBusTests.m; sourceTree = "<group>"; };
-		30415FAD18C5109D0069FAE3 /* TYPreferencesTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TYPreferencesTests.m; path = Core/Preferences/TYPreferencesTests.m; sourceTree = "<group>"; };
-		30415FB018C51B6A0069FAE3 /* TYPreferences.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TYPreferences.h; path = Core/Preferences/TYPreferences.h; sourceTree = "<group>"; };
-		30415FB418C51C290069FAE3 /* TYUserDefaultsPreferences.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TYUserDefaultsPreferences.h; path = Core/Preferences/TYUserDefaultsPreferences.h; sourceTree = "<group>"; };
-		30415FB518C51C290069FAE3 /* TYUserDefaultsPreferences.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TYUserDefaultsPreferences.m; path = Core/Preferences/TYUserDefaultsPreferences.m; sourceTree = "<group>"; };
-		304AF81218BD04BE00A2EA74 /* Tomighty.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tomighty.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		304AF81518BD04BE00A2EA74 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
-		304AF81818BD04BE00A2EA74 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
-		304AF81918BD04BE00A2EA74 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		304AF81A18BD04BE00A2EA74 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		304AF81D18BD04BE00A2EA74 /* Tomighty-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Tomighty-Info.plist"; sourceTree = "<group>"; };
-		304AF81F18BD04BE00A2EA74 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		304AF82118BD04BE00A2EA74 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		304AF82318BD04BE00A2EA74 /* Tomighty-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tomighty-Prefix.pch"; sourceTree = "<group>"; };
-		304AF82518BD04BE00A2EA74 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
-		304AF82718BD04BE00A2EA74 /* TYAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TYAppDelegate.h; sourceTree = "<group>"; };
-		304AF82818BD04BE00A2EA74 /* TYAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TYAppDelegate.m; sourceTree = "<group>"; };
-		304AF82B18BD04BE00A2EA74 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
-		304AF82D18BD04BE00A2EA74 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		304AF83318BD04BE00A2EA74 /* TomightyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TomightyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		304AF83418BD04BE00A2EA74 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		304AF83B18BD04BF00A2EA74 /* TomightyTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TomightyTests-Info.plist"; sourceTree = "<group>"; };
-		304AF83D18BD04BF00A2EA74 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		305D161418CCEE3500CE6A34 /* TYTimer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TYTimer.h; path = Core/Timer/TYTimer.h; sourceTree = "<group>"; };
-		305D161618CD02E100CE6A34 /* TYAppUI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TYAppUI.h; path = Core/UI/TYAppUI.h; sourceTree = "<group>"; };
-		305D161D18CD13F100CE6A34 /* tomighty.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = tomighty.icns; sourceTree = "<group>"; };
-		309394E518D0C76100D6C71A /* TYDefaultStatusIcon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TYDefaultStatusIcon.h; path = Core/UI/TYDefaultStatusIcon.h; sourceTree = "<group>"; };
-		309394E618D0C76100D6C71A /* TYDefaultStatusIcon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TYDefaultStatusIcon.m; path = Core/UI/TYDefaultStatusIcon.m; sourceTree = "<group>"; };
-		309394E818D0CBEC00D6C71A /* TYImageLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TYImageLoader.h; path = Core/UI/TYImageLoader.h; sourceTree = "<group>"; };
-		309394E918D0CBEC00D6C71A /* TYImageLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TYImageLoader.m; path = Core/UI/TYImageLoader.m; sourceTree = "<group>"; };
-		309ECAFB18C36F6300B270BF /* TYMockTimerContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TYMockTimerContext.h; path = Mock/TYMockTimerContext.h; sourceTree = "<group>"; };
-		309ECAFC18C36F6300B270BF /* TYMockTimerContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TYMockTimerContext.m; path = Mock/TYMockTimerContext.m; sourceTree = "<group>"; };
-		309ECB0118C3828B00B270BF /* TYDefaultSystemTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TYDefaultSystemTimer.h; path = Core/Timer/TYDefaultSystemTimer.h; sourceTree = "<group>"; };
-		309ECB0218C3828B00B270BF /* TYDefaultSystemTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TYDefaultSystemTimer.m; path = Core/Timer/TYDefaultSystemTimer.m; sourceTree = "<group>"; };
-		309ECB0318C3828B00B270BF /* TYSystemTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TYSystemTimer.h; path = Core/Timer/TYSystemTimer.h; sourceTree = "<group>"; };
-		309ECB0718C382CF00B270BF /* TYTimerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TYTimerTests.m; path = Core/Timer/TYTimerTests.m; sourceTree = "<group>"; };
-		309ECB0918C3830B00B270BF /* TYTimerContextTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TYTimerContextTests.m; path = Core/Timer/TYTimerContextTests.m; sourceTree = "<group>"; };
-		30B89F9C18C3855600C1DD2B /* TYDefaultTimerContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TYDefaultTimerContext.h; path = Core/Timer/TYDefaultTimerContext.h; sourceTree = "<group>"; };
-		30B89F9D18C3855600C1DD2B /* TYDefaultTimerContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TYDefaultTimerContext.m; path = Core/Timer/TYDefaultTimerContext.m; sourceTree = "<group>"; };
-		30BD314118C556EE00428B1E /* TYMockEventBus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TYMockEventBus.h; path = Mock/TYMockEventBus.h; sourceTree = "<group>"; };
-		30BD314218C556EE00428B1E /* TYMockEventBus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TYMockEventBus.m; path = Mock/TYMockEventBus.m; sourceTree = "<group>"; };
-		30BD314B18C5686500428B1E /* TYSoundPlayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TYSoundPlayer.h; path = Core/Sound/TYSoundPlayer.h; sourceTree = "<group>"; };
-		30C383BF18CFC9FC00FABFFE /* icon-clock.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = "icon-clock.tiff"; path = "Icons/icon-clock.tiff"; sourceTree = SOURCE_ROOT; };
-		30C383C018CFC9FC00FABFFE /* icon-start-long-break.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = "icon-start-long-break.tiff"; path = "Icons/icon-start-long-break.tiff"; sourceTree = SOURCE_ROOT; };
-		30C383C118CFC9FC00FABFFE /* icon-start-pomodoro.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = "icon-start-pomodoro.tiff"; path = "Icons/icon-start-pomodoro.tiff"; sourceTree = SOURCE_ROOT; };
-		30C383C218CFC9FC00FABFFE /* icon-start-short-break.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = "icon-start-short-break.tiff"; path = "Icons/icon-start-short-break.tiff"; sourceTree = SOURCE_ROOT; };
-		30C383C318CFC9FC00FABFFE /* icon-status-long-break.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = "icon-status-long-break.tiff"; path = "Icons/icon-status-long-break.tiff"; sourceTree = SOURCE_ROOT; };
-		30C383C418CFC9FC00FABFFE /* icon-status-idle.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = "icon-status-idle.tiff"; path = "Icons/icon-status-idle.tiff"; sourceTree = SOURCE_ROOT; };
-		30C383C518CFC9FC00FABFFE /* icon-status-pomodoro.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = "icon-status-pomodoro.tiff"; path = "Icons/icon-status-pomodoro.tiff"; sourceTree = SOURCE_ROOT; };
-		30C383C618CFC9FC00FABFFE /* icon-status-short-break.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = "icon-status-short-break.tiff"; path = "Icons/icon-status-short-break.tiff"; sourceTree = SOURCE_ROOT; };
-		30C383C718CFC9FC00FABFFE /* icon-status-alternate.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = "icon-status-alternate.tiff"; path = "Icons/icon-status-alternate.tiff"; sourceTree = SOURCE_ROOT; };
-		30C383C818CFC9FC00FABFFE /* icon-stop-timer.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = "icon-stop-timer.tiff"; path = "Icons/icon-stop-timer.tiff"; sourceTree = SOURCE_ROOT; };
-		30C383D418CFCA6B00FABFFE /* timer_start.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = timer_start.wav; path = Sound/timer_start.wav; sourceTree = SOURCE_ROOT; };
-		30C383D518CFCA6B00FABFFE /* timer_goes_off.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = timer_goes_off.wav; path = Sound/timer_goes_off.wav; sourceTree = SOURCE_ROOT; };
-		30C383D618CFCA6B00FABFFE /* timer_tick.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = timer_tick.wav; path = Sound/timer_tick.wav; sourceTree = SOURCE_ROOT; };
-		30C383DB18CFDE8F00FABFFE /* TYAppUITests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TYAppUITests.m; path = Core/UI/TYAppUITests.m; sourceTree = "<group>"; };
-		30C383DD18CFDFF000FABFFE /* TYStatusMenu.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TYStatusMenu.h; path = Core/UI/TYStatusMenu.h; sourceTree = "<group>"; };
-		30C383DE18CFE02100FABFFE /* TYDefaultAppUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TYDefaultAppUI.h; path = Core/UI/TYDefaultAppUI.h; sourceTree = "<group>"; };
-		30C383DF18CFE02100FABFFE /* TYDefaultAppUI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TYDefaultAppUI.m; path = Core/UI/TYDefaultAppUI.m; sourceTree = "<group>"; };
-		30C383E118CFE34700FABFFE /* TYStatusIcon.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TYStatusIcon.h; path = Core/UI/TYStatusIcon.h; sourceTree = "<group>"; };
-		30CFBF1018BD76F7000266B4 /* TYMockSystemTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TYMockSystemTimer.h; path = Mock/TYMockSystemTimer.h; sourceTree = "<group>"; };
-		30CFBF1118BD76F7000266B4 /* TYMockSystemTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TYMockSystemTimer.m; path = Mock/TYMockSystemTimer.m; sourceTree = "<group>"; };
-		30DB72F518CD4FC800293915 /* TYTomightyTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TYTomightyTests.m; path = Core/TYTomightyTests.m; sourceTree = "<group>"; };
-		30DB72F718CD54C000293915 /* TYTomighty.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TYTomighty.h; path = Core/TYTomighty.h; sourceTree = "<group>"; };
-		30DB72F818CD54D200293915 /* TYDefaultTomighty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TYDefaultTomighty.h; path = Core/TYDefaultTomighty.h; sourceTree = "<group>"; };
-		30DB72F918CD54D200293915 /* TYDefaultTomighty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TYDefaultTomighty.m; path = Core/TYDefaultTomighty.m; sourceTree = "<group>"; };
-		C85B4050EDD04BD5964B5A05 /* Pods-TomightyTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TomightyTests.xcconfig"; path = "../Pods/Pods-TomightyTests.xcconfig"; sourceTree = "<group>"; };
-/* End PBXFileReference section */
-
-/* Begin PBXFrameworksBuildPhase section */
-		304AF80F18BD04BE00A2EA74 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				304AF81618BD04BE00A2EA74 /* Cocoa.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		304AF83018BD04BE00A2EA74 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				304AF83618BD04BF00A2EA74 /* Cocoa.framework in Frameworks */,
-				304AF83518BD04BF00A2EA74 /* XCTest.framework in Frameworks */,
-				88742E1C44894488BB0F167C /* libPods-TomightyTests.a in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXFrameworksBuildPhase section */
-
-/* Begin PBXGroup section */
-		301A007618BD413400B8DEE0 /* Timer */ = {
-			isa = PBXGroup;
-			children = (
-				309ECB0318C3828B00B270BF /* TYSystemTimer.h */,
-				309ECB0118C3828B00B270BF /* TYDefaultSystemTimer.h */,
-				309ECB0218C3828B00B270BF /* TYDefaultSystemTimer.m */,
-				305D161418CCEE3500CE6A34 /* TYTimer.h */,
-				301A007718BD417200B8DEE0 /* TYDefaultTimer.h */,
-				301A007818BD417200B8DEE0 /* TYDefaultTimer.m */,
-				301A007B18BD421500B8DEE0 /* TYTimerContext.h */,
-				30B89F9C18C3855600C1DD2B /* TYDefaultTimerContext.h */,
-				30B89F9D18C3855600C1DD2B /* TYDefaultTimerContext.m */,
-			);
-			name = Timer;
-			sourceTree = "<group>";
-		};
-		3025AE5018D35AA000BC4207 /* Agent */ = {
-			isa = PBXGroup;
-			children = (
-				3025AE5118D35B2B00BC4207 /* TYSoundAgent.h */,
-				3025AE5218D35B2B00BC4207 /* TYSoundAgent.m */,
-				3025AE5318D35B2B00BC4207 /* TYUserInterfaceAgent.h */,
-				3025AE5418D35B2B00BC4207 /* TYUserInterfaceAgent.m */,
-			);
-			name = Agent;
-			sourceTree = "<group>";
-		};
-		3025AE5A18D35BAB00BC4207 /* Agent */ = {
-			isa = PBXGroup;
-			children = (
-				3025AE5B18D35C0D00BC4207 /* TYSoundAgentTests.m */,
-				3025AE5C18D35C0D00BC4207 /* TYUserInterfaceAgentTests.m */,
-			);
-			name = Agent;
-			sourceTree = "<group>";
-		};
-		3039D2F118C4DF47008689C9 /* Event */ = {
-			isa = PBXGroup;
-			children = (
-				3025AE5718D35B3700BC4207 /* TYSyntheticEventPublisher.h */,
-				3025AE5818D35B3700BC4207 /* TYSyntheticEventPublisher.m */,
-				3039D2F418C4DF7C008689C9 /* TYEventBus.h */,
-				3039D2F218C4DF7C008689C9 /* TYDefaultEventBus.h */,
-				3039D2F318C4DF7C008689C9 /* TYDefaultEventBus.m */,
-			);
-			name = Event;
-			sourceTree = "<group>";
-		};
-		3039D2F618C4DFB0008689C9 /* Event */ = {
-			isa = PBXGroup;
-			children = (
-				3039D2F718C4DFCE008689C9 /* TYEventBusTests.m */,
-				3025AE5F18D35C1700BC4207 /* TYSyntheticEventPublisherTests.m */,
-			);
-			name = Event;
-			sourceTree = "<group>";
-		};
-		30415FAC18C5105D0069FAE3 /* Preferences */ = {
-			isa = PBXGroup;
-			children = (
-				30415FAD18C5109D0069FAE3 /* TYPreferencesTests.m */,
-			);
-			name = Preferences;
-			sourceTree = "<group>";
-		};
-		30415FAF18C51B4D0069FAE3 /* Preferences */ = {
-			isa = PBXGroup;
-			children = (
-				30415FB018C51B6A0069FAE3 /* TYPreferences.h */,
-				30415FB418C51C290069FAE3 /* TYUserDefaultsPreferences.h */,
-				30415FB518C51C290069FAE3 /* TYUserDefaultsPreferences.m */,
-			);
-			name = Preferences;
-			sourceTree = "<group>";
-		};
-		304AF80918BD04BE00A2EA74 = {
-			isa = PBXGroup;
-			children = (
-				305D161D18CD13F100CE6A34 /* tomighty.icns */,
-				305D161A18CD12FA00CE6A34 /* Icons */,
-				30C383D318CFCA3700FABFFE /* Sound */,
-				304AF81B18BD04BE00A2EA74 /* Tomighty */,
-				304AF83918BD04BF00A2EA74 /* TomightyTests */,
-				304AF81418BD04BE00A2EA74 /* Frameworks */,
-				304AF81318BD04BE00A2EA74 /* Products */,
-			);
-			sourceTree = "<group>";
-		};
-		304AF81318BD04BE00A2EA74 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				304AF81218BD04BE00A2EA74 /* Tomighty.app */,
-				304AF83318BD04BE00A2EA74 /* TomightyTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		304AF81418BD04BE00A2EA74 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				0B1A27968CA44FEFB1DA3DB3 /* libPods-TomightyTests.a */,
-				304AF81518BD04BE00A2EA74 /* Cocoa.framework */,
-				304AF83418BD04BE00A2EA74 /* XCTest.framework */,
-				304AF81718BD04BE00A2EA74 /* Other Frameworks */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		304AF81718BD04BE00A2EA74 /* Other Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				304AF81818BD04BE00A2EA74 /* AppKit.framework */,
-				304AF81918BD04BE00A2EA74 /* CoreData.framework */,
-				304AF81A18BD04BE00A2EA74 /* Foundation.framework */,
-			);
-			name = "Other Frameworks";
-			sourceTree = "<group>";
-		};
-		304AF81B18BD04BE00A2EA74 /* Tomighty */ = {
-			isa = PBXGroup;
-			children = (
-				304AF84918BD117200A2EA74 /* Core */,
-				304AF82718BD04BE00A2EA74 /* TYAppDelegate.h */,
-				304AF82818BD04BE00A2EA74 /* TYAppDelegate.m */,
-				304AF82A18BD04BE00A2EA74 /* MainMenu.xib */,
-				300AE29018D1444400264309 /* PreferencesWindow.xib */,
-				304AF82D18BD04BE00A2EA74 /* Images.xcassets */,
-				304AF81C18BD04BE00A2EA74 /* Supporting Files */,
-			);
-			path = Tomighty;
-			sourceTree = "<group>";
-		};
-		304AF81C18BD04BE00A2EA74 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				304AF81D18BD04BE00A2EA74 /* Tomighty-Info.plist */,
-				304AF81E18BD04BE00A2EA74 /* InfoPlist.strings */,
-				304AF82118BD04BE00A2EA74 /* main.m */,
-				304AF82318BD04BE00A2EA74 /* Tomighty-Prefix.pch */,
-				304AF82418BD04BE00A2EA74 /* Credits.rtf */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		304AF83918BD04BF00A2EA74 /* TomightyTests */ = {
-			isa = PBXGroup;
-			children = (
-				309ECB0518C3829700B270BF /* Core */,
-				304AF83A18BD04BF00A2EA74 /* Supporting Files */,
-				30CFBF1318BD76FC000266B4 /* Mock */,
-			);
-			path = TomightyTests;
-			sourceTree = "<group>";
-		};
-		304AF83A18BD04BF00A2EA74 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				C85B4050EDD04BD5964B5A05 /* Pods-TomightyTests.xcconfig */,
-				304AF83B18BD04BF00A2EA74 /* TomightyTests-Info.plist */,
-				304AF83C18BD04BF00A2EA74 /* InfoPlist.strings */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		304AF84918BD117200A2EA74 /* Core */ = {
-			isa = PBXGroup;
-			children = (
-				3025AE5018D35AA000BC4207 /* Agent */,
-				3039D2F118C4DF47008689C9 /* Event */,
-				30415FAF18C51B4D0069FAE3 /* Preferences */,
-				30BD314718C566B400428B1E /* Sound */,
-				301A007618BD413400B8DEE0 /* Timer */,
-				305D161518CD029F00CE6A34 /* UI */,
-				30DB72F718CD54C000293915 /* TYTomighty.h */,
-				30DB72F818CD54D200293915 /* TYDefaultTomighty.h */,
-				30DB72F918CD54D200293915 /* TYDefaultTomighty.m */,
-			);
-			name = Core;
-			sourceTree = "<group>";
-		};
-		305D161518CD029F00CE6A34 /* UI */ = {
-			isa = PBXGroup;
-			children = (
-				305D161618CD02E100CE6A34 /* TYAppUI.h */,
-				30C383DE18CFE02100FABFFE /* TYDefaultAppUI.h */,
-				30C383DF18CFE02100FABFFE /* TYDefaultAppUI.m */,
-				30C383DD18CFDFF000FABFFE /* TYStatusMenu.h */,
-				30C383E118CFE34700FABFFE /* TYStatusIcon.h */,
-				309394E518D0C76100D6C71A /* TYDefaultStatusIcon.h */,
-				309394E618D0C76100D6C71A /* TYDefaultStatusIcon.m */,
-				309394E818D0CBEC00D6C71A /* TYImageLoader.h */,
-				309394E918D0CBEC00D6C71A /* TYImageLoader.m */,
-				300AE29318D1471F00264309 /* TYPreferencesWindowController.h */,
-				300AE29418D1471F00264309 /* TYPreferencesWindowController.m */,
-			);
-			name = UI;
-			sourceTree = "<group>";
-		};
-		305D161A18CD12FA00CE6A34 /* Icons */ = {
-			isa = PBXGroup;
-			children = (
-				30C383BF18CFC9FC00FABFFE /* icon-clock.tiff */,
-				30C383C018CFC9FC00FABFFE /* icon-start-long-break.tiff */,
-				30C383C118CFC9FC00FABFFE /* icon-start-pomodoro.tiff */,
-				30C383C218CFC9FC00FABFFE /* icon-start-short-break.tiff */,
-				30C383C318CFC9FC00FABFFE /* icon-status-long-break.tiff */,
-				30C383C418CFC9FC00FABFFE /* icon-status-idle.tiff */,
-				30C383C518CFC9FC00FABFFE /* icon-status-pomodoro.tiff */,
-				30C383C618CFC9FC00FABFFE /* icon-status-short-break.tiff */,
-				30C383C718CFC9FC00FABFFE /* icon-status-alternate.tiff */,
-				30C383C818CFC9FC00FABFFE /* icon-stop-timer.tiff */,
-			);
-			name = Icons;
-			path = Tomighty;
-			sourceTree = "<group>";
-		};
-		309ECB0518C3829700B270BF /* Core */ = {
-			isa = PBXGroup;
-			children = (
-				3025AE5A18D35BAB00BC4207 /* Agent */,
-				3039D2F618C4DFB0008689C9 /* Event */,
-				30415FAC18C5105D0069FAE3 /* Preferences */,
-				309ECB0618C3829F00B270BF /* Timer */,
-				30C383DA18CFDE6D00FABFFE /* UI */,
-				30DB72F518CD4FC800293915 /* TYTomightyTests.m */,
-			);
-			name = Core;
-			sourceTree = "<group>";
-		};
-		309ECB0618C3829F00B270BF /* Timer */ = {
-			isa = PBXGroup;
-			children = (
-				309ECB0718C382CF00B270BF /* TYTimerTests.m */,
-				309ECB0918C3830B00B270BF /* TYTimerContextTests.m */,
-			);
-			name = Timer;
-			sourceTree = "<group>";
-		};
-		30BD314718C566B400428B1E /* Sound */ = {
-			isa = PBXGroup;
-			children = (
-				30BD314B18C5686500428B1E /* TYSoundPlayer.h */,
-				3032EEE118C6AF2C00070BD2 /* TYDefaultSoundPlayer.h */,
-				3032EEE218C6AF2C00070BD2 /* TYDefaultSoundPlayer.m */,
-			);
-			name = Sound;
-			sourceTree = "<group>";
-		};
-		30C383D318CFCA3700FABFFE /* Sound */ = {
-			isa = PBXGroup;
-			children = (
-				30C383D418CFCA6B00FABFFE /* timer_start.wav */,
-				30C383D518CFCA6B00FABFFE /* timer_goes_off.wav */,
-				30C383D618CFCA6B00FABFFE /* timer_tick.wav */,
-			);
-			name = Sound;
-			path = Tomighty;
-			sourceTree = "<group>";
-		};
-		30C383DA18CFDE6D00FABFFE /* UI */ = {
-			isa = PBXGroup;
-			children = (
-				30C383DB18CFDE8F00FABFFE /* TYAppUITests.m */,
-			);
-			name = UI;
-			sourceTree = "<group>";
-		};
-		30CFBF1318BD76FC000266B4 /* Mock */ = {
-			isa = PBXGroup;
-			children = (
-				30BD314118C556EE00428B1E /* TYMockEventBus.h */,
-				30BD314218C556EE00428B1E /* TYMockEventBus.m */,
-				30CFBF1018BD76F7000266B4 /* TYMockSystemTimer.h */,
-				30CFBF1118BD76F7000266B4 /* TYMockSystemTimer.m */,
-				309ECAFB18C36F6300B270BF /* TYMockTimerContext.h */,
-				309ECAFC18C36F6300B270BF /* TYMockTimerContext.m */,
-				3032EEEB18C6C28700070BD2 /* TYPublishedEvent.h */,
-				3032EEEC18C6C28700070BD2 /* TYPublishedEvent.m */,
-			);
-			name = Mock;
-			sourceTree = "<group>";
-		};
-/* End PBXGroup section */
-
-/* Begin PBXNativeTarget section */
-		304AF81118BD04BE00A2EA74 /* Tomighty */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 304AF84318BD04BF00A2EA74 /* Build configuration list for PBXNativeTarget "Tomighty" */;
-			buildPhases = (
-				304AF80E18BD04BE00A2EA74 /* Sources */,
-				304AF80F18BD04BE00A2EA74 /* Frameworks */,
-				304AF81018BD04BE00A2EA74 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = Tomighty;
-			productName = Tomighty;
-			productReference = 304AF81218BD04BE00A2EA74 /* Tomighty.app */;
-			productType = "com.apple.product-type.application";
-		};
-		304AF83218BD04BE00A2EA74 /* TomightyTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 304AF84618BD04BF00A2EA74 /* Build configuration list for PBXNativeTarget "TomightyTests" */;
-			buildPhases = (
-				B7B8607396F24F888FD9E51D /* Check Pods Manifest.lock */,
-				304AF82F18BD04BE00A2EA74 /* Sources */,
-				304AF83018BD04BE00A2EA74 /* Frameworks */,
-				304AF83118BD04BE00A2EA74 /* Resources */,
-				30CFBF0718BD45BF000266B4 /* CopyFiles */,
-				94D0AC8D9A87412895298800 /* Copy Pods Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				304AF83818BD04BF00A2EA74 /* PBXTargetDependency */,
-			);
-			name = TomightyTests;
-			productName = TomightyTests;
-			productReference = 304AF83318BD04BE00A2EA74 /* TomightyTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-/* End PBXNativeTarget section */
-
-/* Begin PBXProject section */
-		304AF80A18BD04BE00A2EA74 /* Project object */ = {
-			isa = PBXProject;
-			attributes = {
-				CLASSPREFIX = TY;
-				LastUpgradeCheck = 0500;
-				ORGANIZATIONNAME = "Gig Software";
-				TargetAttributes = {
-					304AF83218BD04BE00A2EA74 = {
-						TestTargetID = 304AF81118BD04BE00A2EA74;
-					};
-				};
-			};
-			buildConfigurationList = 304AF80D18BD04BE00A2EA74 /* Build configuration list for PBXProject "Tomighty" */;
-			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
-			hasScannedForEncodings = 0;
-			knownRegions = (
-				en,
-				Base,
-			);
-			mainGroup = 304AF80918BD04BE00A2EA74;
-			productRefGroup = 304AF81318BD04BE00A2EA74 /* Products */;
-			projectDirPath = "";
-			projectRoot = "";
-			targets = (
-				304AF81118BD04BE00A2EA74 /* Tomighty */,
-				304AF83218BD04BE00A2EA74 /* TomightyTests */,
-			);
-		};
-/* End PBXProject section */
-
-/* Begin PBXResourcesBuildPhase section */
-		304AF81018BD04BE00A2EA74 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				30C383D918CFCA6B00FABFFE /* timer_tick.wav in Resources */,
-				30C383CE18CFC9FC00FABFFE /* icon-status-idle.tiff in Resources */,
-				304AF82018BD04BE00A2EA74 /* InfoPlist.strings in Resources */,
-				305D161E18CD13F100CE6A34 /* tomighty.icns in Resources */,
-				30C383CF18CFC9FC00FABFFE /* icon-status-pomodoro.tiff in Resources */,
-				30C383D718CFCA6B00FABFFE /* timer_start.wav in Resources */,
-				304AF82E18BD04BE00A2EA74 /* Images.xcassets in Resources */,
-				30C383CC18CFC9FC00FABFFE /* icon-start-short-break.tiff in Resources */,
-				30C383D118CFC9FC00FABFFE /* icon-status-alternate.tiff in Resources */,
-				30C383D218CFC9FC00FABFFE /* icon-stop-timer.tiff in Resources */,
-				30C383CD18CFC9FC00FABFFE /* icon-status-long-break.tiff in Resources */,
-				30C383C918CFC9FC00FABFFE /* icon-clock.tiff in Resources */,
-				30C383CB18CFC9FC00FABFFE /* icon-start-pomodoro.tiff in Resources */,
-				30C383D018CFC9FC00FABFFE /* icon-status-short-break.tiff in Resources */,
-				30C383CA18CFC9FC00FABFFE /* icon-start-long-break.tiff in Resources */,
-				300AE29218D1444400264309 /* PreferencesWindow.xib in Resources */,
-				304AF82618BD04BE00A2EA74 /* Credits.rtf in Resources */,
-				30C383D818CFCA6B00FABFFE /* timer_goes_off.wav in Resources */,
-				304AF82C18BD04BE00A2EA74 /* MainMenu.xib in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		304AF83118BD04BE00A2EA74 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				304AF83E18BD04BF00A2EA74 /* InfoPlist.strings in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		94D0AC8D9A87412895298800 /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Pods-TomightyTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		B7B8607396F24F888FD9E51D /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
-
-/* Begin PBXSourcesBuildPhase section */
-		304AF80E18BD04BE00A2EA74 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				304AF82218BD04BE00A2EA74 /* main.m in Sources */,
-				30B89F9E18C3855600C1DD2B /* TYDefaultTimerContext.m in Sources */,
-				3025AE5518D35B2B00BC4207 /* TYSoundAgent.m in Sources */,
-				309ECB0418C3828B00B270BF /* TYDefaultSystemTimer.m in Sources */,
-				3032EEE318C6AF2C00070BD2 /* TYDefaultSoundPlayer.m in Sources */,
-				300AE29518D1471F00264309 /* TYPreferencesWindowController.m in Sources */,
-				30DB72FA18CD54D200293915 /* TYDefaultTomighty.m in Sources */,
-				301A007918BD417200B8DEE0 /* TYDefaultTimer.m in Sources */,
-				309394E718D0C76100D6C71A /* TYDefaultStatusIcon.m in Sources */,
-				30C383E018CFE02100FABFFE /* TYDefaultAppUI.m in Sources */,
-				30415FB618C51C290069FAE3 /* TYUserDefaultsPreferences.m in Sources */,
-				3039D2F518C4DF7C008689C9 /* TYDefaultEventBus.m in Sources */,
-				309394EA18D0CBEC00D6C71A /* TYImageLoader.m in Sources */,
-				3025AE5618D35B2B00BC4207 /* TYUserInterfaceAgent.m in Sources */,
-				3025AE5918D35B3700BC4207 /* TYSyntheticEventPublisher.m in Sources */,
-				304AF82918BD04BE00A2EA74 /* TYAppDelegate.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		304AF82F18BD04BE00A2EA74 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				30DB72F618CD4FC800293915 /* TYTomightyTests.m in Sources */,
-				309ECB0818C382CF00B270BF /* TYTimerTests.m in Sources */,
-				3039D2F818C4DFCE008689C9 /* TYEventBusTests.m in Sources */,
-				3025AE6018D35C1700BC4207 /* TYSyntheticEventPublisherTests.m in Sources */,
-				309ECAFD18C36F6300B270BF /* TYMockTimerContext.m in Sources */,
-				309ECB0A18C3830B00B270BF /* TYTimerContextTests.m in Sources */,
-				3025AE5D18D35C0D00BC4207 /* TYSoundAgentTests.m in Sources */,
-				3032EEED18C6C28700070BD2 /* TYPublishedEvent.m in Sources */,
-				30CFBF1218BD76F7000266B4 /* TYMockSystemTimer.m in Sources */,
-				30C383DC18CFDE8F00FABFFE /* TYAppUITests.m in Sources */,
-				3025AE5E18D35C0D00BC4207 /* TYUserInterfaceAgentTests.m in Sources */,
-				30BD314318C556EE00428B1E /* TYMockEventBus.m in Sources */,
-				30415FAE18C5109D0069FAE3 /* TYPreferencesTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		304AF83818BD04BF00A2EA74 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 304AF81118BD04BE00A2EA74 /* Tomighty */;
-			targetProxy = 304AF83718BD04BF00A2EA74 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		300AE29018D1444400264309 /* PreferencesWindow.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				300AE29118D1444400264309 /* Base */,
-			);
-			name = PreferencesWindow.xib;
-			sourceTree = "<group>";
-		};
-		304AF81E18BD04BE00A2EA74 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				304AF81F18BD04BE00A2EA74 /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		304AF82418BD04BE00A2EA74 /* Credits.rtf */ = {
-			isa = PBXVariantGroup;
-			children = (
-				304AF82518BD04BE00A2EA74 /* en */,
-			);
-			name = Credits.rtf;
-			sourceTree = "<group>";
-		};
-		304AF82A18BD04BE00A2EA74 /* MainMenu.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				304AF82B18BD04BE00A2EA74 /* Base */,
-			);
-			name = MainMenu.xib;
-			sourceTree = "<group>";
-		};
-		304AF83C18BD04BF00A2EA74 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				304AF83D18BD04BF00A2EA74 /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
-/* Begin XCBuildConfiguration section */
-		304AF84118BD04BF00A2EA74 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = NO;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
-				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = macosx;
-			};
-			name = Debug;
-		};
-		304AF84218BD04BF00A2EA74 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = YES;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_NS_ASSERTIONS = NO;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
-				SDKROOT = macosx;
-			};
-			name = Release;
-		};
-		304AF84418BD04BF00A2EA74 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Tomighty/Tomighty-Prefix.pch";
-				INFOPLIST_FILE = "Tomighty/Tomighty-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = app;
-			};
-			name = Debug;
-		};
-		304AF84518BD04BF00A2EA74 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Tomighty/Tomighty-Prefix.pch";
-				INFOPLIST_FILE = "Tomighty/Tomighty-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = app;
-			};
-			name = Release;
-		};
-		304AF84718BD04BF00A2EA74 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C85B4050EDD04BD5964B5A05 /* Pods-TomightyTests.xcconfig */;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Tomighty.app/Contents/MacOS/Tomighty";
-				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-					"$(inherited)",
-					"$(PROJECT_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Tomighty/Tomighty-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "TomightyTests/TomightyTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Debug;
-		};
-		304AF84818BD04BF00A2EA74 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C85B4050EDD04BD5964B5A05 /* Pods-TomightyTests.xcconfig */;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Tomighty.app/Contents/MacOS/Tomighty";
-				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-					"$(inherited)",
-					"$(PROJECT_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Tomighty/Tomighty-Prefix.pch";
-				INFOPLIST_FILE = "TomightyTests/TomightyTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Release;
-		};
-/* End XCBuildConfiguration section */
-
-/* Begin XCConfigurationList section */
-		304AF80D18BD04BE00A2EA74 /* Build configuration list for PBXProject "Tomighty" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				304AF84118BD04BF00A2EA74 /* Debug */,
-				304AF84218BD04BF00A2EA74 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		304AF84318BD04BF00A2EA74 /* Build configuration list for PBXNativeTarget "Tomighty" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				304AF84418BD04BF00A2EA74 /* Debug */,
-				304AF84518BD04BF00A2EA74 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		304AF84618BD04BF00A2EA74 /* Build configuration list for PBXNativeTarget "TomightyTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				304AF84718BD04BF00A2EA74 /* Debug */,
-				304AF84818BD04BF00A2EA74 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-/* End XCConfigurationList section */
-	};
-	rootObject = 304AF80A18BD04BE00A2EA74 /* Project object */;
-}
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>archiveVersion</key>
+	<string>1</string>
+	<key>classes</key>
+	<dict/>
+	<key>objectVersion</key>
+	<string>46</string>
+	<key>objects</key>
+	<dict>
+		<key>0B1A27968CA44FEFB1DA3DB3</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>archive.ar</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>libPods-TomightyTests.a</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>300AE29018D1444400264309</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>300AE29118D1444400264309</string>
+			</array>
+			<key>isa</key>
+			<string>PBXVariantGroup</string>
+			<key>name</key>
+			<string>PreferencesWindow.xib</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>300AE29118D1444400264309</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>file.xib</string>
+			<key>name</key>
+			<string>Base</string>
+			<key>path</key>
+			<string>Base.lproj/PreferencesWindow.xib</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>300AE29218D1444400264309</key>
+		<dict>
+			<key>fileRef</key>
+			<string>300AE29018D1444400264309</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>300AE29318D1471F00264309</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>TYPreferencesWindowController.h</string>
+			<key>path</key>
+			<string>Core/UI/TYPreferencesWindowController.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>300AE29418D1471F00264309</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>TYPreferencesWindowController.m</string>
+			<key>path</key>
+			<string>Core/UI/TYPreferencesWindowController.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>300AE29518D1471F00264309</key>
+		<dict>
+			<key>fileRef</key>
+			<string>300AE29418D1471F00264309</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>301A007618BD413400B8DEE0</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>309ECB0318C3828B00B270BF</string>
+				<string>309ECB0118C3828B00B270BF</string>
+				<string>309ECB0218C3828B00B270BF</string>
+				<string>305D161418CCEE3500CE6A34</string>
+				<string>301A007718BD417200B8DEE0</string>
+				<string>301A007818BD417200B8DEE0</string>
+				<string>301A007B18BD421500B8DEE0</string>
+				<string>30B89F9C18C3855600C1DD2B</string>
+				<string>30B89F9D18C3855600C1DD2B</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Timer</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>301A007718BD417200B8DEE0</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>TYDefaultTimer.h</string>
+			<key>path</key>
+			<string>Core/Timer/TYDefaultTimer.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>301A007818BD417200B8DEE0</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>TYDefaultTimer.m</string>
+			<key>path</key>
+			<string>Core/Timer/TYDefaultTimer.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>301A007918BD417200B8DEE0</key>
+		<dict>
+			<key>fileRef</key>
+			<string>301A007818BD417200B8DEE0</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>301A007B18BD421500B8DEE0</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>TYTimerContext.h</string>
+			<key>path</key>
+			<string>Core/Timer/TYTimerContext.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>3025AE5018D35AA000BC4207</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>3025AE5118D35B2B00BC4207</string>
+				<string>3025AE5218D35B2B00BC4207</string>
+				<string>3025AE5318D35B2B00BC4207</string>
+				<string>3025AE5418D35B2B00BC4207</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Agent</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>3025AE5118D35B2B00BC4207</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>TYSoundAgent.h</string>
+			<key>path</key>
+			<string>Core/Agent/TYSoundAgent.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>3025AE5218D35B2B00BC4207</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>TYSoundAgent.m</string>
+			<key>path</key>
+			<string>Core/Agent/TYSoundAgent.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>3025AE5318D35B2B00BC4207</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>TYUserInterfaceAgent.h</string>
+			<key>path</key>
+			<string>Core/Agent/TYUserInterfaceAgent.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>3025AE5418D35B2B00BC4207</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>TYUserInterfaceAgent.m</string>
+			<key>path</key>
+			<string>Core/Agent/TYUserInterfaceAgent.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>3025AE5518D35B2B00BC4207</key>
+		<dict>
+			<key>fileRef</key>
+			<string>3025AE5218D35B2B00BC4207</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>3025AE5618D35B2B00BC4207</key>
+		<dict>
+			<key>fileRef</key>
+			<string>3025AE5418D35B2B00BC4207</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>3025AE5718D35B3700BC4207</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>TYSyntheticEventPublisher.h</string>
+			<key>path</key>
+			<string>Core/Event/TYSyntheticEventPublisher.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>3025AE5818D35B3700BC4207</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>TYSyntheticEventPublisher.m</string>
+			<key>path</key>
+			<string>Core/Event/TYSyntheticEventPublisher.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>3025AE5918D35B3700BC4207</key>
+		<dict>
+			<key>fileRef</key>
+			<string>3025AE5818D35B3700BC4207</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>3025AE5A18D35BAB00BC4207</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>3025AE5B18D35C0D00BC4207</string>
+				<string>3025AE5C18D35C0D00BC4207</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Agent</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>3025AE5B18D35C0D00BC4207</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>TYSoundAgentTests.m</string>
+			<key>path</key>
+			<string>Core/Agent/TYSoundAgentTests.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>3025AE5C18D35C0D00BC4207</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>TYUserInterfaceAgentTests.m</string>
+			<key>path</key>
+			<string>Core/Agent/TYUserInterfaceAgentTests.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>3025AE5D18D35C0D00BC4207</key>
+		<dict>
+			<key>fileRef</key>
+			<string>3025AE5B18D35C0D00BC4207</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>3025AE5E18D35C0D00BC4207</key>
+		<dict>
+			<key>fileRef</key>
+			<string>3025AE5C18D35C0D00BC4207</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>3025AE5F18D35C1700BC4207</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>TYSyntheticEventPublisherTests.m</string>
+			<key>path</key>
+			<string>Core/Event/TYSyntheticEventPublisherTests.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>3025AE6018D35C1700BC4207</key>
+		<dict>
+			<key>fileRef</key>
+			<string>3025AE5F18D35C1700BC4207</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>3032EEE118C6AF2C00070BD2</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>TYDefaultSoundPlayer.h</string>
+			<key>path</key>
+			<string>Core/Sound/TYDefaultSoundPlayer.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>3032EEE218C6AF2C00070BD2</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>TYDefaultSoundPlayer.m</string>
+			<key>path</key>
+			<string>Core/Sound/TYDefaultSoundPlayer.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>3032EEE318C6AF2C00070BD2</key>
+		<dict>
+			<key>fileRef</key>
+			<string>3032EEE218C6AF2C00070BD2</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>3032EEEB18C6C28700070BD2</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>TYPublishedEvent.h</string>
+			<key>path</key>
+			<string>Mock/TYPublishedEvent.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>3032EEEC18C6C28700070BD2</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>TYPublishedEvent.m</string>
+			<key>path</key>
+			<string>Mock/TYPublishedEvent.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>3032EEED18C6C28700070BD2</key>
+		<dict>
+			<key>fileRef</key>
+			<string>3032EEEC18C6C28700070BD2</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>3039D2F118C4DF47008689C9</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>3025AE5718D35B3700BC4207</string>
+				<string>3025AE5818D35B3700BC4207</string>
+				<string>3039D2F418C4DF7C008689C9</string>
+				<string>3039D2F218C4DF7C008689C9</string>
+				<string>3039D2F318C4DF7C008689C9</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Event</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>3039D2F218C4DF7C008689C9</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>TYDefaultEventBus.h</string>
+			<key>path</key>
+			<string>Core/Event/TYDefaultEventBus.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>3039D2F318C4DF7C008689C9</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>TYDefaultEventBus.m</string>
+			<key>path</key>
+			<string>Core/Event/TYDefaultEventBus.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>3039D2F418C4DF7C008689C9</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>TYEventBus.h</string>
+			<key>path</key>
+			<string>Core/Event/TYEventBus.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>3039D2F518C4DF7C008689C9</key>
+		<dict>
+			<key>fileRef</key>
+			<string>3039D2F318C4DF7C008689C9</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>3039D2F618C4DFB0008689C9</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>3039D2F718C4DFCE008689C9</string>
+				<string>3025AE5F18D35C1700BC4207</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Event</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>3039D2F718C4DFCE008689C9</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>TYEventBusTests.m</string>
+			<key>path</key>
+			<string>Core/Event/TYEventBusTests.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>3039D2F818C4DFCE008689C9</key>
+		<dict>
+			<key>fileRef</key>
+			<string>3039D2F718C4DFCE008689C9</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>30415FAC18C5105D0069FAE3</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>30415FAD18C5109D0069FAE3</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Preferences</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>30415FAD18C5109D0069FAE3</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>TYPreferencesTests.m</string>
+			<key>path</key>
+			<string>Core/Preferences/TYPreferencesTests.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>30415FAE18C5109D0069FAE3</key>
+		<dict>
+			<key>fileRef</key>
+			<string>30415FAD18C5109D0069FAE3</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>30415FAF18C51B4D0069FAE3</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>30415FB018C51B6A0069FAE3</string>
+				<string>30415FB418C51C290069FAE3</string>
+				<string>30415FB518C51C290069FAE3</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Preferences</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>30415FB018C51B6A0069FAE3</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>TYPreferences.h</string>
+			<key>path</key>
+			<string>Core/Preferences/TYPreferences.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>30415FB418C51C290069FAE3</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>TYUserDefaultsPreferences.h</string>
+			<key>path</key>
+			<string>Core/Preferences/TYUserDefaultsPreferences.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>30415FB518C51C290069FAE3</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>TYUserDefaultsPreferences.m</string>
+			<key>path</key>
+			<string>Core/Preferences/TYUserDefaultsPreferences.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>30415FB618C51C290069FAE3</key>
+		<dict>
+			<key>fileRef</key>
+			<string>30415FB518C51C290069FAE3</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>304AF80918BD04BE00A2EA74</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>305D161D18CD13F100CE6A34</string>
+				<string>305D161A18CD12FA00CE6A34</string>
+				<string>30C383D318CFCA3700FABFFE</string>
+				<string>304AF81B18BD04BE00A2EA74</string>
+				<string>304AF83918BD04BF00A2EA74</string>
+				<string>304AF81418BD04BE00A2EA74</string>
+				<string>304AF81318BD04BE00A2EA74</string>
+				<string>448B4AF8B231E32919AFF1BF</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>304AF80A18BD04BE00A2EA74</key>
+		<dict>
+			<key>attributes</key>
+			<dict>
+				<key>CLASSPREFIX</key>
+				<string>TY</string>
+				<key>LastUpgradeCheck</key>
+				<string>0500</string>
+				<key>ORGANIZATIONNAME</key>
+				<string>Gig Software</string>
+				<key>TargetAttributes</key>
+				<dict>
+					<key>304AF83218BD04BE00A2EA74</key>
+					<dict>
+						<key>TestTargetID</key>
+						<string>304AF81118BD04BE00A2EA74</string>
+					</dict>
+				</dict>
+			</dict>
+			<key>buildConfigurationList</key>
+			<string>304AF80D18BD04BE00A2EA74</string>
+			<key>compatibilityVersion</key>
+			<string>Xcode 3.2</string>
+			<key>developmentRegion</key>
+			<string>English</string>
+			<key>hasScannedForEncodings</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXProject</string>
+			<key>knownRegions</key>
+			<array>
+				<string>en</string>
+				<string>Base</string>
+			</array>
+			<key>mainGroup</key>
+			<string>304AF80918BD04BE00A2EA74</string>
+			<key>productRefGroup</key>
+			<string>304AF81318BD04BE00A2EA74</string>
+			<key>projectDirPath</key>
+			<string></string>
+			<key>projectReferences</key>
+			<array/>
+			<key>projectRoot</key>
+			<string></string>
+			<key>targets</key>
+			<array>
+				<string>304AF81118BD04BE00A2EA74</string>
+				<string>304AF83218BD04BE00A2EA74</string>
+			</array>
+		</dict>
+		<key>304AF80D18BD04BE00A2EA74</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>304AF84118BD04BF00A2EA74</string>
+				<string>304AF84218BD04BF00A2EA74</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>304AF80E18BD04BE00A2EA74</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>304AF82218BD04BE00A2EA74</string>
+				<string>30B89F9E18C3855600C1DD2B</string>
+				<string>3025AE5518D35B2B00BC4207</string>
+				<string>309ECB0418C3828B00B270BF</string>
+				<string>3032EEE318C6AF2C00070BD2</string>
+				<string>300AE29518D1471F00264309</string>
+				<string>30DB72FA18CD54D200293915</string>
+				<string>301A007918BD417200B8DEE0</string>
+				<string>309394E718D0C76100D6C71A</string>
+				<string>30C383E018CFE02100FABFFE</string>
+				<string>30415FB618C51C290069FAE3</string>
+				<string>3039D2F518C4DF7C008689C9</string>
+				<string>309394EA18D0CBEC00D6C71A</string>
+				<string>3025AE5618D35B2B00BC4207</string>
+				<string>3025AE5918D35B3700BC4207</string>
+				<string>304AF82918BD04BE00A2EA74</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>304AF80F18BD04BE00A2EA74</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>304AF81618BD04BE00A2EA74</string>
+			</array>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>304AF81018BD04BE00A2EA74</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>30C383D918CFCA6B00FABFFE</string>
+				<string>30C383CE18CFC9FC00FABFFE</string>
+				<string>304AF82018BD04BE00A2EA74</string>
+				<string>305D161E18CD13F100CE6A34</string>
+				<string>30C383CF18CFC9FC00FABFFE</string>
+				<string>30C383D718CFCA6B00FABFFE</string>
+				<string>304AF82E18BD04BE00A2EA74</string>
+				<string>30C383CC18CFC9FC00FABFFE</string>
+				<string>30C383D118CFC9FC00FABFFE</string>
+				<string>30C383D218CFC9FC00FABFFE</string>
+				<string>30C383CD18CFC9FC00FABFFE</string>
+				<string>30C383C918CFC9FC00FABFFE</string>
+				<string>30C383CB18CFC9FC00FABFFE</string>
+				<string>30C383D018CFC9FC00FABFFE</string>
+				<string>30C383CA18CFC9FC00FABFFE</string>
+				<string>300AE29218D1444400264309</string>
+				<string>304AF82618BD04BE00A2EA74</string>
+				<string>30C383D818CFCA6B00FABFFE</string>
+				<string>304AF82C18BD04BE00A2EA74</string>
+			</array>
+			<key>isa</key>
+			<string>PBXResourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>304AF81118BD04BE00A2EA74</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>304AF84318BD04BF00A2EA74</string>
+			<key>buildPhases</key>
+			<array>
+				<string>304AF80E18BD04BE00A2EA74</string>
+				<string>304AF80F18BD04BE00A2EA74</string>
+				<string>304AF81018BD04BE00A2EA74</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>Tomighty</string>
+			<key>productName</key>
+			<string>Tomighty</string>
+			<key>productReference</key>
+			<string>304AF81218BD04BE00A2EA74</string>
+			<key>productType</key>
+			<string>com.apple.product-type.application</string>
+		</dict>
+		<key>304AF81218BD04BE00A2EA74</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.application</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>Tomighty.app</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>304AF81318BD04BE00A2EA74</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>304AF81218BD04BE00A2EA74</string>
+				<string>304AF83318BD04BE00A2EA74</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Products</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>304AF81418BD04BE00A2EA74</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>0B1A27968CA44FEFB1DA3DB3</string>
+				<string>304AF81518BD04BE00A2EA74</string>
+				<string>304AF83418BD04BE00A2EA74</string>
+				<string>304AF81718BD04BE00A2EA74</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Frameworks</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>304AF81518BD04BE00A2EA74</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>Cocoa.framework</string>
+			<key>path</key>
+			<string>System/Library/Frameworks/Cocoa.framework</string>
+			<key>sourceTree</key>
+			<string>SDKROOT</string>
+		</dict>
+		<key>304AF81618BD04BE00A2EA74</key>
+		<dict>
+			<key>fileRef</key>
+			<string>304AF81518BD04BE00A2EA74</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>304AF81718BD04BE00A2EA74</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>304AF81818BD04BE00A2EA74</string>
+				<string>304AF81918BD04BE00A2EA74</string>
+				<string>304AF81A18BD04BE00A2EA74</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Other Frameworks</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>304AF81818BD04BE00A2EA74</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>AppKit.framework</string>
+			<key>path</key>
+			<string>System/Library/Frameworks/AppKit.framework</string>
+			<key>sourceTree</key>
+			<string>SDKROOT</string>
+		</dict>
+		<key>304AF81918BD04BE00A2EA74</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>CoreData.framework</string>
+			<key>path</key>
+			<string>System/Library/Frameworks/CoreData.framework</string>
+			<key>sourceTree</key>
+			<string>SDKROOT</string>
+		</dict>
+		<key>304AF81A18BD04BE00A2EA74</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>Foundation.framework</string>
+			<key>path</key>
+			<string>System/Library/Frameworks/Foundation.framework</string>
+			<key>sourceTree</key>
+			<string>SDKROOT</string>
+		</dict>
+		<key>304AF81B18BD04BE00A2EA74</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>304AF84918BD117200A2EA74</string>
+				<string>304AF82718BD04BE00A2EA74</string>
+				<string>304AF82818BD04BE00A2EA74</string>
+				<string>304AF82A18BD04BE00A2EA74</string>
+				<string>300AE29018D1444400264309</string>
+				<string>304AF82D18BD04BE00A2EA74</string>
+				<string>304AF81C18BD04BE00A2EA74</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>Tomighty</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>304AF81C18BD04BE00A2EA74</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>304AF81D18BD04BE00A2EA74</string>
+				<string>304AF81E18BD04BE00A2EA74</string>
+				<string>304AF82118BD04BE00A2EA74</string>
+				<string>304AF82318BD04BE00A2EA74</string>
+				<string>304AF82418BD04BE00A2EA74</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Supporting Files</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>304AF81D18BD04BE00A2EA74</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>Tomighty-Info.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>304AF81E18BD04BE00A2EA74</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>304AF81F18BD04BE00A2EA74</string>
+			</array>
+			<key>isa</key>
+			<string>PBXVariantGroup</string>
+			<key>name</key>
+			<string>InfoPlist.strings</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>304AF81F18BD04BE00A2EA74</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.strings</string>
+			<key>name</key>
+			<string>en</string>
+			<key>path</key>
+			<string>en.lproj/InfoPlist.strings</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>304AF82018BD04BE00A2EA74</key>
+		<dict>
+			<key>fileRef</key>
+			<string>304AF81E18BD04BE00A2EA74</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>304AF82118BD04BE00A2EA74</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>main.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>304AF82218BD04BE00A2EA74</key>
+		<dict>
+			<key>fileRef</key>
+			<string>304AF82118BD04BE00A2EA74</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>304AF82318BD04BE00A2EA74</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>Tomighty-Prefix.pch</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>304AF82418BD04BE00A2EA74</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>304AF82518BD04BE00A2EA74</string>
+			</array>
+			<key>isa</key>
+			<string>PBXVariantGroup</string>
+			<key>name</key>
+			<string>Credits.rtf</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>304AF82518BD04BE00A2EA74</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.rtf</string>
+			<key>name</key>
+			<string>en</string>
+			<key>path</key>
+			<string>en.lproj/Credits.rtf</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>304AF82618BD04BE00A2EA74</key>
+		<dict>
+			<key>fileRef</key>
+			<string>304AF82418BD04BE00A2EA74</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>304AF82718BD04BE00A2EA74</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>TYAppDelegate.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>304AF82818BD04BE00A2EA74</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>TYAppDelegate.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>304AF82918BD04BE00A2EA74</key>
+		<dict>
+			<key>fileRef</key>
+			<string>304AF82818BD04BE00A2EA74</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>304AF82A18BD04BE00A2EA74</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>304AF82B18BD04BE00A2EA74</string>
+			</array>
+			<key>isa</key>
+			<string>PBXVariantGroup</string>
+			<key>name</key>
+			<string>MainMenu.xib</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>304AF82B18BD04BE00A2EA74</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>file.xib</string>
+			<key>name</key>
+			<string>Base</string>
+			<key>path</key>
+			<string>Base.lproj/MainMenu.xib</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>304AF82C18BD04BE00A2EA74</key>
+		<dict>
+			<key>fileRef</key>
+			<string>304AF82A18BD04BE00A2EA74</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>304AF82D18BD04BE00A2EA74</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>folder.assetcatalog</string>
+			<key>path</key>
+			<string>Images.xcassets</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>304AF82E18BD04BE00A2EA74</key>
+		<dict>
+			<key>fileRef</key>
+			<string>304AF82D18BD04BE00A2EA74</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>304AF82F18BD04BE00A2EA74</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>30DB72F618CD4FC800293915</string>
+				<string>309ECB0818C382CF00B270BF</string>
+				<string>3039D2F818C4DFCE008689C9</string>
+				<string>3025AE6018D35C1700BC4207</string>
+				<string>309ECAFD18C36F6300B270BF</string>
+				<string>309ECB0A18C3830B00B270BF</string>
+				<string>3025AE5D18D35C0D00BC4207</string>
+				<string>3032EEED18C6C28700070BD2</string>
+				<string>30CFBF1218BD76F7000266B4</string>
+				<string>30C383DC18CFDE8F00FABFFE</string>
+				<string>3025AE5E18D35C0D00BC4207</string>
+				<string>30BD314318C556EE00428B1E</string>
+				<string>30415FAE18C5109D0069FAE3</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>304AF83018BD04BE00A2EA74</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>304AF83618BD04BF00A2EA74</string>
+				<string>304AF83518BD04BF00A2EA74</string>
+				<string>88742E1C44894488BB0F167C</string>
+			</array>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>304AF83118BD04BE00A2EA74</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>304AF83E18BD04BF00A2EA74</string>
+			</array>
+			<key>isa</key>
+			<string>PBXResourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>304AF83218BD04BE00A2EA74</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>304AF84618BD04BF00A2EA74</string>
+			<key>buildPhases</key>
+			<array>
+				<string>B7B8607396F24F888FD9E51D</string>
+				<string>304AF82F18BD04BE00A2EA74</string>
+				<string>304AF83018BD04BE00A2EA74</string>
+				<string>304AF83118BD04BE00A2EA74</string>
+				<string>30CFBF0718BD45BF000266B4</string>
+				<string>94D0AC8D9A87412895298800</string>
+				<string>9824E2BC220CB543E2CD32C4</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array>
+				<string>304AF83818BD04BF00A2EA74</string>
+			</array>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>TomightyTests</string>
+			<key>productName</key>
+			<string>TomightyTests</string>
+			<key>productReference</key>
+			<string>304AF83318BD04BE00A2EA74</string>
+			<key>productType</key>
+			<string>com.apple.product-type.bundle.unit-test</string>
+		</dict>
+		<key>304AF83318BD04BE00A2EA74</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.cfbundle</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>TomightyTests.xctest</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>304AF83418BD04BE00A2EA74</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>XCTest.framework</string>
+			<key>path</key>
+			<string>Library/Frameworks/XCTest.framework</string>
+			<key>sourceTree</key>
+			<string>DEVELOPER_DIR</string>
+		</dict>
+		<key>304AF83518BD04BF00A2EA74</key>
+		<dict>
+			<key>fileRef</key>
+			<string>304AF83418BD04BE00A2EA74</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>304AF83618BD04BF00A2EA74</key>
+		<dict>
+			<key>fileRef</key>
+			<string>304AF81518BD04BE00A2EA74</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>304AF83718BD04BF00A2EA74</key>
+		<dict>
+			<key>containerPortal</key>
+			<string>304AF80A18BD04BE00A2EA74</string>
+			<key>isa</key>
+			<string>PBXContainerItemProxy</string>
+			<key>proxyType</key>
+			<string>1</string>
+			<key>remoteGlobalIDString</key>
+			<string>304AF81118BD04BE00A2EA74</string>
+			<key>remoteInfo</key>
+			<string>Tomighty</string>
+		</dict>
+		<key>304AF83818BD04BF00A2EA74</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXTargetDependency</string>
+			<key>target</key>
+			<string>304AF81118BD04BE00A2EA74</string>
+			<key>targetProxy</key>
+			<string>304AF83718BD04BF00A2EA74</string>
+		</dict>
+		<key>304AF83918BD04BF00A2EA74</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>309ECB0518C3829700B270BF</string>
+				<string>304AF83A18BD04BF00A2EA74</string>
+				<string>30CFBF1318BD76FC000266B4</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>TomightyTests</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>304AF83A18BD04BF00A2EA74</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>304AF83B18BD04BF00A2EA74</string>
+				<string>304AF83C18BD04BF00A2EA74</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Supporting Files</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>304AF83B18BD04BF00A2EA74</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>TomightyTests-Info.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>304AF83C18BD04BF00A2EA74</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>304AF83D18BD04BF00A2EA74</string>
+			</array>
+			<key>isa</key>
+			<string>PBXVariantGroup</string>
+			<key>name</key>
+			<string>InfoPlist.strings</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>304AF83D18BD04BF00A2EA74</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.strings</string>
+			<key>name</key>
+			<string>en</string>
+			<key>path</key>
+			<string>en.lproj/InfoPlist.strings</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>304AF83E18BD04BF00A2EA74</key>
+		<dict>
+			<key>fileRef</key>
+			<string>304AF83C18BD04BF00A2EA74</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>304AF84118BD04BF00A2EA74</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_SEARCH_USER_PATHS</key>
+				<string>NO</string>
+				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
+				<string>gnu++0x</string>
+				<key>CLANG_CXX_LIBRARY</key>
+				<string>libc++</string>
+				<key>CLANG_ENABLE_OBJC_ARC</key>
+				<string>YES</string>
+				<key>CLANG_WARN_BOOL_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN_EMPTY_BODY</key>
+				<string>YES</string>
+				<key>CLANG_WARN_ENUM_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_INT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
+				<string>YES</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>NO</string>
+				<key>GCC_C_LANGUAGE_STANDARD</key>
+				<string>gnu99</string>
+				<key>GCC_DYNAMIC_NO_PIC</key>
+				<string>NO</string>
+				<key>GCC_ENABLE_OBJC_EXCEPTIONS</key>
+				<string>YES</string>
+				<key>GCC_OPTIMIZATION_LEVEL</key>
+				<string>0</string>
+				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
+				<array>
+					<string>DEBUG=1</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>GCC_SYMBOLS_PRIVATE_EXTERN</key>
+				<string>NO</string>
+				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
+				<string>YES</string>
+				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
+				<string>YES_ERROR</string>
+				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_FUNCTION</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_VARIABLE</key>
+				<string>YES</string>
+				<key>MACOSX_DEPLOYMENT_TARGET</key>
+				<string>10.9</string>
+				<key>ONLY_ACTIVE_ARCH</key>
+				<string>YES</string>
+				<key>SDKROOT</key>
+				<string>macosx</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>304AF84218BD04BF00A2EA74</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_SEARCH_USER_PATHS</key>
+				<string>NO</string>
+				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
+				<string>gnu++0x</string>
+				<key>CLANG_CXX_LIBRARY</key>
+				<string>libc++</string>
+				<key>CLANG_ENABLE_OBJC_ARC</key>
+				<string>YES</string>
+				<key>CLANG_WARN_BOOL_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN_EMPTY_BODY</key>
+				<string>YES</string>
+				<key>CLANG_WARN_ENUM_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_INT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
+				<string>YES</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>YES</string>
+				<key>DEBUG_INFORMATION_FORMAT</key>
+				<string>dwarf-with-dsym</string>
+				<key>ENABLE_NS_ASSERTIONS</key>
+				<string>NO</string>
+				<key>GCC_C_LANGUAGE_STANDARD</key>
+				<string>gnu99</string>
+				<key>GCC_ENABLE_OBJC_EXCEPTIONS</key>
+				<string>YES</string>
+				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
+				<string>YES</string>
+				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
+				<string>YES_ERROR</string>
+				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_FUNCTION</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_VARIABLE</key>
+				<string>YES</string>
+				<key>MACOSX_DEPLOYMENT_TARGET</key>
+				<string>10.9</string>
+				<key>SDKROOT</key>
+				<string>macosx</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>304AF84318BD04BF00A2EA74</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>304AF84418BD04BF00A2EA74</string>
+				<string>304AF84518BD04BF00A2EA74</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>304AF84418BD04BF00A2EA74</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>COMBINE_HIDPI_IMAGES</key>
+				<string>YES</string>
+				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>Tomighty/Tomighty-Prefix.pch</string>
+				<key>INFOPLIST_FILE</key>
+				<string>Tomighty/Tomighty-Info.plist</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>WRAPPER_EXTENSION</key>
+				<string>app</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>304AF84518BD04BF00A2EA74</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>COMBINE_HIDPI_IMAGES</key>
+				<string>YES</string>
+				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>Tomighty/Tomighty-Prefix.pch</string>
+				<key>INFOPLIST_FILE</key>
+				<string>Tomighty/Tomighty-Info.plist</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>WRAPPER_EXTENSION</key>
+				<string>app</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>304AF84618BD04BF00A2EA74</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>304AF84718BD04BF00A2EA74</string>
+				<string>304AF84818BD04BF00A2EA74</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>304AF84718BD04BF00A2EA74</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>4E46E0E26D22DDAFC599CB28</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>BUNDLE_LOADER</key>
+				<string>$(BUILT_PRODUCTS_DIR)/Tomighty.app/Contents/MacOS/Tomighty</string>
+				<key>COMBINE_HIDPI_IMAGES</key>
+				<string>YES</string>
+				<key>FRAMEWORK_SEARCH_PATHS</key>
+				<array>
+					<string>$(DEVELOPER_FRAMEWORKS_DIR)</string>
+					<string>$(inherited)</string>
+					<string>$(PROJECT_DIR)</string>
+				</array>
+				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>Tomighty/Tomighty-Prefix.pch</string>
+				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
+				<array>
+					<string>DEBUG=1</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>INFOPLIST_FILE</key>
+				<string>TomightyTests/TomightyTests-Info.plist</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>TEST_HOST</key>
+				<string>$(BUNDLE_LOADER)</string>
+				<key>WRAPPER_EXTENSION</key>
+				<string>xctest</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>304AF84818BD04BF00A2EA74</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>9C134136195EF68DBA17C261</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>BUNDLE_LOADER</key>
+				<string>$(BUILT_PRODUCTS_DIR)/Tomighty.app/Contents/MacOS/Tomighty</string>
+				<key>COMBINE_HIDPI_IMAGES</key>
+				<string>YES</string>
+				<key>FRAMEWORK_SEARCH_PATHS</key>
+				<array>
+					<string>$(DEVELOPER_FRAMEWORKS_DIR)</string>
+					<string>$(inherited)</string>
+					<string>$(PROJECT_DIR)</string>
+				</array>
+				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>Tomighty/Tomighty-Prefix.pch</string>
+				<key>INFOPLIST_FILE</key>
+				<string>TomightyTests/TomightyTests-Info.plist</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>TEST_HOST</key>
+				<string>$(BUNDLE_LOADER)</string>
+				<key>WRAPPER_EXTENSION</key>
+				<string>xctest</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>304AF84918BD117200A2EA74</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>3025AE5018D35AA000BC4207</string>
+				<string>3039D2F118C4DF47008689C9</string>
+				<string>30415FAF18C51B4D0069FAE3</string>
+				<string>30BD314718C566B400428B1E</string>
+				<string>301A007618BD413400B8DEE0</string>
+				<string>305D161518CD029F00CE6A34</string>
+				<string>30DB72F718CD54C000293915</string>
+				<string>30DB72F818CD54D200293915</string>
+				<string>30DB72F918CD54D200293915</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Core</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>305D161418CCEE3500CE6A34</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>TYTimer.h</string>
+			<key>path</key>
+			<string>Core/Timer/TYTimer.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>305D161518CD029F00CE6A34</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>305D161618CD02E100CE6A34</string>
+				<string>30C383DE18CFE02100FABFFE</string>
+				<string>30C383DF18CFE02100FABFFE</string>
+				<string>30C383DD18CFDFF000FABFFE</string>
+				<string>30C383E118CFE34700FABFFE</string>
+				<string>309394E518D0C76100D6C71A</string>
+				<string>309394E618D0C76100D6C71A</string>
+				<string>309394E818D0CBEC00D6C71A</string>
+				<string>309394E918D0CBEC00D6C71A</string>
+				<string>300AE29318D1471F00264309</string>
+				<string>300AE29418D1471F00264309</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>UI</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>305D161618CD02E100CE6A34</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>TYAppUI.h</string>
+			<key>path</key>
+			<string>Core/UI/TYAppUI.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>305D161A18CD12FA00CE6A34</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>30C383BF18CFC9FC00FABFFE</string>
+				<string>30C383C018CFC9FC00FABFFE</string>
+				<string>30C383C118CFC9FC00FABFFE</string>
+				<string>30C383C218CFC9FC00FABFFE</string>
+				<string>30C383C318CFC9FC00FABFFE</string>
+				<string>30C383C418CFC9FC00FABFFE</string>
+				<string>30C383C518CFC9FC00FABFFE</string>
+				<string>30C383C618CFC9FC00FABFFE</string>
+				<string>30C383C718CFC9FC00FABFFE</string>
+				<string>30C383C818CFC9FC00FABFFE</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Icons</string>
+			<key>path</key>
+			<string>Tomighty</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>305D161D18CD13F100CE6A34</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>image.icns</string>
+			<key>path</key>
+			<string>tomighty.icns</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>305D161E18CD13F100CE6A34</key>
+		<dict>
+			<key>fileRef</key>
+			<string>305D161D18CD13F100CE6A34</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>309394E518D0C76100D6C71A</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>TYDefaultStatusIcon.h</string>
+			<key>path</key>
+			<string>Core/UI/TYDefaultStatusIcon.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>309394E618D0C76100D6C71A</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>TYDefaultStatusIcon.m</string>
+			<key>path</key>
+			<string>Core/UI/TYDefaultStatusIcon.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>309394E718D0C76100D6C71A</key>
+		<dict>
+			<key>fileRef</key>
+			<string>309394E618D0C76100D6C71A</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>309394E818D0CBEC00D6C71A</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>TYImageLoader.h</string>
+			<key>path</key>
+			<string>Core/UI/TYImageLoader.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>309394E918D0CBEC00D6C71A</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>TYImageLoader.m</string>
+			<key>path</key>
+			<string>Core/UI/TYImageLoader.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>309394EA18D0CBEC00D6C71A</key>
+		<dict>
+			<key>fileRef</key>
+			<string>309394E918D0CBEC00D6C71A</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>309ECAFB18C36F6300B270BF</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>TYMockTimerContext.h</string>
+			<key>path</key>
+			<string>Mock/TYMockTimerContext.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>309ECAFC18C36F6300B270BF</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>TYMockTimerContext.m</string>
+			<key>path</key>
+			<string>Mock/TYMockTimerContext.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>309ECAFD18C36F6300B270BF</key>
+		<dict>
+			<key>fileRef</key>
+			<string>309ECAFC18C36F6300B270BF</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>309ECB0118C3828B00B270BF</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>TYDefaultSystemTimer.h</string>
+			<key>path</key>
+			<string>Core/Timer/TYDefaultSystemTimer.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>309ECB0218C3828B00B270BF</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>TYDefaultSystemTimer.m</string>
+			<key>path</key>
+			<string>Core/Timer/TYDefaultSystemTimer.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>309ECB0318C3828B00B270BF</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>TYSystemTimer.h</string>
+			<key>path</key>
+			<string>Core/Timer/TYSystemTimer.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>309ECB0418C3828B00B270BF</key>
+		<dict>
+			<key>fileRef</key>
+			<string>309ECB0218C3828B00B270BF</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>309ECB0518C3829700B270BF</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>3025AE5A18D35BAB00BC4207</string>
+				<string>3039D2F618C4DFB0008689C9</string>
+				<string>30415FAC18C5105D0069FAE3</string>
+				<string>309ECB0618C3829F00B270BF</string>
+				<string>30C383DA18CFDE6D00FABFFE</string>
+				<string>30DB72F518CD4FC800293915</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Core</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>309ECB0618C3829F00B270BF</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>309ECB0718C382CF00B270BF</string>
+				<string>309ECB0918C3830B00B270BF</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Timer</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>309ECB0718C382CF00B270BF</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>TYTimerTests.m</string>
+			<key>path</key>
+			<string>Core/Timer/TYTimerTests.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>309ECB0818C382CF00B270BF</key>
+		<dict>
+			<key>fileRef</key>
+			<string>309ECB0718C382CF00B270BF</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>309ECB0918C3830B00B270BF</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>TYTimerContextTests.m</string>
+			<key>path</key>
+			<string>Core/Timer/TYTimerContextTests.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>309ECB0A18C3830B00B270BF</key>
+		<dict>
+			<key>fileRef</key>
+			<string>309ECB0918C3830B00B270BF</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>30B89F9C18C3855600C1DD2B</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>TYDefaultTimerContext.h</string>
+			<key>path</key>
+			<string>Core/Timer/TYDefaultTimerContext.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>30B89F9D18C3855600C1DD2B</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>TYDefaultTimerContext.m</string>
+			<key>path</key>
+			<string>Core/Timer/TYDefaultTimerContext.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>30B89F9E18C3855600C1DD2B</key>
+		<dict>
+			<key>fileRef</key>
+			<string>30B89F9D18C3855600C1DD2B</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>30BD314118C556EE00428B1E</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>TYMockEventBus.h</string>
+			<key>path</key>
+			<string>Mock/TYMockEventBus.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>30BD314218C556EE00428B1E</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>TYMockEventBus.m</string>
+			<key>path</key>
+			<string>Mock/TYMockEventBus.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>30BD314318C556EE00428B1E</key>
+		<dict>
+			<key>fileRef</key>
+			<string>30BD314218C556EE00428B1E</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>30BD314718C566B400428B1E</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>30BD314B18C5686500428B1E</string>
+				<string>3032EEE118C6AF2C00070BD2</string>
+				<string>3032EEE218C6AF2C00070BD2</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Sound</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>30BD314B18C5686500428B1E</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>TYSoundPlayer.h</string>
+			<key>path</key>
+			<string>Core/Sound/TYSoundPlayer.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>30C383BF18CFC9FC00FABFFE</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>image.tiff</string>
+			<key>name</key>
+			<string>icon-clock.tiff</string>
+			<key>path</key>
+			<string>Icons/icon-clock.tiff</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>30C383C018CFC9FC00FABFFE</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>image.tiff</string>
+			<key>name</key>
+			<string>icon-start-long-break.tiff</string>
+			<key>path</key>
+			<string>Icons/icon-start-long-break.tiff</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>30C383C118CFC9FC00FABFFE</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>image.tiff</string>
+			<key>name</key>
+			<string>icon-start-pomodoro.tiff</string>
+			<key>path</key>
+			<string>Icons/icon-start-pomodoro.tiff</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>30C383C218CFC9FC00FABFFE</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>image.tiff</string>
+			<key>name</key>
+			<string>icon-start-short-break.tiff</string>
+			<key>path</key>
+			<string>Icons/icon-start-short-break.tiff</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>30C383C318CFC9FC00FABFFE</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>image.tiff</string>
+			<key>name</key>
+			<string>icon-status-long-break.tiff</string>
+			<key>path</key>
+			<string>Icons/icon-status-long-break.tiff</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>30C383C418CFC9FC00FABFFE</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>image.tiff</string>
+			<key>name</key>
+			<string>icon-status-idle.tiff</string>
+			<key>path</key>
+			<string>Icons/icon-status-idle.tiff</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>30C383C518CFC9FC00FABFFE</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>image.tiff</string>
+			<key>name</key>
+			<string>icon-status-pomodoro.tiff</string>
+			<key>path</key>
+			<string>Icons/icon-status-pomodoro.tiff</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>30C383C618CFC9FC00FABFFE</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>image.tiff</string>
+			<key>name</key>
+			<string>icon-status-short-break.tiff</string>
+			<key>path</key>
+			<string>Icons/icon-status-short-break.tiff</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>30C383C718CFC9FC00FABFFE</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>image.tiff</string>
+			<key>name</key>
+			<string>icon-status-alternate.tiff</string>
+			<key>path</key>
+			<string>Icons/icon-status-alternate.tiff</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>30C383C818CFC9FC00FABFFE</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>image.tiff</string>
+			<key>name</key>
+			<string>icon-stop-timer.tiff</string>
+			<key>path</key>
+			<string>Icons/icon-stop-timer.tiff</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>30C383C918CFC9FC00FABFFE</key>
+		<dict>
+			<key>fileRef</key>
+			<string>30C383BF18CFC9FC00FABFFE</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>30C383CA18CFC9FC00FABFFE</key>
+		<dict>
+			<key>fileRef</key>
+			<string>30C383C018CFC9FC00FABFFE</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>30C383CB18CFC9FC00FABFFE</key>
+		<dict>
+			<key>fileRef</key>
+			<string>30C383C118CFC9FC00FABFFE</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>30C383CC18CFC9FC00FABFFE</key>
+		<dict>
+			<key>fileRef</key>
+			<string>30C383C218CFC9FC00FABFFE</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>30C383CD18CFC9FC00FABFFE</key>
+		<dict>
+			<key>fileRef</key>
+			<string>30C383C318CFC9FC00FABFFE</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>30C383CE18CFC9FC00FABFFE</key>
+		<dict>
+			<key>fileRef</key>
+			<string>30C383C418CFC9FC00FABFFE</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>30C383CF18CFC9FC00FABFFE</key>
+		<dict>
+			<key>fileRef</key>
+			<string>30C383C518CFC9FC00FABFFE</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>30C383D018CFC9FC00FABFFE</key>
+		<dict>
+			<key>fileRef</key>
+			<string>30C383C618CFC9FC00FABFFE</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>30C383D118CFC9FC00FABFFE</key>
+		<dict>
+			<key>fileRef</key>
+			<string>30C383C718CFC9FC00FABFFE</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>30C383D218CFC9FC00FABFFE</key>
+		<dict>
+			<key>fileRef</key>
+			<string>30C383C818CFC9FC00FABFFE</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>30C383D318CFCA3700FABFFE</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>30C383D418CFCA6B00FABFFE</string>
+				<string>30C383D518CFCA6B00FABFFE</string>
+				<string>30C383D618CFCA6B00FABFFE</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Sound</string>
+			<key>path</key>
+			<string>Tomighty</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>30C383D418CFCA6B00FABFFE</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>audio.wav</string>
+			<key>name</key>
+			<string>timer_start.wav</string>
+			<key>path</key>
+			<string>Sound/timer_start.wav</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>30C383D518CFCA6B00FABFFE</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>audio.wav</string>
+			<key>name</key>
+			<string>timer_goes_off.wav</string>
+			<key>path</key>
+			<string>Sound/timer_goes_off.wav</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>30C383D618CFCA6B00FABFFE</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>audio.wav</string>
+			<key>name</key>
+			<string>timer_tick.wav</string>
+			<key>path</key>
+			<string>Sound/timer_tick.wav</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>30C383D718CFCA6B00FABFFE</key>
+		<dict>
+			<key>fileRef</key>
+			<string>30C383D418CFCA6B00FABFFE</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>30C383D818CFCA6B00FABFFE</key>
+		<dict>
+			<key>fileRef</key>
+			<string>30C383D518CFCA6B00FABFFE</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>30C383D918CFCA6B00FABFFE</key>
+		<dict>
+			<key>fileRef</key>
+			<string>30C383D618CFCA6B00FABFFE</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>30C383DA18CFDE6D00FABFFE</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>30C383DB18CFDE8F00FABFFE</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>UI</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>30C383DB18CFDE8F00FABFFE</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>TYAppUITests.m</string>
+			<key>path</key>
+			<string>Core/UI/TYAppUITests.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>30C383DC18CFDE8F00FABFFE</key>
+		<dict>
+			<key>fileRef</key>
+			<string>30C383DB18CFDE8F00FABFFE</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>30C383DD18CFDFF000FABFFE</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>TYStatusMenu.h</string>
+			<key>path</key>
+			<string>Core/UI/TYStatusMenu.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>30C383DE18CFE02100FABFFE</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>TYDefaultAppUI.h</string>
+			<key>path</key>
+			<string>Core/UI/TYDefaultAppUI.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>30C383DF18CFE02100FABFFE</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>TYDefaultAppUI.m</string>
+			<key>path</key>
+			<string>Core/UI/TYDefaultAppUI.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>30C383E018CFE02100FABFFE</key>
+		<dict>
+			<key>fileRef</key>
+			<string>30C383DF18CFE02100FABFFE</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>30C383E118CFE34700FABFFE</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>TYStatusIcon.h</string>
+			<key>path</key>
+			<string>Core/UI/TYStatusIcon.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>30CFBF0718BD45BF000266B4</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>dstPath</key>
+			<string></string>
+			<key>dstSubfolderSpec</key>
+			<string>16</string>
+			<key>files</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXCopyFilesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>30CFBF1018BD76F7000266B4</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>TYMockSystemTimer.h</string>
+			<key>path</key>
+			<string>Mock/TYMockSystemTimer.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>30CFBF1118BD76F7000266B4</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>TYMockSystemTimer.m</string>
+			<key>path</key>
+			<string>Mock/TYMockSystemTimer.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>30CFBF1218BD76F7000266B4</key>
+		<dict>
+			<key>fileRef</key>
+			<string>30CFBF1118BD76F7000266B4</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>30CFBF1318BD76FC000266B4</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>30BD314118C556EE00428B1E</string>
+				<string>30BD314218C556EE00428B1E</string>
+				<string>30CFBF1018BD76F7000266B4</string>
+				<string>30CFBF1118BD76F7000266B4</string>
+				<string>309ECAFB18C36F6300B270BF</string>
+				<string>309ECAFC18C36F6300B270BF</string>
+				<string>3032EEEB18C6C28700070BD2</string>
+				<string>3032EEEC18C6C28700070BD2</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Mock</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>30DB72F518CD4FC800293915</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>TYTomightyTests.m</string>
+			<key>path</key>
+			<string>Core/TYTomightyTests.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>30DB72F618CD4FC800293915</key>
+		<dict>
+			<key>fileRef</key>
+			<string>30DB72F518CD4FC800293915</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>30DB72F718CD54C000293915</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>TYTomighty.h</string>
+			<key>path</key>
+			<string>Core/TYTomighty.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>30DB72F818CD54D200293915</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>TYDefaultTomighty.h</string>
+			<key>path</key>
+			<string>Core/TYDefaultTomighty.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>30DB72F918CD54D200293915</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>TYDefaultTomighty.m</string>
+			<key>path</key>
+			<string>Core/TYDefaultTomighty.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>30DB72FA18CD54D200293915</key>
+		<dict>
+			<key>fileRef</key>
+			<string>30DB72F918CD54D200293915</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>448B4AF8B231E32919AFF1BF</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>4E46E0E26D22DDAFC599CB28</string>
+				<string>9C134136195EF68DBA17C261</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Pods</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>4E46E0E26D22DDAFC599CB28</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>name</key>
+			<string>Pods-TomightyTests.debug.xcconfig</string>
+			<key>path</key>
+			<string>Pods/Target Support Files/Pods-TomightyTests/Pods-TomightyTests.debug.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>88742E1C44894488BB0F167C</key>
+		<dict>
+			<key>fileRef</key>
+			<string>0B1A27968CA44FEFB1DA3DB3</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>94D0AC8D9A87412895298800</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>Copy Pods Resources</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>"${SRCROOT}/Pods/Target Support Files/Pods-TomightyTests/Pods-TomightyTests-resources.sh"
+</string>
+			<key>showEnvVarsInLog</key>
+			<string>0</string>
+		</dict>
+		<key>9824E2BC220CB543E2CD32C4</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>Embed Pods Frameworks</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>"${SRCROOT}/Pods/Target Support Files/Pods-TomightyTests/Pods-TomightyTests-frameworks.sh"
+</string>
+			<key>showEnvVarsInLog</key>
+			<string>0</string>
+		</dict>
+		<key>9C134136195EF68DBA17C261</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>name</key>
+			<string>Pods-TomightyTests.release.xcconfig</string>
+			<key>path</key>
+			<string>Pods/Target Support Files/Pods-TomightyTests/Pods-TomightyTests.release.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>B7B8607396F24F888FD9E51D</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>Check Pods Manifest.lock</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>diff "${PODS_ROOT}/../Podfile.lock" "${PODS_ROOT}/Manifest.lock" &gt; /dev/null
+if [[ $? != 0 ]] ; then
+    cat &lt;&lt; EOM
+error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.
+EOM
+    exit 1
+fi
+</string>
+			<key>showEnvVarsInLog</key>
+			<string>0</string>
+		</dict>
+	</dict>
+	<key>rootObject</key>
+	<string>304AF80A18BD04BE00A2EA74</string>
+</dict>
+</plist>
