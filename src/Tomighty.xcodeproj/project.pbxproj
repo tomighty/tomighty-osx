@@ -60,6 +60,8 @@
 		30DB72F618CD4FC800293915 /* TYTomightyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 30DB72F518CD4FC800293915 /* TYTomightyTests.m */; };
 		30DB72FA18CD54D200293915 /* TYDefaultTomighty.m in Sources */ = {isa = PBXBuildFile; fileRef = 30DB72F918CD54D200293915 /* TYDefaultTomighty.m */; };
 		88742E1C44894488BB0F167C /* libPods-TomightyTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B1A27968CA44FEFB1DA3DB3 /* libPods-TomightyTests.a */; };
+		C69D84451D7971A000B24643 /* MVTHotkey.m in Sources */ = {isa = PBXBuildFile; fileRef = C69D84441D7971A000B24643 /* MVTHotkey.m */; };
+		C69D84481D7971B900B24643 /* MVTHotkeyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C69D84471D7971B900B24643 /* MVTHotkeyTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -176,6 +178,9 @@
 		30DB72F918CD54D200293915 /* TYDefaultTomighty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TYDefaultTomighty.m; path = Core/TYDefaultTomighty.m; sourceTree = "<group>"; };
 		4E46E0E26D22DDAFC599CB28 /* Pods-TomightyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TomightyTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TomightyTests/Pods-TomightyTests.debug.xcconfig"; sourceTree = "<group>"; };
 		9C134136195EF68DBA17C261 /* Pods-TomightyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TomightyTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TomightyTests/Pods-TomightyTests.release.xcconfig"; sourceTree = "<group>"; };
+		C69D84431D7971A000B24643 /* MVTHotkey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MVTHotkey.h; path = Core/Hotkey/MVTHotkey.h; sourceTree = "<group>"; };
+		C69D84441D7971A000B24643 /* MVTHotkey.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MVTHotkey.m; path = Core/Hotkey/MVTHotkey.m; sourceTree = "<group>"; };
+		C69D84471D7971B900B24643 /* MVTHotkeyTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MVTHotkeyTests.m; path = Core/Hotkey/MVTHotkeyTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -367,6 +372,7 @@
 		304AF84918BD117200A2EA74 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				C69D84421D79718500B24643 /* Hotkey */,
 				3025AE5018D35AA000BC4207 /* Agent */,
 				3039D2F118C4DF47008689C9 /* Event */,
 				30415FAF18C51B4D0069FAE3 /* Preferences */,
@@ -419,6 +425,7 @@
 		309ECB0518C3829700B270BF /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				C69D84461D7971AA00B24643 /* Hotkey */,
 				3025AE5A18D35BAB00BC4207 /* Agent */,
 				3039D2F618C4DFB0008689C9 /* Event */,
 				30415FAC18C5105D0069FAE3 /* Preferences */,
@@ -489,6 +496,23 @@
 				9C134136195EF68DBA17C261 /* Pods-TomightyTests.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		C69D84421D79718500B24643 /* Hotkey */ = {
+			isa = PBXGroup;
+			children = (
+				C69D84431D7971A000B24643 /* MVTHotkey.h */,
+				C69D84441D7971A000B24643 /* MVTHotkey.m */,
+			);
+			name = Hotkey;
+			sourceTree = "<group>";
+		};
+		C69D84461D7971AA00B24643 /* Hotkey */ = {
+			isa = PBXGroup;
+			children = (
+				C69D84471D7971B900B24643 /* MVTHotkeyTests.m */,
+			);
+			name = Hotkey;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -660,6 +684,7 @@
 				304AF82218BD04BE00A2EA74 /* main.m in Sources */,
 				30B89F9E18C3855600C1DD2B /* TYDefaultTimerContext.m in Sources */,
 				3025AE5518D35B2B00BC4207 /* TYSoundAgent.m in Sources */,
+				C69D84451D7971A000B24643 /* MVTHotkey.m in Sources */,
 				309ECB0418C3828B00B270BF /* TYDefaultSystemTimer.m in Sources */,
 				3032EEE318C6AF2C00070BD2 /* TYDefaultSoundPlayer.m in Sources */,
 				300AE29518D1471F00264309 /* TYPreferencesWindowController.m in Sources */,
@@ -691,6 +716,7 @@
 				30CFBF1218BD76F7000266B4 /* TYMockSystemTimer.m in Sources */,
 				30C383DC18CFDE8F00FABFFE /* TYAppUITests.m in Sources */,
 				3025AE5E18D35C0D00BC4207 /* TYUserInterfaceAgentTests.m in Sources */,
+				C69D84481D7971B900B24643 /* MVTHotkeyTests.m in Sources */,
 				30BD314318C556EE00428B1E /* TYMockEventBus.m in Sources */,
 				30415FAE18C5109D0069FAE3 /* TYPreferencesTests.m in Sources */,
 			);
