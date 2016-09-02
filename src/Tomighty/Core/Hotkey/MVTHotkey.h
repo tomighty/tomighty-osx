@@ -10,6 +10,16 @@
 
 @class NSColor;
 @class NSFont;
+@class MVTHotkey;
+
+@protocol MVTHotkeyView <NSObject>
+
+- (void)setHotkey:(MVTHotkey*)hotkey;
+
+@optional
+- (MVTHotkey*)hotkey;
+
+@end
 /**
  @brief Helper object for MVTHotkeyView
  */

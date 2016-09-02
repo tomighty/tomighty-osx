@@ -62,6 +62,8 @@
 		88742E1C44894488BB0F167C /* libPods-TomightyTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B1A27968CA44FEFB1DA3DB3 /* libPods-TomightyTests.a */; };
 		C69D84451D7971A000B24643 /* MVTHotkey.m in Sources */ = {isa = PBXBuildFile; fileRef = C69D84441D7971A000B24643 /* MVTHotkey.m */; };
 		C69D84481D7971B900B24643 /* MVTHotkeyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C69D84471D7971B900B24643 /* MVTHotkeyTests.m */; };
+		C69D844D1D79722600B24643 /* MVTHotkeyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C69D844A1D79722600B24643 /* MVTHotkeyCell.m */; };
+		C69D844E1D79722600B24643 /* MVTHotkeyControl.m in Sources */ = {isa = PBXBuildFile; fileRef = C69D844C1D79722600B24643 /* MVTHotkeyControl.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -181,6 +183,10 @@
 		C69D84431D7971A000B24643 /* MVTHotkey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MVTHotkey.h; path = Core/Hotkey/MVTHotkey.h; sourceTree = "<group>"; };
 		C69D84441D7971A000B24643 /* MVTHotkey.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MVTHotkey.m; path = Core/Hotkey/MVTHotkey.m; sourceTree = "<group>"; };
 		C69D84471D7971B900B24643 /* MVTHotkeyTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MVTHotkeyTests.m; path = Core/Hotkey/MVTHotkeyTests.m; sourceTree = "<group>"; };
+		C69D84491D79722600B24643 /* MVTHotkeyCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MVTHotkeyCell.h; path = Core/Hotkey/MVTHotkeyCell.h; sourceTree = "<group>"; };
+		C69D844A1D79722600B24643 /* MVTHotkeyCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MVTHotkeyCell.m; path = Core/Hotkey/MVTHotkeyCell.m; sourceTree = "<group>"; };
+		C69D844B1D79722600B24643 /* MVTHotkeyControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MVTHotkeyControl.h; path = Core/Hotkey/MVTHotkeyControl.h; sourceTree = "<group>"; };
+		C69D844C1D79722600B24643 /* MVTHotkeyControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MVTHotkeyControl.m; path = Core/Hotkey/MVTHotkeyControl.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -334,6 +340,7 @@
 				300AE29018D1444400264309 /* PreferencesWindow.xib */,
 				304AF82D18BD04BE00A2EA74 /* Images.xcassets */,
 				304AF81C18BD04BE00A2EA74 /* Supporting Files */,
+				C69D84421D79718500B24643 /* Hotkey */,
 			);
 			path = Tomighty;
 			sourceTree = "<group>";
@@ -372,7 +379,6 @@
 		304AF84918BD117200A2EA74 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				C69D84421D79718500B24643 /* Hotkey */,
 				3025AE5018D35AA000BC4207 /* Agent */,
 				3039D2F118C4DF47008689C9 /* Event */,
 				30415FAF18C51B4D0069FAE3 /* Preferences */,
@@ -503,6 +509,10 @@
 			children = (
 				C69D84431D7971A000B24643 /* MVTHotkey.h */,
 				C69D84441D7971A000B24643 /* MVTHotkey.m */,
+				C69D84491D79722600B24643 /* MVTHotkeyCell.h */,
+				C69D844A1D79722600B24643 /* MVTHotkeyCell.m */,
+				C69D844B1D79722600B24643 /* MVTHotkeyControl.h */,
+				C69D844C1D79722600B24643 /* MVTHotkeyControl.m */,
 			);
 			name = Hotkey;
 			sourceTree = "<group>";
@@ -687,9 +697,11 @@
 				C69D84451D7971A000B24643 /* MVTHotkey.m in Sources */,
 				309ECB0418C3828B00B270BF /* TYDefaultSystemTimer.m in Sources */,
 				3032EEE318C6AF2C00070BD2 /* TYDefaultSoundPlayer.m in Sources */,
+				C69D844E1D79722600B24643 /* MVTHotkeyControl.m in Sources */,
 				300AE29518D1471F00264309 /* TYPreferencesWindowController.m in Sources */,
 				30DB72FA18CD54D200293915 /* TYDefaultTomighty.m in Sources */,
 				301A007918BD417200B8DEE0 /* TYDefaultTimer.m in Sources */,
+				C69D844D1D79722600B24643 /* MVTHotkeyCell.m in Sources */,
 				309394E718D0C76100D6C71A /* TYDefaultStatusIcon.m in Sources */,
 				30C383E018CFE02100FABFFE /* TYDefaultAppUI.m in Sources */,
 				30415FB618C51C290069FAE3 /* TYUserDefaultsPreferences.m in Sources */,
