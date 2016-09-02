@@ -15,6 +15,8 @@ NSString * const PREF_PLAY_SOUND_WHEN_TIMER_STARTS        = @"org.tomighty.sound
 NSString * const PREF_PLAY_SOUND_WHEN_TIMER_GOES_OFF         = @"org.tomighty.sound.play_on_timer_stop";
 NSString * const PREF_PLAY_TICKTOCK_SOUND_DURING_POMODORO  = @"org.tomighty.sound.play_tick_tock_during_pomodoro";
 NSString * const PREF_PLAY_TICKTOCK_SOUND_DURING_BREAK     = @"org.tomighty.sound.play_tick_tock_during_break";
+NSString * const PREF_HOTKEY_START = @"org.tomighty.hotkey.start";
+NSString * const PREF_HOTKEY_STOP = @"org.tomighty.hotkey.stop";
 
 @implementation TYUserDefaultsPreferences
 {
@@ -58,4 +60,18 @@ NSString * const PREF_PLAY_TICKTOCK_SOUND_DURING_BREAK     = @"org.tomighty.soun
     }
 }
 
+- (NSString*)getString:(NSString*)key
+{
+    return (NSString*)[[NSUserDefaults standardUserDefaults] objectForKey:key];
+}
+
+- (void)setString:(NSString *)key value:(NSString *)value
+{
+    NSString *v = [self getString:key];
+    NSLog(@"%@ %@", v, value);
+    if(![v isEqualToString:value]) {
+        [[NSUserDefaults standardUserDefaults] setObject:value forKey:key];
+        [eventBus publish:PREFERENCE_CHANGE data:key];
+    }
+}
 @end

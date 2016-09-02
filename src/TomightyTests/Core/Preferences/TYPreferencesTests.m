@@ -71,6 +71,23 @@
     XCTAssertEqual([preferences getInt:PREF_TIME_POMODORO], 123);
 }
 
+- (void)test_set_and_get_string_value
+{
+    [preferences setString:PREF_HOTKEY_START value:@"start"];
+    XCTAssertTrue([@"start" isEqualToString:[preferences
+                                             getString:PREF_HOTKEY_START]]);
+}
+
+- (void)test_fire_event_when_string_value_changes_on_set
+{
+    [preferences setString:PREF_HOTKEY_STOP value:@"stop"];
+
+    XCTAssertEqual([eventBus getPublishedEventCount], (NSUInteger)1);
+    XCTAssertTrue([eventBus hasPublishedEvent:PREFERENCE_CHANGE
+                                     withData:PREF_HOTKEY_STOP
+                                   atPosition:1]);
+}
+
 - (void)test_fire_event_when_integer_value_changes_on_set
 {
     [preferences setInt:PREF_TIME_POMODORO value:987];

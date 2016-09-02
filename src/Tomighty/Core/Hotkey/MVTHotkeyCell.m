@@ -19,7 +19,8 @@
     as = [key mutableAttributedString:self.font
                             textColor:self.textColor
                         inactiveColor:[NSColor controlHighlightColor]];
-    [as addAttribute:NSParagraphStyleAttributeName value:ps range:NSMakeRange(0, as.length)];
+    [as addAttribute:NSParagraphStyleAttributeName value:ps
+               range:NSMakeRange(0, as.length)];
     [self setAttributedStringValue:as];
 }
 
