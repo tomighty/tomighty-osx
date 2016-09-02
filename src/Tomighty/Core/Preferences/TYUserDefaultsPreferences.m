@@ -68,7 +68,6 @@ NSString * const PREF_HOTKEY_STOP = @"org.tomighty.hotkey.stop";
 - (void)setString:(NSString *)key value:(NSString *)value
 {
     NSString *v = [self getString:key];
-    NSLog(@"%@ %@", v, value);
     if(![v isEqualToString:value]) {
         [[NSUserDefaults standardUserDefaults] setObject:value forKey:key];
         [eventBus publish:PREFERENCE_CHANGE data:key];
