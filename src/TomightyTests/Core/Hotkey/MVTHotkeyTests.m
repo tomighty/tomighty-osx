@@ -128,4 +128,15 @@
     XCTAssertTrue(key.string == nil);
 }
 
+- (void)test_sets_correct_carbon_flags {
+    key.string = @"⇧⌘S";
+    XCTAssertTrue(key.carbonFlags & (shiftKey + cmdKey));
+}
+
+- (void)test_does_not_set_incorrect_carbon_flags
+{
+    key.string = @"⇧⌘S";
+    XCTAssertFalse(key.carbonFlags & optionKey);
+}
+
 @end

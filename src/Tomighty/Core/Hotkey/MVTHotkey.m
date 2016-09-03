@@ -92,6 +92,20 @@ static NSString* const MVTCommandKeyString = @"⌘";
     return nil;
 }
 
+- (UInt32)carbonFlags
+{
+    UInt32 cf = 0;
+    if(self.ctrl)
+        cf |= controlKey;
+    if(self.alt)
+        cf |= optionKey;
+    if(self.shift)
+        cf |= shiftKey;
+    if(self.cmd)
+        cf |= cmdKey;
+    return cf;
+}
+
 - (BOOL)ctrl
 {
     return _flags & NSControlKeyMask ? TRUE : FALSE;

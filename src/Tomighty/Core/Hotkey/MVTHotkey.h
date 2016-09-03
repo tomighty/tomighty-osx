@@ -32,6 +32,7 @@
 @property (readonly) BOOL valid;
 @property (nonatomic, assign) SInt32 code;
 @property (nonatomic, assign) UInt32 flags;
+@property (readonly) UInt32 carbonFlags;
 @property (nonatomic, strong) NSString *string;
 
 + (id)hotkeyWithCode:(CGKeyCode)code flags:(UInt32)flags;
