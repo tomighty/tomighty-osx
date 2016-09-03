@@ -83,9 +83,4 @@
     [statusMenu enableResetPomodoroCountItem:count > 0];
 }
 
-- (void)handlePrerencesChange:(NSString*)which
-{
-    NSLog(@"Pref change: %@", which);
-}
-
 @end
