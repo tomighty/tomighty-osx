@@ -56,6 +56,11 @@
         NSNumber *pomodoroCount = eventData;
         [ui updatePomodoroCount:[pomodoroCount intValue]];
     }];
+
+    [eventBus subscribeTo:PREFERENCE_CHANGE subscriber:^(id eventData) {
+        NSString *pref = eventData;
+        [ui handlePrerencesChange:pref];
+    }];
 }
 
 @end
