@@ -39,7 +39,8 @@ NSString * const PREF_HOTKEY_STOP = @"org.tomighty.hotkey.stop";
         [defaultValues setObject:[NSNumber numberWithInt:true] forKey:PREF_PLAY_SOUND_WHEN_TIMER_GOES_OFF];
         [defaultValues setObject:[NSNumber numberWithInt:true] forKey:PREF_PLAY_TICKTOCK_SOUND_DURING_POMODORO];
         [defaultValues setObject:[NSNumber numberWithInt:true] forKey:PREF_PLAY_TICKTOCK_SOUND_DURING_BREAK];
-        
+        [defaultValues setObject:@"^⌘P" forKey:PREF_HOTKEY_START];
+        [defaultValues setObject:@"^⌘S" forKey:PREF_HOTKEY_STOP];
         [[NSUserDefaults standardUserDefaults] registerDefaults:defaultValues];
     }
     return self;
@@ -62,7 +63,8 @@ NSString * const PREF_HOTKEY_STOP = @"org.tomighty.hotkey.stop";
 
 - (NSString*)getString:(NSString*)key
 {
-    return (NSString*)[[NSUserDefaults standardUserDefaults] objectForKey:key];
+    NSString *ret = [[NSUserDefaults standardUserDefaults] objectForKey:key];
+    return ret;
 }
 
 - (void)setString:(NSString *)key value:(NSString *)value

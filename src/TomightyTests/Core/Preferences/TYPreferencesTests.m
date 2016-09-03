@@ -73,14 +73,14 @@
 
 - (void)test_set_and_get_string_value
 {
-    [preferences setString:PREF_HOTKEY_START value:@"start"];
-    XCTAssertTrue([@"start" isEqualToString:[preferences
+    [preferences setString:PREF_HOTKEY_START value:@"^⌘P"];
+    XCTAssertTrue([@"^⌘P" isEqualToString:[preferences
                                              getString:PREF_HOTKEY_START]]);
 }
 
 - (void)test_fire_event_when_string_value_changes_on_set
 {
-    [preferences setString:PREF_HOTKEY_STOP value:@"stop"];
+    [preferences setString:PREF_HOTKEY_STOP value:@"^⌘S"];
 
     XCTAssertEqual([eventBus getPublishedEventCount], (NSUInteger)1);
     XCTAssertTrue([eventBus hasPublishedEvent:PREFERENCE_CHANGE
