@@ -78,4 +78,20 @@
     [preferences setInt:PREF_PLAY_TICKTOCK_SOUND_DURING_BREAK value:(int)[self.check_play_ticktock_sound_during_break state]];
 }
 
+- (IBAction)save_hotkey_start:(id)sender
+{
+    // Note that we don't use [_t.. stringValue] because it'll return the key
+    // with all modifiers, not just those which are pressed
+    [preferences setString:PREF_HOTKEY_START
+                     value:_text_hotkey_start.hotkey.string];
+}
+
+- (IBAction)save_hotkey_stop:(id)sender
+{
+    // Note that we don't use [_t.. stringValue] because it'll return the key
+    // with all modifiers, not just those which are pressed
+    [preferences setString:PREF_HOTKEY_STOP
+                     value:_text_hotkey_stop.hotkey.string];
+}
+
 @end

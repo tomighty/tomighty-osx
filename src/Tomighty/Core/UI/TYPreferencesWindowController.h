@@ -30,5 +30,7 @@
 - (IBAction)save_play_sound_when_timer_goes_off:(id)sender;
 - (IBAction)save_play_ticktock_sound_during_pomodoro:(id)sender;
 - (IBAction)save_play_ticktock_sound_during_break:(id)sender;
+- (IBAction)save_hotkey_start:(id)sender;
+- (IBAction)save_hotkey_stop:(id)sender;
 
 @end
