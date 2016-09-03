@@ -5,6 +5,7 @@
 //  http://www.apache.org/licenses/LICENSE-2.0.txt
 //
 
+#import <Carbon/Carbon.h>
 #import "TYUserInterfaceAgent.h"
 #import "TYTimerContext.h"
 
@@ -55,11 +56,6 @@
     [eventBus subscribeTo:POMODORO_COUNT_CHANGE subscriber:^(id eventData) {
         NSNumber *pomodoroCount = eventData;
         [ui updatePomodoroCount:[pomodoroCount intValue]];
-    }];
-
-    [eventBus subscribeTo:PREFERENCE_CHANGE subscriber:^(id eventData) {
-        NSString *pref = eventData;
-        [ui handlePrerencesChange:pref];
     }];
 }
 
