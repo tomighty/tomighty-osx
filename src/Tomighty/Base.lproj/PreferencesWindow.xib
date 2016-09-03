@@ -12,6 +12,8 @@
                 <outlet property="check_play_sound_when_timer_starts" destination="UEf-gI-pZ6" id="VdU-XK-1aG"/>
                 <outlet property="check_play_ticktock_sound_during_break" destination="n8X-6J-yb1" id="fEo-Gf-VN3"/>
                 <outlet property="check_play_ticktock_sound_during_pomodoro" destination="XPt-RS-x5J" id="Id6-N6-jWy"/>
+                <outlet property="text_hotkey_start" destination="2oE-1m-x8L" id="LTe-aM-tL1"/>
+                <outlet property="text_hotkey_stop" destination="X8D-lx-dSZ" id="EaB-y7-iLQ"/>
                 <outlet property="text_time_long_break" destination="1UG-sw-aRq" id="mez-iY-mzE"/>
                 <outlet property="text_time_pomodoro" destination="sE1-ym-iCF" id="DWF-ut-22a"/>
                 <outlet property="text_time_short_break" destination="N2p-3V-2IY" id="s41-PU-SSB"/>
