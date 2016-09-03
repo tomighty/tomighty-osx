@@ -23,7 +23,6 @@ IB_DESIGNABLE
 - (void)setDefaults
 {
     _key = nil;
-    _key_valid = FALSE;
 }
 
 - (id)initWithFrame:(CGRect)frame {
@@ -49,9 +48,10 @@ IB_DESIGNABLE
 #pragma mark Properties
 - (void)setHotkey:(MVTHotkey*)hotkey
 {
-    if([self isKeyValid:hotkey]) {
+    if(hotkey.valid) {
         _key = hotkey;
         [_cell setHotkey:_key];
+        [self sendAction:self.action to:self.target];
     }
 }
 
@@ -64,27 +64,16 @@ IB_DESIGNABLE
 
 - (void)keyDown:(NSEvent *)theEvent
 {
-    enter(nil);
-    _key = [MVTHotkey hotkeyWithCode:[theEvent keyCode] flags:theEvent.modifierFlags];
-    if([self isKeyValid:_key]) {
-        [_cell setHotkey:_key];
-        [self sendAction:self.action to:self.target];
-    } else
+    MVTHotkey *key = [MVTHotkey hotkeyWithCode:[theEvent keyCode] flags:theEvent.modifierFlags];
+    if(key.valid)
+        [self setHotkey:key];
+    else
         [[super window] keyDown:theEvent];
 }
 
 - (void)mouseDown:(NSEvent *)theEvent
 {
     // Prevent background redraw by doing nothing.
-}
-
-#pragma mark Utilities
-- (BOOL)isKeyValid:(MVTHotkey*)key
-{
-    return
-    (_key.ctrl || _key.alt || _key.shift || _key.cmd) &&
-    (_key.code != kVK_Tab) ? TRUE : FALSE;
-
 }
 
 @end
