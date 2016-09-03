@@ -15,6 +15,5 @@
 - (void)switchToLongBreakState;
 - (void)updateRemainingTime:(int)remainingSeconds;
 - (void)updatePomodoroCount:(int)count;
-- (void)handlePrerencesChange:(NSString*)which;
 
 @end
