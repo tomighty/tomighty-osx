@@ -64,6 +64,7 @@
 		C69D84481D7971B900B24643 /* MVTHotkeyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C69D84471D7971B900B24643 /* MVTHotkeyTests.m */; };
 		C69D844D1D79722600B24643 /* MVTHotkeyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C69D844A1D79722600B24643 /* MVTHotkeyCell.m */; };
 		C69D844E1D79722600B24643 /* MVTHotkeyControl.m in Sources */ = {isa = PBXBuildFile; fileRef = C69D844C1D79722600B24643 /* MVTHotkeyControl.m */; };
+		C69D84521D7B280800B24643 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C69D84511D7B280800B24643 /* Carbon.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -187,6 +188,7 @@
 		C69D844A1D79722600B24643 /* MVTHotkeyCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MVTHotkeyCell.m; path = Core/Hotkey/MVTHotkeyCell.m; sourceTree = "<group>"; };
 		C69D844B1D79722600B24643 /* MVTHotkeyControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MVTHotkeyControl.h; path = Core/Hotkey/MVTHotkeyControl.h; sourceTree = "<group>"; };
 		C69D844C1D79722600B24643 /* MVTHotkeyControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MVTHotkeyControl.m; path = Core/Hotkey/MVTHotkeyControl.m; sourceTree = "<group>"; };
+		C69D84511D7B280800B24643 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = System/Library/Frameworks/Carbon.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -194,6 +196,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C69D84521D7B280800B24643 /* Carbon.framework in Frameworks */,
 				304AF81618BD04BE00A2EA74 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -312,6 +315,7 @@
 		304AF81418BD04BE00A2EA74 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C69D84511D7B280800B24643 /* Carbon.framework */,
 				0B1A27968CA44FEFB1DA3DB3 /* libPods-TomightyTests.a */,
 				304AF81518BD04BE00A2EA74 /* Cocoa.framework */,
 				304AF83418BD04BE00A2EA74 /* XCTest.framework */,
