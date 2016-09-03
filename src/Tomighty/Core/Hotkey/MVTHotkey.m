@@ -68,6 +68,10 @@ static NSString* const MVTCommandKeyString = @"⌘";
             break;
         }
     }
+    if(![self valid]) {
+        _code = -1;
+        _flags = -1;
+    }
 }
 
 - (NSString *)string
@@ -81,15 +85,12 @@ static NSString* const MVTCommandKeyString = @"⌘";
         [ar addObject:MVTShiftKeyString];
     if(self.cmd)
         [ar addObject:MVTCommandKeyString];
-    if([ar count] != 0) {
+    if([ar count] != 0 && _code != -1) {
         [ar addObject:[self _keyCodeToString:_code]];
         return [ar componentsJoinedByString:@""];
     }
     return nil;
 }
-
-
-#pragma mark Helpers
 
 - (BOOL)ctrl
 {
@@ -109,6 +110,12 @@ static NSString* const MVTCommandKeyString = @"⌘";
 - (BOOL)cmd
 {
     return _flags & NSCommandKeyMask ? TRUE : FALSE;
+}
+
+- (BOOL)valid
+{
+    return (([self ctrl] || [self alt] || [self shift] || [self cmd]) &&
+            (_code != -1 && _code != kVK_Tab));
 }
 
 #pragma mark Methods
@@ -159,6 +166,10 @@ static NSString* const MVTCommandKeyString = @"⌘";
 {
     _code = code;
     _flags = flags;
+    if(![self valid]) {
+        _code = -1;
+        _flags = -1;
+    }
 }
 
 - (NSString*)_keyCodeToString:(CGKeyCode)code

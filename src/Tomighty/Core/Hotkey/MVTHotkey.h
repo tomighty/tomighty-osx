@@ -29,11 +29,13 @@
 @property (readonly) BOOL alt;
 @property (readonly) BOOL shift;
 @property (readonly) BOOL cmd;
+@property (readonly) BOOL valid;
 @property (nonatomic, assign) SInt32 code;
 @property (nonatomic, assign) UInt32 flags;
 @property (nonatomic, strong) NSString *string;
 
 + (id)hotkeyWithCode:(CGKeyCode)code flags:(UInt32)flags;
++ (id)hotkeyWithString:(NSString*)string;
 
 - (NSMutableAttributedString*)mutableAttributedString:(NSFont*)font
                                             textColor:(NSColor*)textColor

@@ -93,4 +93,39 @@
     XCTAssertTrue(key.ctrl && key.code == 2);
 }
 
+- (void)test_should_report_invalid_without_key_code {
+    key.string = @"^";
+    XCTAssertFalse(key.valid);
+}
+
+- (void)test_should_report_invalid_if_tab {
+    key = [MVTHotkey hotkeyWithCode:kVK_Tab
+                              flags:(0 | NSCommandKeyMask)];
+    XCTAssertFalse(key.valid);
+}
+
+- (void)test_should_report_invalid_if_no_modifier
+{
+    key = [MVTHotkey hotkeyWithCode:0x1 flags:0];
+    XCTAssertFalse(key.valid);
+}
+
+- (void)test_should_have_code_minum_one_if_invalid
+{
+    key.string = @"R";
+    XCTAssertTrue(key.code == -1);
+}
+
+- (void)test_should_have_flags_minus_one_if_invalid
+{
+    key.string = @"";
+    XCTAssertTrue(key.flags == -1);
+}
+
+- (void)test_string_should_return_nil_if_invalid
+{
+    key.string = @"";
+    XCTAssertTrue(key.string == nil);
+}
+
 @end
