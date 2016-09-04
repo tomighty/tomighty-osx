@@ -13,6 +13,7 @@
 
 - (void)setHotkey:(MVTHotkey*)key
 {
+    // Respect IB text alignment settings
     NSMutableParagraphStyle *ps = [[NSMutableParagraphStyle alloc] init];
     ps.alignment = self.alignment;
     NSMutableAttributedString *as;
@@ -21,6 +22,7 @@
                         inactiveColor:[NSColor controlHighlightColor]];
     [as addAttribute:NSParagraphStyleAttributeName value:ps
                range:NSMakeRange(0, as.length)];
+
     [self setAttributedStringValue:as];
 }
 

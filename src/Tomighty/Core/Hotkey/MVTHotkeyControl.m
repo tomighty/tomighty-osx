@@ -64,7 +64,8 @@ IB_DESIGNABLE
 
 - (void)keyDown:(NSEvent *)theEvent
 {
-    MVTHotkey *key = [MVTHotkey hotkeyWithCode:[theEvent keyCode] flags:theEvent.modifierFlags];
+    MVTHotkey *key = [MVTHotkey hotkeyWithCode:[theEvent keyCode]
+                                         flags:theEvent.modifierFlags];
     if(key.valid)
         [self setHotkey:key];
     else
