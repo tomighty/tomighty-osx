@@ -16,6 +16,9 @@
 
 @end
 
+static NSString* const HOTKEY_START = @"^⌘P";
+static NSString* const HOTKEY_STOP = @"^⌘S";
+
 @implementation TYPreferencesTests
 {
     id <TYPreferences> preferences;
@@ -73,19 +76,22 @@
 
 - (void)test_set_and_get_string_value
 {
-    [preferences setString:PREF_HOTKEY_START value:@"^⌘P"];
-    XCTAssertTrue([@"^⌘P" isEqualToString:[preferences
+    [preferences setString:PREF_HOTKEY_START value:@"deadbeef"];
+    XCTAssertTrue([@"deadbeef" isEqualToString:[preferences
                                              getString:PREF_HOTKEY_START]]);
+    [preferences setString:PREF_HOTKEY_START value:HOTKEY_START];
 }
 
 - (void)test_fire_event_when_string_value_changes_on_set
 {
-    [preferences setString:PREF_HOTKEY_STOP value:@"^⌘S"];
+    [preferences setString:PREF_HOTKEY_STOP value:@""];
+    [preferences setString:PREF_HOTKEY_STOP value:@"deadbeef"];
 
-    XCTAssertEqual([eventBus getPublishedEventCount], (NSUInteger)1);
+    XCTAssertNotEqual([eventBus getPublishedEventCount], (NSUInteger)0);
     XCTAssertTrue([eventBus hasPublishedEvent:PREFERENCE_CHANGE
                                      withData:PREF_HOTKEY_STOP
                                    atPosition:1]);
+    [preferences setString:PREF_HOTKEY_STOP value:HOTKEY_STOP];
 }
 
 - (void)test_fire_event_when_integer_value_changes_on_set
