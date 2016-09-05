@@ -38,10 +38,10 @@
     [self.check_play_ticktock_sound_during_pomodoro setState:[preferences getInt:PREF_PLAY_TICKTOCK_SOUND_DURING_POMODORO]];
     [self.check_play_ticktock_sound_during_break setState:[preferences getInt:PREF_PLAY_TICKTOCK_SOUND_DURING_BREAK]];
     [self.text_hotkey_start
-     setHotkey:[MVTHotkey hotkeyWithString:[preferences
+     setHotkey:[TYHotkey hotkeyWithString:[preferences
                                             getString:PREF_HOTKEY_START]]];
     [self.text_hotkey_stop
-     setHotkey:[MVTHotkey hotkeyWithString:[preferences
+     setHotkey:[TYHotkey hotkeyWithString:[preferences
                                             getString:PREF_HOTKEY_STOP]]];
 }
 

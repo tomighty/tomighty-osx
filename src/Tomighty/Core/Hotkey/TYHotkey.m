@@ -1,21 +1,20 @@
 //
-//  MVTHotkey.m
-//  Tomighty
+//  Tomighty - http://www.tomighty.org
 //
-//  Created by Misha Tavkhelidze on 8/27/16.
-//  Copyright © 2016 Gig Software. All rights reserved.
+//  This software is licensed under the Apache License Version 2.0:
+//  http://www.apache.org/licenses/LICENSE-2.0.txt
 //
 
 #import <Cocoa/Cocoa.h>
 #import <Carbon/Carbon.h>
-#import "MVTHotkey.h"
+#import "TYHotkey.h"
 
 static NSString* const MVTControlKeyString = @"^";
 static NSString* const MVTAlternativeKeyString = @"⌥";
 static NSString* const MVTShiftKeyString = @"⇧";
 static NSString* const MVTCommandKeyString = @"⌘";
 
-@implementation MVTHotkey {
+@implementation TYHotkey {
     NSDictionary *_keymap;
 }
 
@@ -23,7 +22,7 @@ static NSString* const MVTCommandKeyString = @"⌘";
 
 + (id)hotkeyWithCode:(CGKeyCode)code flags:(UInt32)flags
 {
-    MVTHotkey *key = [[MVTHotkey alloc] init];
+    TYHotkey *key = [[TYHotkey alloc] init];
     if(key) {
         [key _withCodeAndFlags:code flags:flags];
     }
@@ -32,7 +31,7 @@ static NSString* const MVTCommandKeyString = @"⌘";
 
 + (id)hotkeyWithString:(NSString*)str
 {
-    MVTHotkey *key = [[MVTHotkey alloc] init];
+    TYHotkey *key = [[TYHotkey alloc] init];
     key.string = str;
     return key;
 }

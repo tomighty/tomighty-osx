@@ -1,17 +1,16 @@
 //
-//  MVTHotkeyCell.m
-//  MVTHotkeyViewApp
+//  Tomighty - http://www.tomighty.org
 //
-//  Created by Misha Tavkhelidze on 8/28/16.
-//  Copyright © 2016 Misha Tavkhelidze. All rights reserved.
+//  This software is licensed under the Apache License Version 2.0:
+//  http://www.apache.org/licenses/LICENSE-2.0.txt
 //
 
-#import "MVTHotkey.h"
-#import "MVTHotkeyCell.h"
+#import "TYHotkey.h"
+#import "TYHotkeyCell.h"
 
-@implementation MVTHotkeyCell
+@implementation TYHotkeyCell
 
-- (void)setHotkey:(MVTHotkey*)key
+- (void)setHotkey:(TYHotkey*)key
 {
     // Respect IB text alignment settings
     NSMutableParagraphStyle *ps = [[NSMutableParagraphStyle alloc] init];

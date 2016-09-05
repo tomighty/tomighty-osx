@@ -1,29 +1,30 @@
 //
-//  MVTHotkey.h
-//  Tomighty
+//  Tomighty - http://www.tomighty.org
 //
-//  Created by Misha Tavkhelidze on 8/27/16.
-//  Copyright © 2016 Gig Software. All rights reserved.
+//  This software is licensed under the Apache License Version 2.0:
+//  http://www.apache.org/licenses/LICENSE-2.0.txt
 //
 
+
+/// @credits
 #import <Foundation/Foundation.h>
 
 @class NSColor;
 @class NSFont;
-@class MVTHotkey;
+@class TYHotkey;
 
 @protocol MVTHotkeyView <NSObject>
 
-- (void)setHotkey:(MVTHotkey*)hotkey;
+- (void)setHotkey:(TYHotkey*)hotkey;
 
 @optional
-- (MVTHotkey*)hotkey;
+- (TYHotkey*)hotkey;
 
 @end
 /**
- @brief Helper object for MVTHotkeyView
+ @brief A helper class to handle and represent OS X hotkey.
  */
-@interface MVTHotkey : NSObject
+@interface TYHotkey : NSObject
 
 @property (readonly) BOOL ctrl;
 @property (readonly) BOOL alt;

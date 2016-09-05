@@ -10,7 +10,7 @@
 #import "TYDefaultTomighty.h"
 #import "TYEventBus.h"
 #import "TYPreferences.h"
-#import "MVTHotkey.h"
+#import "TYHotkey.h"
 
 @implementation TYDefaultTomighty
 {
@@ -135,9 +135,9 @@
 
 - (void)registerHotkeys
 {
-    MVTHotkey *start = [MVTHotkey hotkeyWithString:[preferences
+    TYHotkey *start = [TYHotkey hotkeyWithString:[preferences
                                                  getString:PREF_HOTKEY_START]];
-    MVTHotkey *stop = [MVTHotkey hotkeyWithString:[preferences
+    TYHotkey *stop = [TYHotkey hotkeyWithString:[preferences
                                                     getString:PREF_HOTKEY_STOP]];
     EventHotKeyID hotkeyID;
 

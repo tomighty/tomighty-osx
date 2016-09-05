@@ -1,20 +1,20 @@
 //
-//  MVTHotkeyView.m
+//  Tomighty - http://www.tomighty.org
 //
-//  Created by Misha Tavkhelidze <misha.tavkhelidze@gmail.com>
-//  Copyright © 2016 Misha Tavkhelidze. All rights reserved.
+//  This software is licensed under the Apache License Version 2.0:
+//  http://www.apache.org/licenses/LICENSE-2.0.txt
 //
 
 #import <Carbon/Carbon.h>
-#import "MVTHotkeyControl.h"
-#import "MVTHotkeyCell.h"
-#import "MVTHotkey.h"
+#import "TYHotkeyControl.h"
+#import "TYHotkeyCell.h"
+#import "TYHotkey.h"
 
 IB_DESIGNABLE
 
-@implementation MVTHotkeyControl {
+@implementation TYHotkeyControl {
     BOOL _key_valid;
-    MVTHotkey *_key;
+    TYHotkey *_key;
 }
 
 #pragma mark Initialization
@@ -46,7 +46,7 @@ IB_DESIGNABLE
 }
 
 #pragma mark Properties
-- (void)setHotkey:(MVTHotkey*)hotkey
+- (void)setHotkey:(TYHotkey*)hotkey
 {
     if(hotkey.valid) {
         _key = hotkey;
@@ -55,7 +55,7 @@ IB_DESIGNABLE
     }
 }
 
-- (MVTHotkey*)hotkey
+- (TYHotkey*)hotkey
 {
     return _key;
 }
@@ -64,7 +64,7 @@ IB_DESIGNABLE
 
 - (void)keyDown:(NSEvent *)theEvent
 {
-    MVTHotkey *key = [MVTHotkey hotkeyWithCode:[theEvent keyCode]
+    TYHotkey *key = [TYHotkey hotkeyWithCode:[theEvent keyCode]
                                          flags:theEvent.modifierFlags];
     if(key.valid)
         [self setHotkey:key];

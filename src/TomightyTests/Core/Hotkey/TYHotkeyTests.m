@@ -1,27 +1,26 @@
 //
-//  MVTHotkey.m
-//  Tomighty
+//  Tomighty - http://www.tomighty.org
 //
-//  Created by Misha Tavkhelidze on 8/27/16.
-//  Copyright © 2016 Gig Software. All rights reserved.
+//  This software is licensed under the Apache License Version 2.0:
+//  http://www.apache.org/licenses/LICENSE-2.0.txt
 //
 
 #import <XCTest/XCTest.h>
 #import <Carbon/Carbon.h>
-#import "MVTHotkey.h"
+#import "TYHotkey.h"
 
-@interface MVTHotkeyTests : XCTestCase {
-    MVTHotkey *key;
+@interface TYHotkeyTests : XCTestCase {
+    TYHotkey *key;
 }
 
 @end
 
-@implementation MVTHotkeyTests
+@implementation TYHotkeyTests
 
 - (void)setUp {
     [super setUp];
     // ⇧⌘S
-    key = [MVTHotkey hotkeyWithCode:0x1
+    key = [TYHotkey hotkeyWithCode:0x1
                               flags:(0 | NSCommandKeyMask | NSShiftKeyMask)];
 }
 
@@ -99,14 +98,14 @@
 }
 
 - (void)test_should_report_invalid_if_tab {
-    key = [MVTHotkey hotkeyWithCode:kVK_Tab
+    key = [TYHotkey hotkeyWithCode:kVK_Tab
                               flags:(0 | NSCommandKeyMask)];
     XCTAssertFalse(key.valid);
 }
 
 - (void)test_should_report_invalid_if_no_modifier
 {
-    key = [MVTHotkey hotkeyWithCode:0x1 flags:0];
+    key = [TYHotkey hotkeyWithCode:0x1 flags:0];
     XCTAssertFalse(key.valid);
 }
 
