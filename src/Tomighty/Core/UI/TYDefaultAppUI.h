@@ -15,4 +15,6 @@
 
 - (id)initWith:(id <TYStatusMenu>)statusMenu statusIcon:(id<TYStatusIcon>)statusIcon;
 
+@property (nonatomic) TYAppUIStatusIconTextFormat statusIconTextFormat;
+
 @end

@@ -15,9 +15,9 @@ NSString * const ICON_STATUS_ALTERNATE = @"icon-status-alternate";
 
 @implementation TYDefaultStatusIcon
 {
-    __strong NSStatusItem *statusItem;
-    __strong NSMutableDictionary *iconImageCache;
-    __strong TYImageLoader *imageLoader;
+    NSStatusItem *statusItem;
+    NSMutableDictionary *iconImageCache;
+    TYImageLoader *imageLoader;
 }
 
 - (id)initWith:(NSMenu *)aMenu imageLoader:(TYImageLoader *)anImageLoader
@@ -37,8 +37,8 @@ NSString * const ICON_STATUS_ALTERNATE = @"icon-status-alternate";
     NSStatusItem *newStatusItem = [[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength];
     
     [newStatusItem setHighlightMode:YES];
-    [newStatusItem setImage:[self getIconImage:ICON_STATUS_IDLE]];
-    [newStatusItem setAlternateImage:[self getIconImage:ICON_STATUS_ALTERNATE]];
+    [newStatusItem setImage:[self getIconImage:ICON_STATUS_IDLE template:YES]];
+    [newStatusItem setAlternateImage:[self getIconImage:ICON_STATUS_ALTERNATE template:YES]];
     [newStatusItem setMenu:menu];
     
     return newStatusItem;
@@ -46,18 +46,24 @@ NSString * const ICON_STATUS_ALTERNATE = @"icon-status-alternate";
 
 - (void)changeIcon:(NSString *)iconName
 {
-    [statusItem setImage:[self getIconImage:iconName]];
+    [statusItem setImage:[self getIconImage:iconName template:NO]];
 }
 
-- (NSImage *)getIconImage:(NSString *)iconName
+- (NSImage *)getIconImage:(NSString *)iconName template:(BOOL)isTemplate
 {
     NSImage *image = [iconImageCache objectForKey:iconName];
     if(!image)
     {
         image = [imageLoader loadIcon:iconName];
         iconImageCache[iconName] = image;
+        [image setTemplate:isTemplate];
     }
     return image;
+}
+
+- (void)setStatusText:(NSString *)statusText
+{
+    statusItem.title = statusText;
 }
 
 @end

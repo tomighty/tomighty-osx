@@ -14,6 +14,8 @@ extern NSString * const ICON_STATUS_LONG_BREAK;
 
 @protocol TYStatusIcon <NSObject>
 
+- (void)setStatusText:(NSString *)statusText;
+
 - (void)changeIcon:(NSString *)iconName;
 
 @end

@@ -24,9 +24,9 @@
 
 @implementation TYAppUITests
 {
-    __strong id <TYAppUI> appUi;
-    __strong id <TYStatusMenu> statusMenu;
-    __strong id <TYStatusIcon> statusIcon;
+    id <TYAppUI> appUi;
+    id <TYStatusMenu> statusMenu;
+    id <TYStatusIcon> statusIcon;
 }
 
 - (void)setUp
@@ -87,32 +87,64 @@
 
 - (void)test_update_remaining_time_to_zero_seconds
 {
-    [appUi updateRemainingTime:0];
+    [appUi updateRemainingTime:0 withMode:TYAppUIRemainingTimeModeDefault];
     [verify(statusMenu) setRemainingTimeText:@"00:00"];
+    [verify(statusIcon) setStatusText:@""];
+    
+    [appUi setStatusIconTextFormat:TYAppUIStatusIconTextFormatMinutes];
+    [verify(statusIcon) setStatusText:@" Stopped"];
 }
 
 - (void)test_update_remaining_time_to_one_second
 {
-    [appUi updateRemainingTime:1];
+    [appUi updateRemainingTime:1 withMode:TYAppUIRemainingTimeModeDefault];
     [verify(statusMenu) setRemainingTimeText:@"00:01"];
+    [verify(statusIcon) setStatusText:@""];
+    
+    [appUi setStatusIconTextFormat:TYAppUIStatusIconTextFormatMinutes];
+    [verify(statusIcon) setStatusText:@" 1 m"];
+    
+    [appUi setStatusIconTextFormat:TYAppUIStatusIconTextFormatSeconds];
+    [verify(statusIcon) setStatusText:@" 00:01"];
 }
 
 - (void)test_update_remaining_time_to_fifty_nine_seconds
 {
-    [appUi updateRemainingTime:59];
+    [appUi updateRemainingTime:59 withMode:TYAppUIRemainingTimeModeDefault];
     [verify(statusMenu) setRemainingTimeText:@"00:59"];
 }
 
 - (void)test_update_remaining_time_to_one_minute
 {
-    [appUi updateRemainingTime:60];
+    [appUi updateRemainingTime:60 withMode:TYAppUIRemainingTimeModeDefault];
     [verify(statusMenu) setRemainingTimeText:@"01:00"];
 }
 
 - (void)test_update_remaining_time_to_zero_fifty_nine_minutes_and_fifty_nine_seconds
 {
-    [appUi updateRemainingTime:59 * 60 + 59];
+    [appUi updateRemainingTime:59 * 60 + 59 withMode:TYAppUIRemainingTimeModeDefault];
     [verify(statusMenu) setRemainingTimeText:@"59:59"];
+    [verify(statusIcon) setStatusText:@""];
+    
+    [appUi setStatusIconTextFormat:TYAppUIStatusIconTextFormatMinutes];
+    [verify(statusIcon) setStatusText:@" 60 m"];
+    
+    [appUi setStatusIconTextFormat:TYAppUIStatusIconTextFormatSeconds];
+    [verify(statusIcon) setStatusText:@" 59:59"];
+}
+
+- (void)test_update_remaining_time_with_start_mode
+{
+    [appUi setStatusIconTextFormat:TYAppUIStatusIconTextFormatMinutes];
+    
+    [appUi updateRemainingTime:25 * 60 withMode:TYAppUIRemainingTimeModeStart];
+    [verify(statusMenu) setRemainingTimeText:@"25:00"];
+    [verify(statusIcon) setStatusText:@" 25 m"];
+    
+    [appUi updateRemainingTime:23 * 60 + 59 withMode:TYAppUIRemainingTimeModeDefault];
+    [verify(statusMenu) setRemainingTimeText:@"23:59"];
+    [verify(statusIcon) setStatusText:@" 24 m"];
+
 }
 
 - (void)test_update_pomodoro_count_to_zero

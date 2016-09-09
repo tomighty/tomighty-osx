@@ -15,7 +15,7 @@
 
 @implementation TYEventBusTests
 {
-    __strong id<TYEventBus> eventBus;
+    id<TYEventBus> eventBus;
 }
 
 - (void)setUp

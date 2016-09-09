@@ -15,7 +15,7 @@
 
 @implementation TYPreferencesWindowController
 {
-    __strong id <TYPreferences> preferences;
+    id <TYPreferences> preferences;
 }
 
 - (id)initWithPreferences:(id <TYPreferences>)aPreferences
@@ -37,6 +37,8 @@
     [self.check_play_sound_when_timer_goes_off setState:[preferences getInt:PREF_PLAY_SOUND_WHEN_TIMER_GOES_OFF]];
     [self.check_play_ticktock_sound_during_pomodoro setState:[preferences getInt:PREF_PLAY_TICKTOCK_SOUND_DURING_POMODORO]];
     [self.check_play_ticktock_sound_during_break setState:[preferences getInt:PREF_PLAY_TICKTOCK_SOUND_DURING_BREAK]];
+    [self.popup_status_icon_time_format selectItemAtIndex:[preferences getInt:PREF_STATUS_ICON_TIME_FORMAT]];
+
 }
 
 - (void)windowWillClose:(NSNotification *)notification {
@@ -70,6 +72,10 @@
 
 - (IBAction)save_play_ticktock_sound_during_break:(id)sender {
     [preferences setInt:PREF_PLAY_TICKTOCK_SOUND_DURING_BREAK value:(int)[self.check_play_ticktock_sound_during_break state]];
+}
+
+- (IBAction)save_status_icon_time_format:(id)sender {
+    [preferences setInt:PREF_STATUS_ICON_TIME_FORMAT value:(int)self.popup_status_icon_time_format.indexOfSelectedItem];
 }
 
 @end

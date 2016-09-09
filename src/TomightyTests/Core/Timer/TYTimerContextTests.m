@@ -15,7 +15,7 @@
 
 @implementation TYTimerContextTests
 {
-    __strong id <TYTimerContext> timerContext;
+    id <TYTimerContext> timerContext;
 }
 
 - (void)test_context_type

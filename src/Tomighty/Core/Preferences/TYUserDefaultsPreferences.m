@@ -15,10 +15,17 @@ NSString * const PREF_PLAY_SOUND_WHEN_TIMER_STARTS        = @"org.tomighty.sound
 NSString * const PREF_PLAY_SOUND_WHEN_TIMER_GOES_OFF         = @"org.tomighty.sound.play_on_timer_stop";
 NSString * const PREF_PLAY_TICKTOCK_SOUND_DURING_POMODORO  = @"org.tomighty.sound.play_tick_tock_during_pomodoro";
 NSString * const PREF_PLAY_TICKTOCK_SOUND_DURING_BREAK     = @"org.tomighty.sound.play_tick_tock_during_break";
+NSString * const PREF_STATUS_ICON_TIME_FORMAT     = @"org.tomighty.general.status_icon_time_format";
+
+// formats must have same values as TYAppUIStatusIconTextFormat enum in TYAppUI.h
+// TODO : move this values to some common place?
+int const PREF_STATUS_ICON_TIME_FORMAT_NONE = 0;
+int const PREF_STATUS_ICON_TIME_FORMAT_MINUTES = 1;
+int const PREF_STATUS_ICON_TIME_FORMAT_SECONDS = 2;
 
 @implementation TYUserDefaultsPreferences
 {
-    __strong id <TYEventBus> eventBus;
+    id <TYEventBus> eventBus;
 }
 
 - (id)initWith:(id <TYEventBus>)anEventBus
@@ -37,7 +44,8 @@ NSString * const PREF_PLAY_TICKTOCK_SOUND_DURING_BREAK     = @"org.tomighty.soun
         [defaultValues setObject:[NSNumber numberWithInt:true] forKey:PREF_PLAY_SOUND_WHEN_TIMER_GOES_OFF];
         [defaultValues setObject:[NSNumber numberWithInt:true] forKey:PREF_PLAY_TICKTOCK_SOUND_DURING_POMODORO];
         [defaultValues setObject:[NSNumber numberWithInt:true] forKey:PREF_PLAY_TICKTOCK_SOUND_DURING_BREAK];
-        
+        [defaultValues setObject:[NSNumber numberWithInt:PREF_STATUS_ICON_TIME_FORMAT_NONE] forKey:PREF_STATUS_ICON_TIME_FORMAT];
+
         [[NSUserDefaults standardUserDefaults] registerDefaults:defaultValues];
     }
     return self;
@@ -54,6 +62,7 @@ NSString * const PREF_PLAY_TICKTOCK_SOUND_DURING_BREAK     = @"org.tomighty.soun
     if(value != actualValue)
     {
         [[NSUserDefaults standardUserDefaults] setInteger:value forKey:key];
+        [[NSUserDefaults standardUserDefaults] synchronize];
         [eventBus publish:PREFERENCE_CHANGE data:key];
     }
 }

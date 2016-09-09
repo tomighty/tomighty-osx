@@ -26,11 +26,11 @@
 
 @implementation TYTomightyTests
 {
-    __strong id <TYTomighty> tomighty;
-    __strong id <TYTimer> timer;
-    __strong id <TYPreferences> preferences;
-    __strong TYMockEventBus *eventBus;
-    __strong MKTArgumentCaptor *timerContextArgument;
+    id <TYTomighty> tomighty;
+    id <TYTimer> timer;
+    id <TYPreferences> preferences;
+    TYMockEventBus *eventBus;
+    MKTArgumentCaptor *timerContextArgument;
 }
 
 - (void)setUp

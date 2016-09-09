@@ -10,7 +10,7 @@
 @implementation TYDefaultTimerContext
 {
     TYTimerContextType contextType;
-    __strong NSString *name;
+    NSString *name;
     int remainingSeconds;
 }
 

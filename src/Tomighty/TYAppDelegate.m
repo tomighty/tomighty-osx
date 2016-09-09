@@ -35,12 +35,12 @@
 
 @implementation TYAppDelegate
 {
-    __strong id <TYTomighty> tomighty;
-    __strong id <TYPreferences> preferences;
-    __strong TYSoundAgent *soundAgent;
-    __strong TYSyntheticEventPublisher *syntheticEventPublisher;
-    __strong TYUserInterfaceAgent *userInterfaceAgent;
-    __strong TYPreferencesWindowController *preferencesWindow;
+    id <TYTomighty> tomighty;
+    id <TYPreferences> preferences;
+    TYSoundAgent *soundAgent;
+    TYSyntheticEventPublisher *syntheticEventPublisher;
+    TYUserInterfaceAgent *userInterfaceAgent;
+    TYPreferencesWindowController *preferencesWindow;
 }
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
@@ -54,11 +54,11 @@
     id <TYStatusIcon> statusIcon = [[TYDefaultStatusIcon alloc] initWith:self.statusMenu imageLoader:imageLoader];
     id <TYStatusMenu> statusMenu = self;
     id <TYAppUI> appUi = [[TYDefaultAppUI alloc] initWith:statusMenu statusIcon:statusIcon];
-    
+
     preferences = [[TYUserDefaultsPreferences alloc] initWith:eventBus];
     soundAgent = [[TYSoundAgent alloc] initWith:soundPlayer preferences:preferences];
     syntheticEventPublisher = [[TYSyntheticEventPublisher alloc] init];
-    userInterfaceAgent = [[TYUserInterfaceAgent alloc] initWith:appUi];
+    userInterfaceAgent = [[TYUserInterfaceAgent alloc] initWith:appUi preferences:preferences];
     tomighty = [[TYDefaultTomighty alloc] initWith:timer preferences:preferences eventBus:eventBus];
     
     [syntheticEventPublisher publishSyntheticEventsInResponseToOtherEventsFrom:eventBus];
@@ -66,6 +66,8 @@
     [userInterfaceAgent updateAppUiInResponseToEventsFrom:eventBus];
     
     [self initMenuItemsIcons:imageLoader];
+    
+    [eventBus publish:APP_INIT data:nil];
 }
 
 - (void)initMenuItemsIcons:(TYImageLoader *)imageLoader {

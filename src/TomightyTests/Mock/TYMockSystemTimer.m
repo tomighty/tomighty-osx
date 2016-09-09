@@ -9,7 +9,7 @@
 
 @implementation TYMockSystemTimer
 {
-    __strong TYSystemTimerTrigger trigger;
+    TYSystemTimerTrigger trigger;
     BOOL isInterrupted;
 }
 

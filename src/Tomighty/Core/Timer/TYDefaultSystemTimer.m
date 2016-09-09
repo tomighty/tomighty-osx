@@ -9,8 +9,8 @@
 
 @implementation TYDefaultSystemTimer
 {
-    __strong NSTimer *timer;
-    __strong TYSystemTimerTrigger currentTrigger;
+    NSTimer *timer;
+    TYSystemTimerTrigger currentTrigger;
 }
 
 - (void)triggerRepeatedly:(TYSystemTimerTrigger)trigger intervalInSeconds:(int)seconds
