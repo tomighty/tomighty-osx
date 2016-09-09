@@ -47,6 +47,7 @@
     [[NSUserDefaults standardUserDefaults] removeObjectForKey:PREF_PLAY_SOUND_WHEN_TIMER_GOES_OFF];
     [[NSUserDefaults standardUserDefaults] removeObjectForKey:PREF_PLAY_TICKTOCK_SOUND_DURING_POMODORO];
     [[NSUserDefaults standardUserDefaults] removeObjectForKey:PREF_PLAY_TICKTOCK_SOUND_DURING_BREAK];
+    [[NSUserDefaults standardUserDefaults] removeObjectForKey:PREF_STATUS_ICON_TIME_FORMAT];
 }
 
 - (void)test_register_default_values_on_instantiation
@@ -58,6 +59,7 @@
     XCTAssertEqual([[NSUserDefaults standardUserDefaults] integerForKey:PREF_PLAY_SOUND_WHEN_TIMER_GOES_OFF], (NSInteger)true);
     XCTAssertEqual([[NSUserDefaults standardUserDefaults] integerForKey:PREF_PLAY_TICKTOCK_SOUND_DURING_POMODORO], (NSInteger)true);
     XCTAssertEqual([[NSUserDefaults standardUserDefaults] integerForKey:PREF_PLAY_TICKTOCK_SOUND_DURING_BREAK], (NSInteger)true);
+    XCTAssertEqual([[NSUserDefaults standardUserDefaults] integerForKey:PREF_STATUS_ICON_TIME_FORMAT], (NSInteger)PREF_STATUS_ICON_TIME_FORMAT_NONE);
 }
 
 - (void)test_get_any_default_value
