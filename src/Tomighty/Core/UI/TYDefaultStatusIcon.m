@@ -61,4 +61,9 @@ NSString * const ICON_STATUS_ALTERNATE = @"icon-status-alternate";
     return image;
 }
 
+- (void)setStatusText:(NSString *)statusText
+{
+    statusItem.title = statusText;
+}
+
 @end

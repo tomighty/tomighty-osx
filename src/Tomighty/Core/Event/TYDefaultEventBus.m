@@ -24,24 +24,25 @@
 
 - (void)subscribeTo:(TYEventType)eventType subscriber:(TYEventSubscriber)subscriber
 {
-    NSMutableArray *subscribers;
-    subscribers = [self produceSubscriberListForEventType:eventType];
-    [subscribers addObject:subscriber];
+    if (subscriber == nil)
+        return;
+
+    NSMutableArray *subscribers = [self produceSubscriberListForEventType:eventType];
+    [subscribers addObject:[subscriber copy]];
 }
 
 - (void)publish:(TYEventType)eventType data:(id)data
 {
-    NSMutableArray *subscribers = [map objectForKey:@(eventType)];
-    for(int index = 0; index < [subscribers count]; index++)
+    NSMutableArray *subscribers = map[@(eventType)];
+    for(TYEventSubscriber subscriber in subscribers)
     {
-        TYEventSubscriber subscriber = (TYEventSubscriber) [subscribers objectAtIndex:index];
         subscriber(data);
     }
 }
 
 - (NSMutableArray *)produceSubscriberListForEventType:(TYEventType)eventType
 {
-    NSMutableArray *subscribers = [map objectForKey:@(eventType)];
+    NSMutableArray *subscribers = map[@(eventType)];
     if(!subscribers)
     {
         subscribers = [NSMutableArray arrayWithCapacity:8];
