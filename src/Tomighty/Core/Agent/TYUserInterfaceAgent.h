@@ -9,10 +9,11 @@
 
 #import "TYAppUI.h"
 #import "TYEventBus.h"
+#import "TYPreferences.h"
 
 @interface TYUserInterfaceAgent : NSObject
 
-- (id)initWith:(id <TYAppUI>)ui;
+- (id)initWith:(id <TYAppUI>)ui preferences:(id <TYPreferences>)aPreferences;
 - (void)updateAppUiInResponseToEventsFrom:(id <TYEventBus>)eventBus;
 
 @end

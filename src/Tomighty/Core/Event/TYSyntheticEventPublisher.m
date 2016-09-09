@@ -12,10 +12,8 @@
 
 - (void)publishSyntheticEventsInResponseToOtherEventsFrom:(id <TYEventBus>)eventBus
 {
-    [eventBus subscribeTo:TIMER_START subscriber:^(id eventData)
+    [eventBus subscribeTo:TIMER_START subscriber:^(id <TYTimerContext> timerContext)
     {
-        id <TYTimerContext> timerContext = eventData;
-        
         if([timerContext getContextType] == POMODORO)
         {
             [eventBus publish:POMODORO_START data:timerContext];
@@ -32,17 +30,15 @@
         }
     }];
     
-    [eventBus subscribeTo:TIMER_STOP subscriber:^(id eventData)
+    [eventBus subscribeTo:TIMER_STOP subscriber:^(id <TYTimerContext> timerContext)
     {
-        id <TYTimerContext> timerContext = eventData;
-        
         if([timerContext getRemainingSeconds] > 0)
         {
-            [eventBus publish:TIMER_ABORT data:eventData];
+            [eventBus publish:TIMER_ABORT data:timerContext];
         }
         else
         {
-            [eventBus publish:TIMER_GOES_OFF data:eventData];
+            [eventBus publish:TIMER_GOES_OFF data:timerContext];
             if([timerContext getContextType] == POMODORO)
             {
                 [eventBus publish:POMODORO_COMPLETE data:timerContext];
