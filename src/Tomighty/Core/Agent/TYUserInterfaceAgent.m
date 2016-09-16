@@ -5,6 +5,7 @@
 //  http://www.apache.org/licenses/LICENSE-2.0.txt
 //
 
+#import <Carbon/Carbon.h>
 #import "TYUserInterfaceAgent.h"
 #import "TYTimerContext.h"
 
