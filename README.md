@@ -39,5 +39,6 @@ Thank you to all the contributors to Tomighty OSX:
 * Luke Wong (@hausofwong)
 * Matthew Andersen (@mattandersen)
 * Devon Tucker (@dvntucker)
+* Misha Tavkhelidze (@mtavkhelidze)
 
 Please let us know if you feel your name is missing from this list (and feel free to update it with your PRs).
