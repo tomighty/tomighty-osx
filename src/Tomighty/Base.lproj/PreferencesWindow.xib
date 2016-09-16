@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1004" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="10117"/>
@@ -13,6 +13,8 @@
                 <outlet property="check_play_ticktock_sound_during_break" destination="n8X-6J-yb1" id="fEo-Gf-VN3"/>
                 <outlet property="check_play_ticktock_sound_during_pomodoro" destination="XPt-RS-x5J" id="Id6-N6-jWy"/>
                 <outlet property="popup_status_icon_time_format" destination="AB6-cq-4zH" id="aKC-78-ExV"/>
+                <outlet property="text_hotkey_start" destination="2oE-1m-x8L" id="LTe-aM-tL1"/>
+                <outlet property="text_hotkey_stop" destination="X8D-lx-dSZ" id="EaB-y7-iLQ"/>
                 <outlet property="text_time_long_break" destination="1UG-sw-aRq" id="mez-iY-mzE"/>
                 <outlet property="text_time_pomodoro" destination="sE1-ym-iCF" id="DWF-ut-22a"/>
                 <outlet property="text_time_short_break" destination="N2p-3V-2IY" id="s41-PU-SSB"/>
@@ -299,6 +301,60 @@
                                         <constraint firstItem="lBK-YY-ePX" firstAttribute="leading" secondItem="nvp-HR-2ZP" secondAttribute="leading" constant="19" id="tip-x4-nLM"/>
                                         <constraint firstAttribute="bottom" secondItem="lBK-YY-ePX" secondAttribute="bottom" constant="20" id="wb5-uR-YyL"/>
                                     </constraints>
+                                </view>
+                            </tabViewItem>
+                            <tabViewItem label="Hotkeys" identifier="" id="Lel-bu-qwv">
+                                <view key="view" id="AIU-Lx-wnc">
+                                    <rect key="frame" x="10" y="33" width="278" height="153"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XLj-Dh-kCT">
+                                            <rect key="frame" x="120" y="105" width="135" height="17"/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="click to record hotkey" id="89H-tb-ssG">
+                                                <font key="font" metaFont="system"/>
+                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uFJ-8V-C8B">
+                                            <rect key="frame" x="24" y="78" width="96" height="17"/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Start Pomdoro:" id="G8M-z7-EPE">
+                                                <font key="font" metaFont="system"/>
+                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2oE-1m-x8L" customClass="TYHotkeyControl">
+                                            <rect key="frame" x="127" y="75" width="120" height="22"/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="center" placeholderString="" drawsBackground="YES" id="iNZ-hc-WQa" customClass="TYHotkeyCell">
+                                                <font key="font" metaFont="system"/>
+                                                <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                            <connections>
+                                                <action selector="save_hotkey_start:" target="-2" id="OaJ-p4-o0d"/>
+                                            </connections>
+                                        </textField>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fnv-eF-5PJ">
+                                            <rect key="frame" x="25" y="48" width="95" height="17"/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Stop Pomdoro:" id="zEM-fO-SWk">
+                                                <font key="font" metaFont="system"/>
+                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="X8D-lx-dSZ" customClass="TYHotkeyControl">
+                                            <rect key="frame" x="127" y="45" width="120" height="22"/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="center" placeholderString="" drawsBackground="YES" id="GdV-C7-rvA" customClass="TYHotkeyCell">
+                                                <font key="font" metaFont="system"/>
+                                                <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                            <connections>
+                                                <action selector="save_hotkey_stop:" target="-2" id="qFR-Pk-Zvc"/>
+                                            </connections>
+                                        </textField>
+                                    </subviews>
                                 </view>
                             </tabViewItem>
                         </tabViewItems>
