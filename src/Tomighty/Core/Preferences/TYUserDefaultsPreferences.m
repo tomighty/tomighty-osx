@@ -15,6 +15,7 @@ NSString * const PREF_PLAY_SOUND_WHEN_TIMER_STARTS        = @"org.tomighty.sound
 NSString * const PREF_PLAY_SOUND_WHEN_TIMER_GOES_OFF         = @"org.tomighty.sound.play_on_timer_stop";
 NSString * const PREF_PLAY_TICKTOCK_SOUND_DURING_POMODORO  = @"org.tomighty.sound.play_tick_tock_during_pomodoro";
 NSString * const PREF_PLAY_TICKTOCK_SOUND_DURING_BREAK     = @"org.tomighty.sound.play_tick_tock_during_break";
+NSString * const PREF_CONTINUOUS_MODE = @"org.tomighty.continuous";
 NSString * const PREF_STATUS_ICON_TIME_FORMAT     = @"org.tomighty.general.status_icon_time_format";
 // formats must have same values as TYAppUIStatusIconTextFormat enum in TYAppUI.h
 // TODO : move this values to some common place?
@@ -35,9 +36,9 @@ NSString * const PREF_HOTKEY_STOP = @"org.tomighty.hotkey.stop";
     if(self)
     {
         eventBus = anEventBus;
-        
+
         NSMutableDictionary *defaultValues = [NSMutableDictionary dictionary];
-        
+
         [defaultValues setObject:[NSNumber numberWithInt:25] forKey:PREF_TIME_POMODORO];
         [defaultValues setObject:[NSNumber numberWithInt:5] forKey:PREF_TIME_SHORT_BREAK];
         [defaultValues setObject:[NSNumber numberWithInt:15] forKey:PREF_TIME_LONG_BREAK];
@@ -45,6 +46,7 @@ NSString * const PREF_HOTKEY_STOP = @"org.tomighty.hotkey.stop";
         [defaultValues setObject:[NSNumber numberWithInt:true] forKey:PREF_PLAY_SOUND_WHEN_TIMER_GOES_OFF];
         [defaultValues setObject:[NSNumber numberWithInt:true] forKey:PREF_PLAY_TICKTOCK_SOUND_DURING_POMODORO];
         [defaultValues setObject:[NSNumber numberWithInt:true] forKey:PREF_PLAY_TICKTOCK_SOUND_DURING_BREAK];
+        [defaultValues setObject:[NSNumber numberWithInt:true] forKey:PREF_CONTINUOUS_MODE];
         [defaultValues setObject:[NSNumber numberWithInt:PREF_STATUS_ICON_TIME_FORMAT_NONE] forKey:PREF_STATUS_ICON_TIME_FORMAT];
         [defaultValues setObject:@"^⌘P" forKey:PREF_HOTKEY_START];
         [defaultValues setObject:@"^⌘S" forKey:PREF_HOTKEY_STOP];

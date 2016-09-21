@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="10117"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11201"/>
         <capability name="box content view" minToolsVersion="7.0"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="TYPreferencesWindowController">
             <connections>
+                <outlet property="check_continuous_mode" destination="K00-WD-P1n" id="dew-jz-0dY"/>
                 <outlet property="check_play_sound_when_timer_goes_off" destination="4gP-n3-o9H" id="FUX-Fi-uco"/>
                 <outlet property="check_play_sound_when_timer_starts" destination="UEf-gI-pZ6" id="VdU-XK-1aG"/>
                 <outlet property="check_play_ticktock_sound_during_break" destination="n8X-6J-yb1" id="fEo-Gf-VN3"/>
@@ -26,7 +27,7 @@
         <window title="Tomighty Preferences" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" showsToolbarButton="NO" frameAutosaveName="tomighty.window.preferences" animationBehavior="default" id="QvC-M9-y7g">
             <windowStyleMask key="styleMask" titled="YES" closable="YES"/>
             <rect key="contentRect" x="196" y="240" width="393" height="253"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1057"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1280" height="777"/>
             <view key="contentView" id="EiT-Mj-1SZ">
                 <rect key="frame" x="0.0" y="0.0" width="393" height="253"/>
                 <autoresizingMask key="autoresizingMask"/>
@@ -181,6 +182,17 @@
                                                 <action selector="save_time_pomodoro:" target="-2" id="To2-NB-cyT"/>
                                             </connections>
                                         </textField>
+                                        <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="K00-WD-P1n">
+                                            <rect key="frame" x="44" y="56" width="216" height="18"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <buttonCell key="cell" type="check" title="Start next timer automatically" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="Wpx-RY-CKL">
+                                                <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                <font key="font" metaFont="system"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <action selector="save_continuous_mode:" target="-2" id="msj-yn-Ewm"/>
+                                            </connections>
+                                        </button>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="N2p-3V-2IY" firstAttribute="leading" secondItem="mPd-9o-PQZ" secondAttribute="trailing" constant="8" symbolic="YES" id="1Cs-HA-Cde"/>
@@ -292,8 +304,6 @@
                                                     <constraint firstItem="XPt-RS-x5J" firstAttribute="leading" secondItem="n8X-6J-yb1" secondAttribute="leading" id="uQ3-IT-ujT"/>
                                                 </constraints>
                                             </view>
-                                            <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
-                                            <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </box>
                                     </subviews>
                                     <constraints>
