@@ -41,6 +41,7 @@
     
     [eventBus subscribeTo:POMODORO_START subscriber:^(id timerContext)
     {
+        [soundPlayer stopCurrentLoop];
         if([preferences getInt:PREF_PLAY_TICKTOCK_SOUND_DURING_POMODORO])
         {
             [soundPlayer loop:SOUND_TIMER_TICK];
@@ -49,6 +50,7 @@
     
     [eventBus subscribeTo:BREAK_START subscriber:^(id timerContext)
     {
+        [soundPlayer stopCurrentLoop];
         if([preferences getInt:PREF_PLAY_TICKTOCK_SOUND_DURING_BREAK])
         {
             [soundPlayer loop:SOUND_TIMER_TICK];
