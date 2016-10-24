@@ -21,6 +21,7 @@ extern int const PREF_STATUS_ICON_TIME_FORMAT_SECONDS;
 extern NSString * const PREF_HOTKEY_START;
 extern NSString * const PREF_HOTKEY_STOP;
 extern NSString * const PREF_CONTINUOUS_MODE;
+extern NSString * const PREF_ENABLE_NOTIFICATIONS;
 
 @protocol TYPreferences <NSObject>
 

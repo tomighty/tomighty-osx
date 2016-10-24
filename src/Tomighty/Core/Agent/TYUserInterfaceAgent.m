@@ -28,11 +28,13 @@
 
 - (void)dispatchNewNotification: (NSString*) text
 {
-    NSUserNotification *notification = [[NSUserNotification alloc] init];
-    notification.title = text;
-    notification.soundName = NSUserNotificationDefaultSoundName;
-    
-    [[NSUserNotificationCenter defaultUserNotificationCenter] deliverNotification:notification];
+    if ([preferences getInt:PREF_ENABLE_NOTIFICATIONS]) {
+        NSUserNotification *notification = [[NSUserNotification alloc] init];
+        notification.title = text;
+        notification.soundName = NSUserNotificationDefaultSoundName;
+        
+        [[NSUserNotificationCenter defaultUserNotificationCenter] deliverNotification:notification];
+    }
 }
 
 - (void)updateAppUiInResponseToEventsFrom:(id <TYEventBus>)eventBus

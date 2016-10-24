@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11201"/>
@@ -13,6 +13,7 @@
                 <outlet property="check_play_sound_when_timer_starts" destination="UEf-gI-pZ6" id="VdU-XK-1aG"/>
                 <outlet property="check_play_ticktock_sound_during_break" destination="n8X-6J-yb1" id="fEo-Gf-VN3"/>
                 <outlet property="check_play_ticktock_sound_during_pomodoro" destination="XPt-RS-x5J" id="Id6-N6-jWy"/>
+                <outlet property="check_show_notifications" destination="Nlo-52-gcU" id="9Ya-4Z-l3G"/>
                 <outlet property="popup_status_icon_time_format" destination="AB6-cq-4zH" id="aKC-78-ExV"/>
                 <outlet property="text_hotkey_start" destination="2oE-1m-x8L" id="LTe-aM-tL1"/>
                 <outlet property="text_hotkey_stop" destination="X8D-lx-dSZ" id="EaB-y7-iLQ"/>
@@ -27,7 +28,7 @@
         <window title="Tomighty Preferences" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" showsToolbarButton="NO" frameAutosaveName="tomighty.window.preferences" animationBehavior="default" id="QvC-M9-y7g">
             <windowStyleMask key="styleMask" titled="YES" closable="YES"/>
             <rect key="contentRect" x="196" y="240" width="393" height="253"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1280" height="777"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1058"/>
             <view key="contentView" id="EiT-Mj-1SZ">
                 <rect key="frame" x="0.0" y="0.0" width="393" height="253"/>
                 <autoresizingMask key="autoresizingMask"/>
@@ -257,7 +258,7 @@
                                             </connections>
                                         </button>
                                         <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ay4-lu-bRj">
-                                            <rect key="frame" x="18" y="119" width="179" height="17"/>
+                                            <rect key="frame" x="17" y="104" width="179" height="17"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="175" id="dZm-qd-6Yg"/>
                                             </constraints>
@@ -268,7 +269,7 @@
                                             </textFieldCell>
                                         </textField>
                                         <box autoresizesSubviews="NO" borderType="line" translatesAutoresizingMaskIntoConstraints="NO" id="lBK-YY-ePX">
-                                            <rect key="frame" x="16" y="54" width="243" height="74"/>
+                                            <rect key="frame" x="16" y="37" width="243" height="74"/>
                                             <view key="contentView" id="Xg6-Cb-Sav">
                                                 <rect key="frame" x="1" y="1" width="241" height="58"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -305,14 +306,25 @@
                                                 </constraints>
                                             </view>
                                         </box>
+                                        <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Nlo-52-gcU">
+                                            <rect key="frame" x="15" y="132" width="251" height="18"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <buttonCell key="cell" type="check" title="Show notifications when timers go off" bezelStyle="regularSquare" imagePosition="left" inset="2" id="Bzh-st-EPg">
+                                                <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                <font key="font" metaFont="system"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <action selector="save_show_notifications:" target="-2" id="xXF-j5-KHh"/>
+                                            </connections>
+                                        </button>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="4gP-n3-o9H" firstAttribute="top" secondItem="UEf-gI-pZ6" secondAttribute="bottom" constant="6" symbolic="YES" id="7L1-bm-QDu"/>
-                                        <constraint firstItem="ay4-lu-bRj" firstAttribute="leading" secondItem="nvp-HR-2ZP" secondAttribute="leading" constant="20" id="Aki-B0-sj9"/>
+                                        <constraint firstItem="ay4-lu-bRj" firstAttribute="leading" secondItem="nvp-HR-2ZP" secondAttribute="leading" constant="19" id="Aki-B0-sj9"/>
                                         <constraint firstItem="4gP-n3-o9H" firstAttribute="centerX" secondItem="lBK-YY-ePX" secondAttribute="centerX" id="RB5-85-sGb"/>
-                                        <constraint firstAttribute="bottom" secondItem="lBK-YY-ePX" secondAttribute="bottom" constant="58" id="WT5-IL-6Oq"/>
-                                        <constraint firstItem="ay4-lu-bRj" firstAttribute="top" secondItem="4gP-n3-o9H" secondAttribute="bottom" constant="18" id="n8B-lc-cM4"/>
-                                        <constraint firstItem="lBK-YY-ePX" firstAttribute="top" secondItem="4gP-n3-o9H" secondAttribute="bottom" constant="26" id="nbp-3A-EB7"/>
+                                        <constraint firstAttribute="bottom" secondItem="lBK-YY-ePX" secondAttribute="bottom" constant="41" id="WT5-IL-6Oq"/>
+                                        <constraint firstItem="ay4-lu-bRj" firstAttribute="top" secondItem="4gP-n3-o9H" secondAttribute="bottom" constant="33" id="n8B-lc-cM4"/>
+                                        <constraint firstItem="lBK-YY-ePX" firstAttribute="top" secondItem="4gP-n3-o9H" secondAttribute="bottom" constant="43" id="nbp-3A-EB7"/>
                                         <constraint firstAttribute="trailing" secondItem="4gP-n3-o9H" secondAttribute="trailing" constant="90" id="nfy-xv-3et"/>
                                         <constraint firstItem="UEf-gI-pZ6" firstAttribute="top" secondItem="nvp-HR-2ZP" secondAttribute="top" constant="3" id="nlj-o0-8vn"/>
                                         <constraint firstItem="lBK-YY-ePX" firstAttribute="leading" secondItem="nvp-HR-2ZP" secondAttribute="leading" constant="19" id="w3w-CN-Q28"/>

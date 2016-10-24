@@ -24,6 +24,7 @@ int const PREF_STATUS_ICON_TIME_FORMAT_MINUTES = 1;
 int const PREF_STATUS_ICON_TIME_FORMAT_SECONDS = 2;
 NSString * const PREF_HOTKEY_START = @"org.tomighty.hotkey.start";
 NSString * const PREF_HOTKEY_STOP = @"org.tomighty.hotkey.stop";
+NSString * const PREF_ENABLE_NOTIFICATIONS = @"org.tomighty.enable_notifications";
 
 @implementation TYUserDefaultsPreferences
 {
@@ -47,6 +48,7 @@ NSString * const PREF_HOTKEY_STOP = @"org.tomighty.hotkey.stop";
         [defaultValues setObject:[NSNumber numberWithInt:true] forKey:PREF_PLAY_TICKTOCK_SOUND_DURING_POMODORO];
         [defaultValues setObject:[NSNumber numberWithInt:true] forKey:PREF_PLAY_TICKTOCK_SOUND_DURING_BREAK];
         [defaultValues setObject:[NSNumber numberWithInt:true] forKey:PREF_CONTINUOUS_MODE];
+        [defaultValues setObject:[NSNumber numberWithInt:false] forKey:PREF_ENABLE_NOTIFICATIONS];
         [defaultValues setObject:[NSNumber numberWithInt:PREF_STATUS_ICON_TIME_FORMAT_NONE] forKey:PREF_STATUS_ICON_TIME_FORMAT];
         [defaultValues setObject:@"^⌘P" forKey:PREF_HOTKEY_START];
         [defaultValues setObject:@"^⌘S" forKey:PREF_HOTKEY_STOP];
