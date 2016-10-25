@@ -26,6 +26,17 @@
     return self;
 }
 
+- (void)dispatchNewNotification: (NSString*) text
+{
+    if ([preferences getInt:PREF_ENABLE_NOTIFICATIONS]) {
+        NSUserNotification *notification = [[NSUserNotification alloc] init];
+        notification.title = text;
+        notification.soundName = NSUserNotificationDefaultSoundName;
+        
+        [[NSUserNotificationCenter defaultUserNotificationCenter] deliverNotification:notification];
+    }
+}
+
 - (void)updateAppUiInResponseToEventsFrom:(id <TYEventBus>)eventBus
 {
     [eventBus subscribeTo:APP_INIT subscriber:^(id eventData) {
@@ -37,6 +48,7 @@
 
     [eventBus subscribeTo:POMODORO_START subscriber:^(id eventData) {
         [ui switchToPomodoroState];
+        [self dispatchNewNotification:@"Pomodoro started"];
     }];
     
     [eventBus subscribeTo:TIMER_STOP subscriber:^(id eventData) {
@@ -45,10 +57,12 @@
     
     [eventBus subscribeTo:SHORT_BREAK_START subscriber:^(id eventData) {
         [ui switchToShortBreakState];
+        [self dispatchNewNotification:@"Short break started"];
     }];
     
     [eventBus subscribeTo:LONG_BREAK_START subscriber:^(id eventData) {
         [ui switchToLongBreakState];
+        [self dispatchNewNotification:@"Long break started"];
     }];
     
     [eventBus subscribeTo:TIMER_TICK subscriber:^(id <TYTimerContext> timerContext) {

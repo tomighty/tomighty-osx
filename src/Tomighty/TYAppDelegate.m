@@ -64,6 +64,7 @@
     [syntheticEventPublisher publishSyntheticEventsInResponseToOtherEventsFrom:eventBus];
     [soundAgent playSoundsInResponseToEventsFrom:eventBus];
     [userInterfaceAgent updateAppUiInResponseToEventsFrom:eventBus];
+    [[NSUserNotificationCenter defaultUserNotificationCenter] setDelegate:self];
     
     [self initMenuItemsIcons:imageLoader];
     
@@ -156,6 +157,11 @@
 - (void)setPomodoroCountText:(NSString *)text
 {
     [self.pomodoroCountMenuItem setTitle:text];
+}
+
+- (BOOL)userNotificationCenter:(NSUserNotificationCenter *)center shouldPresentNotification:(NSUserNotification *)notification
+{
+    return YES;
 }
 
 @end
