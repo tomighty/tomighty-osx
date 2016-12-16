@@ -3,7 +3,7 @@
 #Us the create-dmg project to create the DMG
 #git clone https://github.com/andreyvit/yoursway-create-dmg.git
 
-VERSION="1.1"
+VERSION="1.2"
 
 mkdir -p target/package
 cp -rf target/Tomighty.app target/package/
