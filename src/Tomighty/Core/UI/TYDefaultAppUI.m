@@ -85,7 +85,11 @@
         [statusIcon setStatusText:@" Stopped"];
     } else {
         if (timeFormat == TYAppUIStatusIconTextFormatMinutes) {
-            text = [NSString stringWithFormat:@" %d m", minutes + (mode == TYAppUIRemainingTimeModeStart ? 0:1)];
+            if(minutes < 1){
+                text = [NSString stringWithFormat:@" %02d s", seconds];
+            } else {
+                text = [NSString stringWithFormat:@" %d m", minutes + (mode == TYAppUIRemainingTimeModeStart ? 0:1)];
+            }
         } else if (timeFormat == TYAppUIStatusIconTextFormatSeconds) {
             text = [NSString stringWithFormat:@" %02d:%02d", minutes, seconds];
         }
