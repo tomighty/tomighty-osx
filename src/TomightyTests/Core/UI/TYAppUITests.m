@@ -147,6 +147,14 @@
 
 }
 
+- (void)test_update_remaining_time_to_fifty_nine_seconds_with_format_minutes
+{
+    [appUi setStatusIconTextFormat:TYAppUIStatusIconTextFormatMinutes];
+    
+    [appUi updateRemainingTime:59 withMode:TYAppUIRemainingTimeModeDefault];
+    [verify(statusIcon) setStatusText:@" 59 s"];
+}
+
 - (void)test_update_pomodoro_count_to_zero
 {
     [appUi updatePomodoroCount:0];

@@ -64,6 +64,7 @@
     [syntheticEventPublisher publishSyntheticEventsInResponseToOtherEventsFrom:eventBus];
     [soundAgent playSoundsInResponseToEventsFrom:eventBus];
     [userInterfaceAgent updateAppUiInResponseToEventsFrom:eventBus];
+    [[NSUserNotificationCenter defaultUserNotificationCenter] setDelegate:self];
     
     [self initMenuItemsIcons:imageLoader];
     
@@ -71,8 +72,12 @@
 }
 
 - (void)initMenuItemsIcons:(TYImageLoader *)imageLoader {
-    [self.remainingTimeMenuItem setImage:[imageLoader loadIcon:@"icon-clock"]];
-    [self.stopTimerMenuItem setImage:[imageLoader loadIcon:@"icon-stop-timer"]];
+    NSImage *clockIcon = [imageLoader loadIcon:@"icon-clock"];
+    [clockIcon setTemplate:TRUE];
+    [self.remainingTimeMenuItem setImage:clockIcon];
+    NSImage *stopIcon = [imageLoader loadIcon:@"icon-stop-timer"];
+    [stopIcon setTemplate:TRUE];
+    [self.stopTimerMenuItem setImage:stopIcon];
     [self.startPomodoroMenuItem setImage:[imageLoader loadIcon:@"icon-start-pomodoro"]];
     [self.startShortBreakMenuItem setImage:[imageLoader loadIcon:@"icon-start-short-break"]];
     [self.startLongBreakMenuItem setImage:[imageLoader loadIcon:@"icon-start-long-break"]];
@@ -152,6 +157,11 @@
 - (void)setPomodoroCountText:(NSString *)text
 {
     [self.pomodoroCountMenuItem setTitle:text];
+}
+
+- (BOOL)userNotificationCenter:(NSUserNotificationCenter *)center shouldPresentNotification:(NSUserNotification *)notification
+{
+    return YES;
 }
 
 @end

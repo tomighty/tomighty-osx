@@ -5,7 +5,7 @@ from the command line.
 
 ## Running
 
-Simply run build.sh from the build directory. Build artifacts should appear in the `targer`
+Simply run build.sh from the build directory. Build artifacts should appear in the `target`
 directory. Existing build artifacts must be deleted before running again.
 
 ## Packaging
