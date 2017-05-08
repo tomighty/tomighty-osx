@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 
-#Us the create-dmg project to create the DMG
+#Use the create-dmg project to create the DMG
 #git clone https://github.com/andreyvit/yoursway-create-dmg.git
 
-VERSION="1.2"
+VERSION="1.3"
 
 mkdir -p target/package
 cp -rf target/Tomighty.app target/package/
