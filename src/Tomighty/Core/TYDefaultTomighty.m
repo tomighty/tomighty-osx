@@ -15,6 +15,7 @@
 @implementation TYDefaultTomighty
 {
     int pomodoroCount;
+    int pomodoroCycle;
     
     id <TYTimer> timer;
     id <TYPreferences> preferences;
@@ -35,6 +36,7 @@
         preferences = aPreferences;
         eventBus = anEventBus;
         continuousMode = [preferences getInt:PREF_CONTINUOUS_MODE];
+        pomodoroCycle = [preferences getInt:PREF_TIME_CYCLE];
         
         [eventBus subscribeTo:POMODORO_COMPLETE subscriber:^(id eventData)
         {
@@ -48,7 +50,7 @@
                 id <TYTimerContext> context = eventData;
                 switch ([context getContextType]) {
                     case POMODORO:
-                        if (pomodoroCount < 4) {
+                        if (pomodoroCount < pomodoroCycle) {
                             [self startShortBreak];
                         }
                         else {
@@ -127,7 +129,7 @@
 {
     int newCount = pomodoroCount + 1;
     
-    if(newCount > 4)
+    if(newCount > pomodoroCycle)
     {
         newCount = 1;
     }
