@@ -33,6 +33,7 @@
     [self.text_time_pomodoro setIntValue:[preferences getInt:PREF_TIME_POMODORO]];
     [self.text_time_short_break setIntValue:[preferences getInt:PREF_TIME_SHORT_BREAK]];
     [self.text_time_long_break setIntValue:[preferences getInt:PREF_TIME_LONG_BREAK]];
+    [self.text_time_cycle setIntValue:[preferences getInt:PREF_TIME_CYCLE]];
     [self.check_play_sound_when_timer_starts setState:[preferences getInt:PREF_PLAY_SOUND_WHEN_TIMER_STARTS]];
     [self.check_play_sound_when_timer_goes_off setState:[preferences getInt:PREF_PLAY_SOUND_WHEN_TIMER_GOES_OFF]];
     [self.check_play_ticktock_sound_during_pomodoro setState:[preferences getInt:PREF_PLAY_TICKTOCK_SOUND_DURING_POMODORO]];
@@ -63,6 +64,10 @@
 
 - (IBAction)save_time_long_break:(id)sender {
     [preferences setInt:PREF_TIME_LONG_BREAK value:[self.text_time_long_break intValue]];
+}
+
+- (IBAction)save_time_cycle:(id)sender {
+    [preferences setInt:PREF_TIME_CYCLE value:[self.text_time_cycle intValue]];
 }
 
 - (IBAction)save_play_sound_when_timer_starts:(id)sender {
